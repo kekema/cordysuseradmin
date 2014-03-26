@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E2-F699-9FBFF7719314">
+	<DocumentID>0027132C-F779-11E2-F699-9FBFF7717314</DocumentID>
+	<Name>0027132C-F779-11E2-F699-9FBFF7717314</Name>
+	<Description>AppPalette3</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-05-04T15:27:31.694</CreationDate>
+	<Notes/>
+	<Text>AppPalette3</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-F654-1862C9CC3211"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E2-F699-9FBFF7713314"
+		/>
+	</TextIdentifier>
+</TranslatedText>

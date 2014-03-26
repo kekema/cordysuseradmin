@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E2-F699-E40A464C7314">
+	<DocumentID>0027132C-F779-11E2-F699-E40A464C5314</DocumentID>
+	<Name>0027132C-F779-11E2-F699-E40A464C5314</Name>
+	<Description>Button2</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-05-04T15:29:45.876</CreationDate>
+	<Notes/>
+	<Text>Button2</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-F654-1862C9CC3211"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E2-F699-E40A464C1314"
+		/>
+	</TextIdentifier>
+</TranslatedText>

@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="0027132C-F779-11E2-F69A-4DF2F481F314">
+	<DocumentID>0027132C-F779-11E2-F69A-4DF2F481D314</DocumentID>
+	<Name>0027132C-F779-11E2-F69A-4DF2F481D314</Name>
+	<Description>TestUI2</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-05-04T16:44:38.325</CreationDate>
+	<Notes/>
+	<DefaultText>TestUI2</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="0027132C-F779-11E2-F654-1862C9CBB211"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="0027132C-F779-11E2-F69A-4DF2F4821314"
+		/>
+	</Translations>
+</TextIdentifier>

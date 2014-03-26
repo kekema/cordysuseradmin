@@ -1,0 +1,17 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	RuntimeDocumentID="0027132C-F779-11E2-F666-9DDB3DF53211">
+	<DocumentID>0027132C-F779-11E2-F666-9DDB3DF51211</DocumentID>
+	<Name>Consultant</Name>
+	<Description>Consultant</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-05-02T19:37:44.571</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<isFunctionalRole>true</isFunctionalRole>
+	<type>Functional</type>
+	<Subroles/>
+	<configuredTasks/>
+</RoleDesignTime>

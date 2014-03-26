@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+    <configuration name="Default" type="webgateway">
+        <dausername>Karel</dausername>
+        <dapassword>OBF:</dapassword>
+        <dadomain>KEKEMA</dadomain>
+    </configuration>
+    <configuration name="EkemaITLocal" type="webgateway">
+        <dausername>cordysadm</dausername>
+        <dapassword>OBF:1to41u9p1vo41thb1vmy1u9t1toq</dapassword>
+        <dadomain/>
+        <organization-name>EkemaIT</organization-name>
+        <organizational-user-name>cordysadm</organizational-user-name>
+        <cws-workspace-name>WS_Karel</cws-workspace-name>
+        <cordys-root-dir>C:\PROGRA~1\Cordys\defaultInst</cordys-root-dir>
+        <restart-soapprocessor-dn>cn=WS-AppServer,cn=WS-AppServer SG,cn=soap nodes,o=EkemaIT,cn=cordys,cn=defaultInst,o=Cordys</restart-soapprocessor-dn>
+        <server>kekema</server>
+        <authenticationtype>SSO</authenticationtype>
+        <cordys-web-dir>C:\PROGRA~1\Cordys\defaultInst\Web</cordys-web-dir>
+        <cordys-cws-sync-dir>C:\PROGRA~1\Cordys\defaultInst\cws\sync</cordys-cws-sync-dir>
+    </configuration>
+</configurations>

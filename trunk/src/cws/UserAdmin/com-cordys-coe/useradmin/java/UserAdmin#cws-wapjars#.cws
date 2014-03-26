@@ -1,0 +1,40 @@
+
+<WSAppServerJavaArchiveSource
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.wsappserver.WSAppServerJavaArchiveSource"
+	RuntimeDocumentID="0027132C-F779-11E2-EBFD-FA3A76CD5369">
+	<DocumentID>0027132C-F779-11E2-EBFD-FA3A76CD3369</DocumentID>
+	<Name>UserAdmin</Name>
+	<Description>UserAdmin</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-01-16T15:30:42.14</CreationDate>
+	<Notes/>
+	<JarFileName>UserAdmin</JarFileName>
+	<NamespacePrefix></NamespacePrefix>
+	<Dependencies>
+		<JavaArchiveReferenceDependency
+			type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveReferenceDependency"
+			RuntimeDocumentID="0027132C-F779-11E2-EBFD-FA3A76CD1369">
+			<DocumentID>0027132C-F779-11E2-EBFD-FA3A76CCF369</DocumentID>
+			<Name>UserAdmin_Dependency</Name>
+			<Description>UserAdmin_Dependency</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-01-16T15:30:41.493</CreationDate>
+			<Notes/>
+			<DependsOnJAR>?CORDYS_INSTALL_DIR?/components/wsappserver/wsappserver.jar</DependsOnJAR>
+			<ISVPName></ISVPName>
+		</JavaArchiveReferenceDependency>
+	</Dependencies>
+	<SourceFolder>
+		<uri
+			id="0027132C-F779-11E3-E8DF-E26C48789262"
+			path="UserAdmin/com-cordys-coe/useradmin/java/source"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+	<WSAppServerPackage>
+		<uri
+			id="0027132C-F779-11E2-F683-6C13D9F79314"
+		/>
+	</WSAppServerPackage>
+</WSAppServerJavaArchiveSource>
