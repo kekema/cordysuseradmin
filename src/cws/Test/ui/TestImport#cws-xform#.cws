@@ -1,0 +1,261 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="0027132C-F779-11E2-FABE-F9CFA69B35D0">
+	<DocumentID>0027132C-F779-11E2-FABE-F9CFA69B15D0</DocumentID>
+	<Name>TestImport</Name>
+	<Description>TestImport</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-06-15T20:48:18.122</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<xml
+					xmlns="">
+					<xml
+						id="uploadExport_request">
+						<SOAP:Envelope
+							xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+							<SOAP:Body>
+								<UpdateXMLObject
+									xmlns="http://schemas.cordys.com/1.0/xmlstore">
+									<tuple>
+										<new>Upload:FileContent1</new>
+									</tuple>
+								</UpdateXMLObject>
+							</SOAP:Body>
+						</SOAP:Envelope>
+					</xml>
+				</xml>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<div
+						xmlns="http://www.w3.org/2002/xforms/cr"
+						xformextendedname="upload"
+						id="uploadExport"
+						fileCount="1"
+						visible="true"
+						encode="false"
+						multiple="single"
+						namespace="cas.xforms.runtimelibrary.Upload"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.extensions.Upload"
+						tabIndex=""
+						model=""
+						xql=""
+						fileContent=""
+						request="UpdateXMLObject"
+						xmlcontent="true"
+						showStatus="true"
+						label="Export File"
+						labelAlign="v_label autosuggest"
+						labelWidth="67"
+						requestSchema="uploadExport_request"
+						uploadRequestXML="&lt;SOAP:Envelope xmlns:SOAP=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP:Body&gt;&lt;UpdateXMLObject xmlns=&quot;http://schemas.cordys.com/1.0/xmlstore&quot;&gt;&lt;tuple key=&quot;&quot; level=&quot;&quot; version=&quot;&quot; name=&quot;&quot; isFolder=&quot;false&quot; unconditional=&quot;false&quot; recursive=&quot;false&quot; pruneHierarchy=&quot;false&quot; lastModified=&quot;&quot; original=&quot;&quot;/&gt;&lt;/UpdateXMLObject&gt;&lt;/SOAP:Body&gt;&lt;/SOAP:Envelope&gt;"
+						wcpforms:class="v_layout"
+						wcpforms:size="411px auto"
+					/>
+					<xforms:group
+						appearance="controlbox"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+						id="controlbox1"
+						controltype="button"
+						wcpforms:layout="horizontal"
+						wcpforms:class="v_layout autoextent"
+						wcpforms:align="left_align"
+						wcpforms:size="410px auto">
+						<xforms:trigger
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+							id="btnUpload"
+							wcpforms:class="h_button"
+							wcpforms:size="11.91em 1.91em">
+							<xforms:label
+								textIdentifier="0027132C-F779-11E2-FAC8-E824B5E895D0">Load Overview</xforms:label>
+							<xforms:action
+								ev:event="xforms-activate">
+								<xforms:btnUpload_Click/>
+							</xforms:action>
+						</xforms:trigger>
+					</xforms:group>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[var randomExt = null;
+
+function btnUpload_Click(eventObject)
+{
+    uploadExport.request = uploadExport_request.XMLDocument;
+    uploadExport.onBeforeUpload = uploadExport_onBeforeUpload;
+    uploadExport.onUpload = uploadExport_onUpload;
+    uploadExport.uploadFile();
+}
+function uploadExport_onBeforeUpload(eventObject)
+{
+    var tupleNode = cordys.selectXMLNode(uploadExport.request, ".//*[local-name()='tuple']");  
+    randomExt = Math.floor((Math.random()*100000)+1);
+    cordys.setXMLAttribute(tupleNode, "", "key", "/com-cordys/coe/useradmin/export/CordysUsers"+randomExt); 
+}
+function uploadExport_onUpload(eventObject)
+{
+    var bb = 1;
+    var cc = bb;
+}]]>
+			</xformsscript>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>TestImport</taskDescription>
+	<taskName>TestImport</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			RuntimeDocumentID="0027132C-F779-11E2-FABE-F9CFA699F5D0">
+			<DocumentID>0027132C-F779-11E2-FABE-F9CFA699D5D0</DocumentID>
+			<Name>0027132C-F779-11E2-FABE-F9CFA699D5D0</Name>
+			<Description>0027132C-F779-11E2-FABE-F9CFA699D5D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-15T20:48:18.122</CreationDate>
+			<Notes/>
+			<Identifier>
+				<uri
+					id="0027132C-F779-11E2-FABE-F9CFA69A15D0"
+				/>
+			</Identifier>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FABE-F9CFA69875D0">
+			<DocumentID>0027132C-F779-11E2-FABE-F9CFA69855D0</DocumentID>
+			<Name>0027132C-F779-11E2-FABE-F9CFA69855D0</Name>
+			<Description>0027132C-F779-11E2-FABE-F9CFA69855D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-15T22:11:34.014</CreationDate>
+			<Notes/>
+			<UIRef>uploadExport</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC8-E824B5EB75D0">
+					<DocumentID>0027132C-F779-11E2-FAC8-E824B5EB55D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC8-E824B5EB55D0</Name>
+					<Description>0027132C-F779-11E2-FAC8-E824B5EB55D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T05:49:39.394</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC8-E824B5EB95D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FABE-F9CFA69B15D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC1-1FB0F1B755D0">
+			<DocumentID>0027132C-F779-11E2-FAC1-1FB0F1B735D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC1-1FB0F1B735D0</Name>
+			<Description>0027132C-F779-11E2-FAC1-1FB0F1B735D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-15T22:29:45.245</CreationDate>
+			<Notes/>
+			<UIRef>btnUpload</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC8-E824B5E875D0">
+					<DocumentID>0027132C-F779-11E2-FAC8-E824B5E855D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC8-E824B5E855D0</Name>
+					<Description>0027132C-F779-11E2-FAC8-E824B5E855D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T05:51:53.254</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC8-E824B5E895D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FABE-F9CFA69B15D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E2-FABE-F9CFA697D5D0">
+			<DocumentID>0027132C-F779-11E2-FABE-F9CFA697B5D0</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-15T22:11:34.011</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

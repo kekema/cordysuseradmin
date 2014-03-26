@@ -1,0 +1,39 @@
+<!--
+Configuration on synchronizing external directory users to Cordys LDAP.
+-->
+<UserSync>
+  <!-- include users from subgroups true or false -->
+  <IncludeSubgroups>false</IncludeSubgroups> 
+  <Groups>
+    <Group>
+      <dn>CN=Users,CN=Roles,CN=Partition1,DC=EkemaIT,DC=COM</dn>
+      <UserSearchRoot>CN=Users,CN=Partition1,DC=EkemaIT,DC=COM</UserSearchRoot>
+      <AssignRoles>
+        <Role>cn=Administrator,cn=Cordys@Work,cn=cordys,cn=defaultInst,o=Cordys</Role>
+        <Role>cn=Analyst,cn=Cordys@Work,cn=cordys,cn=defaultInst,o=Cordys</Role>
+        <Role>cn=Deployer,cn=Cordys@Work,cn=cordys,cn=defaultInst,o=Cordys</Role>
+        <Role>cn=Developer,cn=Cordys@Work,cn=cordys,cn=defaultInst,o=Cordys</Role>
+      </AssignRoles>
+    </Group>
+    <Group>
+      <dn>CN=Administrators,CN=Roles,CN=Partition1,DC=EkemaIT,DC=COM</dn>
+      <UserSearchRoot>CN=Users,CN=Partition1,DC=EkemaIT,DC=COM</UserSearchRoot>
+      <AssignRoles>
+        <Role>cn=Administrator,cn=Cordys@Work,cn=cordys,cn=defaultInst,o=Cordys</Role>
+        <Role>cn=Deployer,cn=Cordys@Work,cn=cordys,cn=defaultInst,o=Cordys</Role>
+        <Role>cn=Developer,cn=Cordys@Work,cn=cordys,cn=defaultInst,o=Cordys</Role>
+      </AssignRoles>
+    </Group>
+  </Groups>
+  <MaintainUsers>
+    <OnlyInsert>true</OnlyInsert>
+    <!-- only insert or also edit users -->
+    <NewUserConfig>
+      <AuthenticationType>custom</AuthenticationType>
+      <!-- either domain or custom -->
+      <DefaultPassword />
+      <!-- applicable only for custom authentication; if not specified it will be equal to the cn -->
+    </NewUserConfig>
+  </MaintainUsers>
+  <DeleteObsoleteUsers>false</DeleteObsoleteUsers>
+</UserSync>

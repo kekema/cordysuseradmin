@@ -1,0 +1,19 @@
+
+<QualifiedNameRoot
+	type="com.cordys.cws.namespace.qualifiedname.QualifiedNameRoot"
+	RuntimeDocumentID="0003FF74-9129-11E0-F5B2-F8BAC93F5F4F">
+	<DocumentID>0003FF74-9129-11E0-F5B2-F8BAC93F3F4F</DocumentID>
+	<Name>designtimeQNR for project</Name>
+	<Description>designtimeQNR for project</Description>
+	<CreatedBy>Administrator</CreatedBy>
+	<CreationDate>2011-07-20T09:22:44.667</CreationDate>
+	<Notes/>
+	<DesigntimeQNRFolder>
+		<uri
+			id="0003FF74-9129-11E0-F5B2-F8BAC93F7F4F"
+			path="Lab"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</DesigntimeQNRFolder>
+	<RuntimeQNRFolder/>
+</QualifiedNameRoot>

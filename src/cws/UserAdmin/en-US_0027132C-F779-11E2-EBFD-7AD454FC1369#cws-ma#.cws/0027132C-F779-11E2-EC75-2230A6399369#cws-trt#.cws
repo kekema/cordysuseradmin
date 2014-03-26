@@ -1,0 +1,24 @@
+
+<TranslatedText
+	xmlns=""
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E2-EC75-2230A639B369">
+	<DocumentID>0027132C-F779-11E2-EC75-2230A6399369</DocumentID>
+	<Name>0027132C-F779-11E2-EC75-2230A6399369</Name>
+	<Description>Delete users who are not existing in Ext directory anymore</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-01-21T09:05:28.068</CreationDate>
+	<Notes/>
+	<Text>Delete users who are not existing in Ext directory anymore</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FC5369"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E2-EC75-2230A6395369"
+		/>
+	</TextIdentifier>
+</TranslatedText>

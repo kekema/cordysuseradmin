@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="0027132C-F779-11E2-F782-060CA71715E8">
+	<DocumentID>0027132C-F779-11E2-F782-060CA716F5E8</DocumentID>
+	<Name>0027132C-F779-11E2-F782-060CA716F5E8</Name>
+	<Description>Button7</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-05-13T21:04:21.811</CreationDate>
+	<Notes/>
+	<DefaultText>Button7</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="0027132C-F779-11E2-F654-1862C9CBB211"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="0027132C-F779-11E2-F782-060CA71735E8"
+		/>
+	</Translations>
+</TextIdentifier>

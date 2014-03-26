@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E2-F87F-80A2D29C5D2A">
+	<DocumentID>0027132C-F779-11E2-F87F-80A2D29C3D2A</DocumentID>
+	<Name>0027132C-F779-11E2-F87F-80A2D29C3D2A</Name>
+	<Description>UITasks</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-05-23T22:57:37.665</CreationDate>
+	<Notes/>
+	<Text>UITasks</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-F654-1862C9CC3211"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E2-F87F-80A2D29BFD2A"
+		/>
+	</TextIdentifier>
+</TranslatedText>
