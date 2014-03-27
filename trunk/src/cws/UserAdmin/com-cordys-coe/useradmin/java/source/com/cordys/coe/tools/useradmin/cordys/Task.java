@@ -702,57 +702,60 @@ public class Task extends CordysObject
 	{
 		HashMap<String, ArrayList<String>> result = new HashMap<String, ArrayList<String>>();
 		
-		String namespace = "http://schemas.cordys.com/task/1.0/runtime/";
-        String methodName = "GetConfiguredTasks";
-        
-        SOAPRequestObject sro = new SOAPRequestObject(namespace, methodName, null, null);
-        
-        int response = 0;
-        ArrayList<Integer> paramNodes = new ArrayList<Integer>();
-        try 
-        {
-        	Document xmlDoc = BSF.getXMLDocument();
-        	for (String DN : DNs)
-        	{
-	        	int paramNode = xmlDoc.parseString("<ConfiguredTasks dn=\""+DN+"\"/>");
-	        	sro.addParameterAsXml(paramNode);
-	        	paramNodes.add(paramNode);
-        	}
-            response = sro.execute();
-			if (response != 0)
-			{
-		        int[] resultNodes = XPath.getMatchingNodes(".//tuple/old/ConfiguredTasks", null, response);
-		        for (int resultNode : resultNodes) 
-		        {
-		        	String DN = Node.getAttribute(resultNode, "dn");
-		        	ArrayList<String> taskIDs = new ArrayList<String>();
-			        int[] taskNodes = XPath.getMatchingNodes("./Task", null, resultNode);
-			        for (int taskNode : taskNodes) 
-			        {
-			        	String taskID = Node.getAttribute(taskNode, "id");
-			        	taskIDs.add(taskID);
-			        }
-			        result.put(DN, taskIDs);
-		        }
-			}
-        }
-        catch (Exception e)
-        {
-        	throw new CordysException("Not able to read assigned tasks for users/roles ", e);
-        }
-		finally
+		if (DNs.size() > 0)
 		{
-			if (response > 0)
+			String namespace = "http://schemas.cordys.com/task/1.0/runtime/";
+	        String methodName = "GetConfiguredTasks";
+	        
+	        SOAPRequestObject sro = new SOAPRequestObject(namespace, methodName, null, null);
+	        
+	        int response = 0;
+	        ArrayList<Integer> paramNodes = new ArrayList<Integer>();
+	        try 
+	        {
+	        	Document xmlDoc = BSF.getXMLDocument();
+	        	for (String DN : DNs)
+	        	{
+		        	int paramNode = xmlDoc.parseString("<ConfiguredTasks dn=\""+DN+"\"/>");
+		        	sro.addParameterAsXml(paramNode);
+		        	paramNodes.add(paramNode);
+	        	}
+	            response = sro.execute();
+				if (response != 0)
+				{
+			        int[] resultNodes = XPath.getMatchingNodes(".//tuple/old/ConfiguredTasks", null, response);
+			        for (int resultNode : resultNodes) 
+			        {
+			        	String DN = Node.getAttribute(resultNode, "dn");
+			        	ArrayList<String> taskIDs = new ArrayList<String>();
+				        int[] taskNodes = XPath.getMatchingNodes("./Task", null, resultNode);
+				        for (int taskNode : taskNodes) 
+				        {
+				        	String taskID = Node.getAttribute(taskNode, "id");
+				        	taskIDs.add(taskID);
+				        }
+				        result.put(DN, taskIDs);
+			        }
+				}
+	        }
+	        catch (Exception e)
+	        {
+	        	throw new CordysException("Not able to read assigned tasks for users/roles ", e);
+	        }
+			finally
 			{
-				Node.delete(response);
-				response = 0;
+				if (response > 0)
+				{
+					Node.delete(response);
+					response = 0;
+				}
+				for (int paramNode : paramNodes)
+				{
+					Node.delete(paramNode);
+				}
+				paramNodes.clear();
 			}
-			for (int paramNode : paramNodes)
-			{
-				Node.delete(paramNode);
-			}
-			paramNodes.clear();
-		}		
+		}
 		return result;
 	}	
 }
