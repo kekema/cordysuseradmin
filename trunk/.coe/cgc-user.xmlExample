@@ -7,7 +7,7 @@
     </configuration>
     <configuration name="EkemaITLocal" type="webgateway">
         <dausername>cordysadm</dausername>
-        <dapassword>OBF:1to41u9p1vo41thb1vmy1u9t1toq</dapassword>
+        <dapassword>OBF:</dapassword>
         <dadomain/>
         <organization-name>EkemaIT</organization-name>
         <organizational-user-name>cordysadm</organizational-user-name>
