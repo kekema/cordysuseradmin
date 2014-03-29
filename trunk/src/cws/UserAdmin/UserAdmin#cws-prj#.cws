@@ -22,8 +22,8 @@
 			<CreatedBy>cordysadm</CreatedBy>
 			<CreationDate>2013-01-16T15:17:20.737</CreationDate>
 			<Notes/>
-			<BuildNumber>4</BuildNumber>
-			<ISVPackageFileName>EkemaIT UserAdmin 1.0.4</ISVPackageFileName>
+			<BuildNumber>6</BuildNumber>
+			<ISVPackageFileName>EkemaIT UserAdmin 1.0.6</ISVPackageFileName>
 			<ISVPackageOwner>EkemaIT</ISVPackageOwner>
 			<PackageForRuntime>true</PackageForRuntime>
 			<PostISVLoaderInformation/>
