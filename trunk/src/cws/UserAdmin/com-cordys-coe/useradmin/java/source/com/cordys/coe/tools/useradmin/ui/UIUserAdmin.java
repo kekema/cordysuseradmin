@@ -4,7 +4,9 @@
 
 package com.cordys.coe.tools.useradmin.ui;
 
+import com.cordys.coe.tools.useradmin.cordys.CordysInstallation;
 import com.cordys.coe.tools.useradmin.cordys.CordysUser;
+import com.cordys.coe.tools.useradmin.cordys.CordysVersion;
 import com.cordys.coe.tools.useradmin.exception.UserAdminException;
 import com.cordys.cpc.bsf.busobject.BSF;
 import com.cordys.cpc.bsf.busobject.BusObjectConfig;
@@ -33,6 +35,16 @@ public class UIUserAdmin extends UIUserAdminBase
         if (!CordysUser.userIsOrgAdmin(BSF.getUser()))
         {
         	throw new UserAdminException("You need to be an Organizational Admin to use the User Admin.");
+        }
+        else
+        {
+        	CordysVersion cordysVersion = CordysInstallation.getVersion();
+        	int major = cordysVersion.getIntMajor();
+        	int minor = cordysVersion.getIntMinor();
+        	if ((major != 4) || (minor != 2))
+        	{
+        		throw new UserAdminException("Platform version is " + cordysVersion.getFormattedExternal() + " - this version of User Admin supports Cordys 4.2");
+        	}
         }
     }
 

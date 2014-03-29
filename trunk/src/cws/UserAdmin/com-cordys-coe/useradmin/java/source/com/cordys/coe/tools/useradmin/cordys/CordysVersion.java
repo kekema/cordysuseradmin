@@ -121,6 +121,28 @@ public class CordysVersion
 	
 	public String getFormattedExternal()
 	{
-		return "Cordys " + getIntMajor() + "." + getIntMinor() + " CU" + getIntCU();
+		String result = "";
+		int major = getIntMajor();
+		int minor = getIntMinor();
+		if ((major <= 4) && (minor <= 3))
+		{
+			result = "Cordys " + getIntMajor() + "." + getIntMinor();
+			if (getIntCU() != 0)
+			{
+				result = result + " CU" + getIntCU();
+			}
+		}
+		else
+		{
+			if ((major == 4) && (minor == 4))
+			{
+				result = "OpenText Cordys 10.5";
+				if (getIntCU() != 0)
+				{
+					result = result + " CU" + getIntCU();
+				}				
+			}
+		}
+		return result;
 	}
 }
