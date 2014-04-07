@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="0027132C-F779-11E3-E9BF-9AC6AD4A3335">
+	<DocumentID>0027132C-F779-11E3-E9BF-9AC6AD4A1335</DocumentID>
+	<Name>0027132C-F779-11E3-E9BF-9AC6AD4A1335</Name>
+	<Description>Import / Update User in Cordys</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-11-15T13:52:19.786</CreationDate>
+	<Notes/>
+	<DefaultText>Import / Update User in Cordys</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FCD369"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="0027132C-F779-11E3-E9BF-9AC6AD4A5335"
+		/>
+	</Translations>
+</TextIdentifier>

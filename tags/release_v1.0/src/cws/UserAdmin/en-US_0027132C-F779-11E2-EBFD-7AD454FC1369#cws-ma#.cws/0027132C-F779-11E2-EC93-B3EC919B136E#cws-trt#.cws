@@ -1,0 +1,24 @@
+
+<TranslatedText
+	xmlns=""
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E2-EC93-B3EC919B336E">
+	<DocumentID>0027132C-F779-11E2-EC93-B3EC919B136E</DocumentID>
+	<Name>0027132C-F779-11E2-EC93-B3EC919B136E</Name>
+	<Description>Increase counter</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-01-22T14:16:38.362</CreationDate>
+	<Notes/>
+	<Text>Increase counter</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FC5369"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E2-EC93-B3EC919AD36E"
+		/>
+	</TextIdentifier>
+</TranslatedText>

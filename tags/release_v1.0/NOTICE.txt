@@ -1,0 +1,5 @@
+Ekema IT User Admin for Cordys - cordysuseradmin
+Copyright 2014 Ekema IT
+
+This product includes software developed at Ekema IT (http://www.ekema-it.com)
+

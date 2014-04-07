@@ -1,0 +1,24 @@
+
+<TranslatedText
+	xmlns=""
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E2-EC75-2230A6359369">
+	<DocumentID>0027132C-F779-11E2-EC75-2230A6357369</DocumentID>
+	<Name>0027132C-F779-11E2-EC75-2230A6357369</Name>
+	<Description>Delete obsolete users</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-01-21T09:13:29.915</CreationDate>
+	<Notes/>
+	<Text>Delete obsolete users</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FC5369"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E2-EC75-2230A6353369"
+		/>
+	</TextIdentifier>
+</TranslatedText>

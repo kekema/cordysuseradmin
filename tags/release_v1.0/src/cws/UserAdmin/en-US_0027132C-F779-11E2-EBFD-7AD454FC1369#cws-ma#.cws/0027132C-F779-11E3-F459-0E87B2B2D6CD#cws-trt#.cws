@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E3-F459-0E87B2B2F6CD">
+	<DocumentID>0027132C-F779-11E3-F459-0E87B2B2D6CD</DocumentID>
+	<Name>0027132C-F779-11E3-F459-0E87B2B2D6CD</Name>
+	<Description>Old password</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2014-03-03T11:49:45.757</CreationDate>
+	<Notes/>
+	<Text>Old password</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FC5369"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E3-F459-0E87B2B296CD"
+		/>
+	</TextIdentifier>
+</TranslatedText>

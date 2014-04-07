@@ -1,0 +1,20 @@
+
+<WebSource
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.websource.WebSource"
+	RuntimeDocumentID="0027132C-F779-11E3-F2B0-0BE192B617C6">
+	<DocumentID>0027132C-F779-11E3-F2B0-0BE192B5F7C6</DocumentID>
+	<Name>UserAdmin Web Library Definition</Name>
+	<Description>UserAdmin Web Library Definition</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2014-02-14T14:01:39.775</CreationDate>
+	<Notes/>
+	<NamespacePrefix></NamespacePrefix>
+	<SourceFolder>
+		<uri
+			id="0027132C-F779-11E3-F2AE-B66E4CEA37C6"
+			path="UserAdmin/com-cordys-coe/useradmin/web"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+</WebSource>
