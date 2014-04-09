@@ -1,0 +1,275 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="0027132C-F779-11E2-FAC2-7ECE975D75D0">
+	<DocumentID>0027132C-F779-11E2-FAC2-7ECE975D95D0</DocumentID>
+	<Name>ExportUsers</Name>
+	<Description>Export Users</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-06-16T05:40:31.179</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<xml
+					xmlns="">
+					<xml
+						id="downloadUsers_request">
+						<SOAP:Envelope
+							xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+							<SOAP:Body>
+								<ExportCordysUsersBase64
+									xmlns="http://schemas.cordys.com/coe/useradmin/1.0"
+									preserveSpace="no"
+									qAccess="0"
+									qValues=""
+								/>
+							</SOAP:Body>
+						</SOAP:Envelope>
+					</xml>
+				</xml>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<xforms:label
+						appearance="richtext"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsRichtext"
+						id="rte1"
+						textIdentifier="0027132C-F779-11E2-FAC8-E824B5EF95D0"
+						wcpforms:class="v_layout"
+						wcpforms:size="819px 21px">
+						<![CDATA[Exports the organizational users to a file, including roles, tasks en team assignments. Upon import, it can be selected which users to import.]]>
+					</xforms:label>
+					<xforms:group
+						appearance="controlbox"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+						id="controlbox1"
+						controltype="button"
+						wcpforms:layout="horizontal"
+						wcpforms:class="v_layout autoextent"
+						wcpforms:align="left_align"
+						wcpforms:size="148px auto">
+						<xforms:trigger
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+							id="btnDownload"
+							wcpforms:class="h_button"
+							wcpforms:size="null 2em">
+							<xforms:label
+								textIdentifier="0027132C-F779-11E2-FAC8-E824B5F175D0">Export..</xforms:label>
+							<xforms:action
+								ev:event="xforms-activate">
+								<xforms:btnDownload_Click/>
+							</xforms:action>
+						</xforms:trigger>
+					</xforms:group>
+					<div
+						xmlns="http://www.w3.org/2002/xforms/cr"
+						xformextendedname="download"
+						id="downloadUsers"
+						namespace="cas.xforms.runtimelibrary.Download"
+						hidden="true"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.extensions.Download"
+						model=""
+						searchPath="Base64"
+						fileName="test"
+						request=""
+						openInNewWindow="false"
+						downloadRequestXML="&lt;SOAP:Envelope xmlns:SOAP=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP:Body&gt;&lt;ExportCordysUsersBase64 xmlns=&quot;http://schemas.cordys.com/coe/useradmin/1.0&quot; preserveSpace=&quot;no&quot; qAccess=&quot;0&quot; qValues=&quot;&quot;/&gt;&lt;/SOAP:Body&gt;&lt;/SOAP:Envelope&gt;"
+						contentType="application/text"
+						wcpforms:class="f_layout"
+						wcpforms:layout="free"
+						wcpforms:size="150px 100px"
+						wcpforms:position="50px 190px">
+						<xforms:action
+							xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+							xmlns:ev="http://www.w3.org/2001/xml-events"
+							external="true"
+							ev:event="ondownloaderror">
+							<xforms:downloadUsers_ondownloaderror/>
+						</xforms:action>
+					</div>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[/*
+ * Download an export of Cordys org users including role, task and team assignments
+ */
+function btnDownload_Click(eventObject)
+{
+    downloadUsers.fileName = "CordysUsers-" + application.organization.substring(2, application.organization.indexOf(','));
+    var requestxml = downloadUsers_request.XMLDocument;
+    downloadUsers.request = requestxml;
+    downloadUsers.downloadFile();
+}
+
+function downloadUsers_ondownloaderror(eventObject)
+{
+    var response = eventObject.response;
+    if (response != null)
+    {
+        var faultStringNode = cordys.selectXMLNode(response, ".//*[local-name()='faultstring']");
+        if (faultStringNode != null)
+        {
+            var errormessage = cordys.getTextContent(faultStringNode);
+            application.showError(errormessage);        
+        }
+    }
+}]]>
+			</xformsscript>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>Export Users</taskDescription>
+	<taskName>ExportUsers</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC8-E824B5F335D0">
+			<DocumentID>0027132C-F779-11E2-FAC8-E824B5F315D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC8-E824B5F315D0</Name>
+			<Description>0027132C-F779-11E2-FAC8-E824B5F315D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T05:40:31.18</CreationDate>
+			<Notes/>
+			<Identifier>
+				<uri
+					id="0027132C-F779-11E2-FAC8-E824B5F355D0"
+				/>
+			</Identifier>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC2-7ECE975CF5D0">
+			<DocumentID>0027132C-F779-11E2-FAC2-7ECE975D15D0</DocumentID>
+			<Name>0027132C-F779-11E2-FABC-92F4901A55D0</Name>
+			<Description>0027132C-F779-11E2-FABC-92F4901A55D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T05:40:31.179</CreationDate>
+			<Notes/>
+			<UIRef>btnDownload</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC8-E824B5F155D0">
+					<DocumentID>0027132C-F779-11E2-FAC8-E824B5F135D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC8-E824B5F135D0</Name>
+					<Description>0027132C-F779-11E2-FAC8-E824B5F135D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T05:40:51.703</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC8-E824B5F175D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC2-7ECE975D95D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC8-E824B5EF35D0">
+			<DocumentID>0027132C-F779-11E2-FAC8-E824B5EF15D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC8-E824B5EF15D0</Name>
+			<Description>0027132C-F779-11E2-FAC8-E824B5EF15D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T05:45:57.391</CreationDate>
+			<Notes/>
+			<UIRef>rte1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC8-E824B5EF75D0">
+					<DocumentID>0027132C-F779-11E2-FAC8-E824B5EF55D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC8-E824B5EF55D0</Name>
+					<Description>0027132C-F779-11E2-FAC8-E824B5EF55D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T05:45:57.391</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC8-E824B5EF95D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC2-7ECE975D95D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC2-7ECE975D35D0">
+			<DocumentID>0027132C-F779-11E2-FAC2-7ECE975D55D0</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T05:40:31.179</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E3-F5B7-536CB322DF70">
+	<DocumentID>0027132C-F779-11E3-F5B7-536CB322BF70</DocumentID>
+	<Name>0027132C-F779-11E3-F5B7-536CB322BF70</Name>
+	<Description>&lt;SPAN style=&quot;FONT-FAMILY: arial,helvetica,sans-serif; FONT-SIZE: small&quot;&gt;For team assignments, team/role combinations will be populated in the unassigned list as per the roles assigned to the user.&lt;/SPAN&gt;</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2014-03-17T14:39:23.692</CreationDate>
+	<Notes/>
+	<Text>&lt;SPAN style=&quot;FONT-FAMILY: arial,helvetica,sans-serif; FONT-SIZE: small&quot;&gt;For team assignments, team/role combinations will be populated in the unassigned list as per the roles assigned to the user.&lt;/SPAN&gt;</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FC5369"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E3-F5B7-536CB3227F70"
+		/>
+	</TextIdentifier>
+</TranslatedText>

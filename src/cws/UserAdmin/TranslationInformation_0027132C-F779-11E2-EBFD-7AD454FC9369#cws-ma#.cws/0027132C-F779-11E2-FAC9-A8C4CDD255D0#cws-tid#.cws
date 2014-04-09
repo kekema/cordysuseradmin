@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDD275D0">
+	<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDD255D0</DocumentID>
+	<Name>0027132C-F779-11E2-FAC9-A8C4CDD255D0</Name>
+	<Description>Import Users</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-06-16T06:23:36.617</CreationDate>
+	<Notes/>
+	<DefaultText>Import Users</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FCD369"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="0027132C-F779-11E2-FAC9-A8C4CDD295D0"
+		/>
+	</Translations>
+</TextIdentifier>
