@@ -43,6 +43,7 @@ public class CordysUser
 	private String company;
 	private String registeredAddress;
 	private String telephoneNumber;
+	private String telephoneNumber2;	
 	private String facsimileTelephoneNumber;
 	private String email;
 	private String labeleduri;
@@ -132,6 +133,15 @@ public class CordysUser
 	{
 		this.telephoneNumber = telephoneNumber;
 	}
+	
+	/**
+	 * Set the telephone number2
+	 * @param telephoneNumber2
+	 */
+	public void setTelephoneNumber2(String telephoneNumber2)
+	{
+		this.telephoneNumber2 = telephoneNumber2;
+	}	
 	
 	/**
 	 * Set the facsimile telephone number
@@ -321,6 +331,15 @@ public class CordysUser
 	{
 		return this.telephoneNumber;
 	}
+	
+	/**
+	 * Telephone Number2
+	 * @return
+	 */
+	public String getTelephoneNumber2()
+	{
+		return this.telephoneNumber2;
+	}	
 	
 	/**
 	 * Facsimile TelephoneNumber
@@ -524,9 +543,18 @@ public class CordysUser
             {
             	attrs.add(new LDAPAttribute("registeredAddress", this.registeredAddress));
             }
-            if (Util.isSet(this.telephoneNumber))
+            if (Util.isSet(this.telephoneNumber) || Util.isSet(this.telephoneNumber2))
             {
-            	attrs.add(new LDAPAttribute("telephoneNumber", this.telephoneNumber));
+            	LDAPAttribute attr = new LDAPAttribute("telephoneNumber");
+            	if (Util.isSet(this.telephoneNumber))
+            	{
+            		attr.addValue(telephoneNumber);
+            	}
+            	if (Util.isSet(this.telephoneNumber2))
+            	{
+            		attr.addValue(telephoneNumber2);
+            	}            			
+            	attrs.add(attr);
             }
             if (Util.isSet(this.facsimileTelephoneNumber))
             {
@@ -1072,10 +1100,16 @@ public class CordysUser
     		registeredAddress = Node.getData(nNode);	
     	}	
     	String telephoneNumber = null;
-    	nNode = XPath.getFirstMatch("./telephoneNumber/string", null, authUserNode);
+    	nNode = XPath.getFirstMatch("./telephoneNumber/string[1]", null, authUserNode);
     	if (nNode > 0)
     	{
     		telephoneNumber = Node.getData(nNode);	
+    	}	
+    	String telephoneNumber2 = null;
+    	nNode = XPath.getFirstMatch("./telephoneNumber/string[2]", null, authUserNode);
+    	if (nNode > 0)
+    	{
+    		telephoneNumber2 = Node.getData(nNode);	
     	}		
     	String facsimileTelephoneNumber = null;
     	nNode = XPath.getFirstMatch("./facsimileTelephoneNumber/string", null, authUserNode);
@@ -1109,6 +1143,7 @@ public class CordysUser
     	cordysUser.setCompany(company);
     	cordysUser.setRegisteredAddress(registeredAddress);
     	cordysUser.setTelephoneNumber(telephoneNumber);
+    	cordysUser.setTelephoneNumber2(telephoneNumber2);		
     	cordysUser.setFacsimileTelephoneNumber(facsimileTelephoneNumber);
     	cordysUser.setEmail(mail);
     	cordysUser.setLabeleduri(labeleduri);   

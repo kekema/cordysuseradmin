@@ -72,7 +72,7 @@ public class UIUser extends UIUserBase
         		this.setCompany(cloneCordysUser.getCompany());
         		this.setAddress(cloneCordysUser.getRegisteredAddress());
         		this.setTelephone(cloneCordysUser.getTelephoneNumber());
-        		this.setTelephone2(cloneCordysUser.getFacsimileTelephoneNumber());
+        		this.setTelephone2(cloneCordysUser.getTelephoneNumber2());
         		this.setEmail(cloneCordysUser.getEmail());
         		this.setUserHomePage(cloneCordysUser.getLabeledURI());     
         		this.setCloneRoles(false);
@@ -180,7 +180,7 @@ public class UIUser extends UIUserBase
 		uiUser.setCompany(cordysUser.getCompany());
 		uiUser.setAddress(cordysUser.getRegisteredAddress());
 		uiUser.setTelephone(cordysUser.getTelephoneNumber());
-		uiUser.setTelephone2(cordysUser.getFacsimileTelephoneNumber());
+		uiUser.setTelephone2(cordysUser.getTelephoneNumber2());
 		uiUser.setEmail(cordysUser.getEmail());
 		uiUser.setUserHomePage(cordysUser.getLabeledURI());
 		return uiUser;
@@ -434,7 +434,7 @@ public class UIUser extends UIUserBase
 		cordysUser.setCompany(this.getCompany());
 		cordysUser.setRegisteredAddress(this.getAddress());
 		cordysUser.setTelephoneNumber(this.getTelephone());
-		cordysUser.setFacsimileTelephoneNumber(this.getTelephone2());
+		cordysUser.setTelephoneNumber2(this.getTelephone2());
 		cordysUser.setEmail(this.getEmail());
 		cordysUser.setLabeleduri(this.getUserHomePage());
 		if (inSystemOrg())
@@ -529,7 +529,7 @@ public class UIUser extends UIUserBase
 			    			}	
 			    			case UA_UPDATE_TELEPHONE2:
 			    			{
-			    				cordysUser.setFacsimileTelephoneNumber(newValue);
+			    				cordysUser.setTelephoneNumber2(newValue);
 			    				break;
 			    			}			    			
 			    		}

@@ -397,6 +397,8 @@ public class ImportExport extends ImportExportBase
     		// only include existing roles
     		ArrayList<String> exportRoles = new ArrayList<String>(Arrays.asList(role.getStringValueArray()));
     		ArrayList<String> importRoles = new ArrayList<String>();
+    		String defaultRole = "cn=everyoneIn" + Util.getCurrentOrgName() + ",cn=organizational roles," + BSF.getOrganization();
+    		importRoles.add(defaultRole);			
             for (String roleDN : exportRoles)
             {
             	if (LDAP.entryExists(roleDN))
