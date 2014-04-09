@@ -1,0 +1,24 @@
+
+<TranslatedText
+	xmlns=""
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E2-EC10-7818E1DDD369">
+	<DocumentID>0027132C-F779-11E2-EC10-7818E1DDB369</DocumentID>
+	<Name>0027132C-F779-11E2-EC10-7818E1DDB369</Name>
+	<Description>Get GroupMembers from Ext Directory</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-01-17T11:44:23.847</CreationDate>
+	<Notes/>
+	<Text>Get GroupMembers from Ext Directory</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FC5369"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E2-EC10-7818E1DD7369"
+		/>
+	</TextIdentifier>
+</TranslatedText>

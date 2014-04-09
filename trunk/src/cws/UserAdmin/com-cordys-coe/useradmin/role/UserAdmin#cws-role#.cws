@@ -1,0 +1,34 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	RuntimeDocumentID="0027132C-F779-11E3-F50B-23BFA5D0F6CD">
+	<DocumentID>0027132C-F779-11E3-F50B-23BFA5D0D6CD</DocumentID>
+	<Name>UserAdmin</Name>
+	<Description>UserAdmin</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2014-03-10T13:38:45.404</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<isFunctionalRole>false</isFunctionalRole>
+	<type>Application</type>
+	<Subroles/>
+	<configuredTasks>
+		<ConfiguredTask
+			type="com.cordys.task.ConfiguredTask"
+			RuntimeDocumentID="0027132C-F779-11E3-F50B-23BFA5CFF6CD">
+			<DocumentID>0027132C-F779-11E3-F50B-23BFA5CFD6CD</DocumentID>
+			<Name>UserAdmin_0027132C-F779-11E3-F50B-23BFA5CFD6CD</Name>
+			<Description>User Admin_0027132C-F779-11E3-F50B-23BFA5CFD6CD</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-10T13:39:16.696</CreationDate>
+			<Notes/>
+			<configuredTaskParts/>
+			<uiTask>
+				<uri
+					id="0027132C-F779-11E3-EA43-6CC22BB2F208"
+				/>
+			</uiTask>
+		</ConfiguredTask>
+	</configuredTasks>
+</RoleDesignTime>

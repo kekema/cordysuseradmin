@@ -1,0 +1,1027 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="0027132C-F779-11E2-FAC9-1AFB63DC55D0">
+	<DocumentID>0027132C-F779-11E2-FAC9-1AFB63DC75D0</DocumentID>
+	<Name>ImportUsers</Name>
+	<Description>Import Users</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-06-16T06:23:36.619</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<xforms:model
+					xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+					xmlns:ev="http://www.w3.org/2001/xml-events"
+					xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+					id="UIImportUserModel"
+					wcpforms:businessElement="tns:UIImportUser"
+					wcpforms:automatic="false"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							src="http://schemas.cordys.com/coe/useradmin/ui/1.0/GetUIImportUserObjects"
+							operationName="GetUIImportUserObjects"
+							type="get"
+							wcpforms:wsguid="0027132C-F779-11E2-FAC9-6F113DD495D0">
+							<Key
+								xmlns="http://schemas.cordys.com/coe/useradmin/ui/1.0"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/coe/useradmin/ui/1.0</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/coe/useradmin/ui/1.0</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+					<wcpforms:instanceschema/>
+					<xforms:action
+						ev:event="xforms-onrequest">
+						<xforms:UIImportUserModel_OnRequest/>
+					</xforms:action>
+				</xforms:model>
+				<xforms:model
+					xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+					xmlns:ev="http://www.w3.org/2001/xml-events"
+					xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+					id="ImportCordysUserModel"
+					wcpforms:businessElement="tns:ImportCordysUserResponse"
+					wcpforms:automatic="false"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:nontransactional="true"
+					singleTransaction="false"
+					promptToSave="true"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							src="http://schemas.cordys.com/coe/useradmin/1.0/ImportCordysUser"
+							operationName="ImportCordysUser"
+							type="get"
+							wcpforms:wsguid="0027132C-F779-11E2-FAF3-B6EFEE37F237">
+							<XmlStoreKey
+								xmlns="http://schemas.cordys.com/coe/useradmin/1.0"
+							/>
+							<OrgUserDN
+								xmlns="http://schemas.cordys.com/coe/useradmin/1.0"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/coe/useradmin/1.0</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/coe/useradmin/1.0</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+					<wcpforms:instanceschema/>
+					<xforms:action
+						ev:event="xforms-onrequest">
+						<xforms:ImportCordysUserModel_OnRequest/>
+					</xforms:action>
+					<xforms:action
+						ev:event="xforms-onresponse">
+						<xforms:ImportCordysUserModel_OnResponse/>
+					</xforms:action>
+					<xforms:action
+						ev:event="xforms-onsoapfault">
+						<xforms:ImportCordysUserModel_OnSOAPFault/>
+					</xforms:action>
+				</xforms:model>
+				<xforms:model
+					xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+					xmlns:ev="http://www.w3.org/2001/xml-events"
+					xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+					id="RemoveExportUploadModel"
+					wcpforms:businessElement="tns:RemoveExportUploadResponse"
+					wcpforms:automatic="false"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:nontransactional="true"
+					singleTransaction="false"
+					promptToSave="true"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							src="http://schemas.cordys.com/coe/useradmin/1.0/RemoveExportUpload"
+							operationName="RemoveExportUpload"
+							type="get"
+							wcpforms:wsguid="0027132C-F779-11E3-F5BE-B406C0AFDF70">
+							<XmlStoreKey
+								xmlns="http://schemas.cordys.com/coe/useradmin/1.0"
+							/>
+							<LastModified
+								xmlns="http://schemas.cordys.com/coe/useradmin/1.0"
+							/>
+							<Level
+								xmlns="http://schemas.cordys.com/coe/useradmin/1.0"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/coe/useradmin/1.0</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/coe/useradmin/1.0</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+					<wcpforms:instanceschema/>
+					<xforms:action
+						ev:event="xforms-onrequest">
+						<xforms:RemoveExportUploadModel_OnRequest/>
+					</xforms:action>
+					<xforms:action
+						ev:event="xforms-onresponse">
+						<xforms:RemoveExportUploadModel_OnResponse/>
+					</xforms:action>
+				</xforms:model>
+				<xml
+					xmlns="">
+					<xml
+						id="uploadExport_request">
+						<SOAP:Envelope
+							xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+							<SOAP:Body>
+								<UpdateXMLObject
+									xmlns="http://schemas.cordys.com/1.0/xmlstore">
+									<tuple>
+										<new>Upload:FileContent1</new>
+									</tuple>
+								</UpdateXMLObject>
+							</SOAP:Body>
+						</SOAP:Envelope>
+					</xml>
+				</xml>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<div
+						xmlns="http://www.w3.org/2002/xforms/cr"
+						xformextendedname="upload"
+						id="uploadExport"
+						fileCount="1"
+						visible="true"
+						encode="false"
+						multiple="single"
+						namespace="cas.xforms.runtimelibrary.Upload"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.extensions.Upload"
+						tabIndex=""
+						model=""
+						xql=""
+						fileContent=""
+						request="UpdateXMLObject"
+						xmlcontent="true"
+						showStatus="true"
+						label="Export File"
+						labelAlign="v_label autosuggest"
+						labelWidth="79"
+						requestSchema="uploadExport_request"
+						uploadRequestXML="&lt;SOAP:Envelope xmlns:SOAP=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP:Body&gt;&lt;UpdateXMLObject xmlns=&quot;http://schemas.cordys.com/1.0/xmlstore&quot;&gt;&lt;tuple key=&quot;&quot; level=&quot;&quot; version=&quot;&quot; name=&quot;&quot; isFolder=&quot;false&quot; unconditional=&quot;false&quot; recursive=&quot;false&quot; pruneHierarchy=&quot;false&quot; lastModified=&quot;&quot; original=&quot;&quot;/&gt;&lt;/UpdateXMLObject&gt;&lt;/SOAP:Body&gt;&lt;/SOAP:Envelope&gt;"
+						wcpforms:class="v_layout"
+						wcpforms:size="411px auto">
+						<xforms:action
+							xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+							xmlns:ev="http://www.w3.org/2001/xml-events"
+							external="true"
+							ev:event="onUpload">
+							<xforms:uploadExport_onUpload/>
+						</xforms:action>
+					</div>
+					<xforms:group
+						appearance="controlbox"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+						id="controlbox1"
+						controltype="button"
+						wcpforms:layout="horizontal"
+						wcpforms:class="v_layout autoextent"
+						wcpforms:align="left_align"
+						wcpforms:size="410px auto">
+						<xforms:trigger
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+							id="btnUpload"
+							wcpforms:class="h_button"
+							wcpforms:size="11.91em 1.91em">
+							<xforms:label
+								textIdentifier="0027132C-F779-11E2-FAC8-E824B5E895D0">Load Overview</xforms:label>
+							<xforms:action
+								ev:event="xforms-activate">
+								<xforms:btnUpload_Click/>
+							</xforms:action>
+						</xforms:trigger>
+					</xforms:group>
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group1"
+						wcpforms:layout="horizontal"
+						wcpforms:class="v_layout"
+						wcpforms:size="795px 572px"
+						wcpforms:labelalign="ontop">
+						<xforms:repeat
+							wcpforms:displayContextMenu="true"
+							wcpforms:toggleColumns="true"
+							wcpforms:movableColumns="false"
+							wcpforms:saveState="false"
+							wcpforms:autoInsert="true"
+							wcpforms:minRows="5"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsTable"
+							id="tblUsers"
+							model="UIImportUserModel"
+							synchronizedDialogFrame="main"
+							isNavigationEnabled="true"
+							wcpforms:gridtype="displaygrid"
+							wcpforms:checkboxes="true"
+							wcpforms:layout="vertical"
+							wcpforms:class="h_layout"
+							wcpforms:size="574px 554px">
+							<xforms:input
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+								id="description"
+								ref="tns:Description"
+								wcpforms:textalign="left_align"
+								doEBIValidate="false"
+								wcpforms:size="222px 100%">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E2-F947-425E9CE57279">User</xforms:label>
+							</xforms:input>
+							<xforms:select1
+								appearance="check"
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsCheck"
+								id="isexistinguser"
+								ref="tns:IsExistingUser"
+								wcpforms:textalign="right_align"
+								doEBIValidate="false"
+								wcpforms:size="100px 100%">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E2-FAC9-A8C4CDCAF5D0">Exists</xforms:label>
+								<xforms:item>
+									<xforms:label>true</xforms:label>
+									<xforms:value>true</xforms:value>
+								</xforms:item>
+								<xforms:item>
+									<xforms:label>false</xforms:label>
+									<xforms:value>false</xforms:value>
+								</xforms:item>
+							</xforms:select1>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="outStatus"
+								doEBIValidate="false"
+								wcpforms:size="auto 100%">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E2-F948-7611CEBF1279">Status</xforms:label>
+							</xforms:output>
+						</xforms:repeat>
+						<xforms:group
+							appearance="controlbox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+							id="controlbox2"
+							controltype="button"
+							wcpforms:layout="vertical"
+							wcpforms:class="h_layout"
+							wcpforms:align="left_align"
+							wcpforms:size="22.08% 73px">
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnImport"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E2-FAC9-A8C4CDC9F5D0">Import</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnImport_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnCancel"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-F37B-D9E15C73B7C6">Cancel</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnCancel_Click/>
+								</xforms:action>
+							</xforms:trigger>
+						</xforms:group>
+					</xforms:group>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[var MAX_ERRORS = 3;
+
+var xmlKey = null;
+var xmlStoreTupleNode = null;
+var currentRownr = 0;
+var currentOrgUserDN = null;
+var statusCleared = true;
+var numberOfErrors = 0;
+var cancelHit = false;
+
+/*
+ * Upload the selected file to xmlstore
+  */
+function btnUpload_Click(eventObject)
+{
+    if (uploadExport_Form.firstChild.value != uploadExport_Form.firstChild.defaultValue)
+    {
+        clearStatus();
+        btnImport.disable();
+        removeAnyPreviousUploadedFile();
+        uploadExport.request = uploadExport_request.XMLDocument;
+        uploadExport.onBeforeUpload = uploadExport_onBeforeUpload; 
+        uploadExport.onUpload = uploadExport_onUpload;                // didn't work in Chrome, so also set in properties of uploadExport
+        uploadExport.uploadFile();
+    }
+    else
+    {
+        application.notify("Pls browse and select the file to be imported.");
+    }
+}
+
+/*
+ * Give random name
+ */
+function uploadExport_onBeforeUpload(eventObject)
+{
+    var tupleNode = cordys.selectXMLNode(uploadExport.request, ".//*[local-name()='tuple']");  
+    var randomExt = Math.floor((Math.random()*100000)+1);
+    xmlKey = "/com-cordys/coe/useradmin/export/CordysUsers"+randomExt;
+    cordys.setXMLAttribute(tupleNode, "", "key", xmlKey);
+}
+
+/*
+ * Get all users in export file
+ */
+function uploadExport_onUpload(eventObject)
+{
+    var response = eventObject.response;
+    var tupleNode = cordys.selectXMLNode(response, ".//*[local-name()='UpdateXMLObjectResponse']/*[local-name()='tuple']");
+    if (tupleNode != null)
+    {
+        xmlStoreTupleNode = tupleNode.cloneNode(true);
+    }
+    UIImportUserModel.reset();
+    var tblUserRows = tblUsers.getRows();     
+    var noUsers = tblUserRows.length;  
+    if (noUsers > 0)
+    {
+        btnImport.enable();
+    }
+}
+
+function UIImportUserModel_OnRequest(eventObject)
+{
+    if (xmlKey != null)
+    {
+        var request = eventObject.request;
+        var keyNode = cordys.selectXMLNode(request, ".//*[local-name()='Key']");
+        cordys.setTextContent(keyNode, xmlKey);    
+    }
+}
+
+/*
+ * Kickoff importing users
+ */
+function btnImport_Click(eventObject)
+{
+    var checkedRows = tblUsers.getCheckedRows();
+    if (checkedRows.length > 0)
+    {
+        btnImport.disable();
+        btnUpload.disable();
+        btnCancel.enable();
+        cancelHit = false;
+        clearStatus();
+        currentRownr = 0;
+        importNextUser();    
+    }
+    else
+    {
+        application.notify("Check one or more users.");    
+    }    
+}
+
+/*
+ * Import user as per next selected row
+ */
+function importNextUser()
+{
+    var endOfImport = false;
+    if (!cancelHit)
+    {
+        if (numberOfErrors < MAX_ERRORS)
+        {
+            currentRownr = getNextCheckedRow(currentRownr);
+            if (currentRownr > 0)
+            {
+                outStatus[currentRownr].setValue("In Process");
+                statusCleared = false;
+                // user timeout to enable rendering of status column
+                setTimeout("importUser()",200);
+            }
+            else
+            {
+                endOfImport = true;
+            }
+        }
+        else
+        {
+            application.showError("To many errors - import interrupted.");
+            endOfImport = true;
+        }
+    }
+    else
+    {
+        application.notify("Importing users cancelled.");
+        endOfImport = true;
+    }
+    if (endOfImport)
+    {
+        btnImport.enable();
+        btnUpload.enable();
+        btnCancel.disable();   
+    }
+}
+
+/*
+ * Import current selected user
+ */
+function importUser()
+{
+    var tblUserRows = tblUsers.getRows();     
+    var bo = tblUserRows[currentRownr-1].businessObject;
+    currentOrgUserDN = cordys.getNodeText(bo, ".//*[local-name()='OrgUserDN']", null);
+    if ((currentOrgUserDN != null) && (currentOrgUserDN != ""))
+    {
+        ImportCordysUserModel.reset();
+    }   
+    else
+    {
+        outStatus[currentRownr].setValue("Error");
+        importNextUser();
+    }     
+}
+
+/*
+ * find next selected row
+ */
+function getNextCheckedRow(rownr)
+{
+    var tblUserRows = tblUsers.getRows();     
+    var noUsers = tblUserRows.length;
+    rownr = rownr + 1;
+    var rowFound = false;
+    while (!rowFound && (rownr <= noUsers))
+    {
+        var rowFound = tblUsers.rows[rownr+1].cells[0].firstChild.checked;
+        if (rowFound)
+        {
+            //var userExists = (isexistinguser[rownr].getValue() == "true");
+            var userExists = (isexistinguser[rownr].checked);
+            if (userExists)
+            {
+                outStatus[rownr].setValue("Skipped");
+                statusCleared = false;
+                rowFound = false;
+            }
+        }
+        if (!rowFound)
+        {
+            rownr = rownr + 1;
+        }
+    }
+    if (!rowFound)
+    { 
+        rownr = -1;
+    }
+    return rownr;
+}
+
+function ImportCordysUserModel_OnRequest(eventObject)
+{
+    var request = eventObject.request;
+    var xmlStoreKeyNode = cordys.selectXMLNode(request, ".//*[local-name()='XmlStoreKey']");
+    cordys.setTextContent(xmlStoreKeyNode, xmlKey);    
+    var orgUserNode = cordys.selectXMLNode(request, ".//*[local-name()='OrgUserDN']");
+    cordys.setTextContent(orgUserNode, currentOrgUserDN);      
+}
+
+function ImportCordysUserModel_OnResponse(eventObject)
+{
+    if (currentRownr > 0)
+    {
+        if (eventObject.httpStatusCode != 500)
+        {
+            outStatus[currentRownr].setValue("Done");
+            isexistinguser[currentRownr].checked = true;
+        }   
+        else
+        {
+            outStatus[currentRownr].setValue("Error");
+        }                 
+    }  
+    importNextUser();      
+    
+}
+
+function clearStatus()
+{
+    if (!statusCleared)
+    {
+        var tblUserRows = tblUsers.getRows();     
+        var noUsers = tblUserRows.length;
+        for (var i=1; i <= noUsers; i++)     
+        {
+            outStatus[i].setValue("");
+        }
+        numberOfErrors = 0;        
+        statusCleared = true;
+    }
+}
+
+function ImportCordysUserModel_OnSOAPFault(eventObject)
+{
+    numberOfErrors++;
+}
+
+function Form_BeforeClose(eventObject)
+{
+    removeAnyPreviousUploadedFile();
+}
+
+function removeAnyPreviousUploadedFile()
+{
+    if (xmlStoreTupleNode != null)
+    {
+        RemoveExportUploadModel.reset();
+    }
+}
+
+function RemoveExportUploadModel_OnRequest(eventObject)
+{
+    if (xmlStoreTupleNode != null)
+    {
+        var lastModified = xmlStoreTupleNode.getAttribute("lastModified");
+        var level= xmlStoreTupleNode.getAttribute("level");
+                
+        var request = eventObject.request;
+        var xmlStoreKeyNode = cordys.selectXMLNode(request, ".//*[local-name()='XmlStoreKey']");
+        cordys.setTextContent(xmlStoreKeyNode, xmlKey);  
+        var lastModifiedNode = cordys.selectXMLNode(request, ".//*[local-name()='LastModified']");
+        cordys.setTextContent(lastModifiedNode, lastModified);  
+        var levelNode = cordys.selectXMLNode(request, ".//*[local-name()='Level']");
+        cordys.setTextContent(levelNode, level);  
+    }    
+}
+
+function RemoveExportUploadModel_OnResponse(eventObject)
+{
+    if (eventObject.httpStatusCode != 500)
+    {
+         xmlStoreTupleNode = null;   
+    }    
+}
+
+function btnCancel_Click(eventObject)
+{
+    cancelHit = true; 
+}
+
+function Form_InitDone(eventObject)
+{
+    btnCancel.disable();
+    btnImport.disable();
+}]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-before-close">
+				<xforms:Form_BeforeClose/>
+			</xforms:action>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>Import Users</taskDescription>
+	<taskName>ImportUsers</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDD235D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDD215D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC9-A8C4CDD215D0</Name>
+			<Description>0027132C-F779-11E2-FAC9-A8C4CDD215D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:23:36.616</CreationDate>
+			<Notes/>
+			<Identifier>
+				<uri
+					id="0027132C-F779-11E2-FAC9-A8C4CDD255D0"
+				/>
+			</Identifier>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-1AFB63DBD5D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-1AFB63DBF5D0</DocumentID>
+			<Name>0027132C-F779-11E2-FABE-F9CFA69855D0</Name>
+			<Description>0027132C-F779-11E2-FABE-F9CFA69855D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:23:36.617</CreationDate>
+			<Notes/>
+			<UIRef>uploadExport</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC9-1AFB63DB95D0">
+					<DocumentID>0027132C-F779-11E2-FAC9-1AFB63DBB5D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC8-E824B5EB55D0</Name>
+					<Description>0027132C-F779-11E2-FAC8-E824B5EB55D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T06:23:36.619</CreationDate>
+					<Notes/>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDD395D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-1AFB63DB75D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC1-1FB0F1B735D0</Name>
+			<Description>0027132C-F779-11E2-FAC1-1FB0F1B735D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:23:36.618</CreationDate>
+			<Notes/>
+			<UIRef>btnUpload</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDD355D0">
+					<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDD375D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC8-E824B5E855D0</Name>
+					<Description>0027132C-F779-11E2-FAC8-E824B5E855D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T06:23:36.616</CreationDate>
+					<Notes/>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCFD5D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCFB5D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC9-A8C4CDCFB5D0</Name>
+			<Description>0027132C-F779-11E2-FAC9-A8C4CDCFB5D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:27:16.427</CreationDate>
+			<Notes/>
+			<UIRef>orguserdn</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDD015D0">
+					<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCFF5D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC9-A8C4CDCFF5D0</Name>
+					<Description>0027132C-F779-11E2-FAC9-A8C4CDCFF5D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T06:27:16.429</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC9-A8C4CDD035D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCED5D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCEB5D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC9-A8C4CDCEB5D0</Name>
+			<Description>0027132C-F779-11E2-FAC9-A8C4CDCEB5D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:27:16.428</CreationDate>
+			<Notes/>
+			<UIRef>description</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCA95D0">
+					<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCA75D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC9-A8C4CDCA75D0</Name>
+					<Description>0027132C-F779-11E2-FAC9-A8C4CDCA75D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T06:27:16.426</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-F947-425E9CE57279"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCDD5D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCDB5D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC9-A8C4CDCDB5D0</Name>
+			<Description>0027132C-F779-11E2-FAC9-A8C4CDCDB5D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:27:16.428</CreationDate>
+			<Notes/>
+			<UIRef>isexistinguser</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCAD5D0">
+					<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCAB5D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC9-A8C4CDCAB5D0</Name>
+					<Description>0027132C-F779-11E2-FAC9-A8C4CDCAB5D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T06:27:16.428</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC9-A8C4CDCAF5D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCCD5D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCCB5D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC9-A8C4CDCCB5D0</Name>
+			<Description>0027132C-F779-11E2-FAC9-A8C4CDCCB5D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:27:16.427</CreationDate>
+			<Notes/>
+			<UIRef>btnImport</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDC9D5D0">
+					<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDC9B5D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC9-A8C4CDC9B5D0</Name>
+					<Description>0027132C-F779-11E2-FAC9-A8C4CDC9B5D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T06:27:16.429</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC9-A8C4CDC9F5D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCBD5D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCBB5D0</DocumentID>
+			<Name>0027132C-F779-11E2-FAC9-A8C4CDCBB5D0</Name>
+			<Description>0027132C-F779-11E2-FAC9-A8C4CDCBB5D0</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:27:16.425</CreationDate>
+			<Notes/>
+			<UIRef>outStatus</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDCB95D0">
+					<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDCB75D0</DocumentID>
+					<Name>0027132C-F779-11E2-FAC9-A8C4CDCB75D0</Name>
+					<Description>0027132C-F779-11E2-FAC9-A8C4CDCB75D0</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2013-06-16T06:27:16.425</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-F948-7611CEBF1279"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F56C-53803B1BBF70">
+			<DocumentID>0027132C-F779-11E3-F56C-53803B1B9F70</DocumentID>
+			<Name>0027132C-F779-11E3-F56C-53803B1B9F70</Name>
+			<Description>0027132C-F779-11E3-F56C-53803B1B9F70</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-15T12:28:07.881</CreationDate>
+			<Notes/>
+			<UIRef>btnCancel</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F56C-53803B1B7F70">
+					<DocumentID>0027132C-F779-11E3-F56C-53803B1B5F70</DocumentID>
+					<Name>0027132C-F779-11E3-F56C-53803B1B5F70</Name>
+					<Description>0027132C-F779-11E3-F56C-53803B1B5F70</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-15T12:28:07.882</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F37B-D9E15C73B7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E2-FAC9-1AFB63DC75D0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices>
+		<uri
+			id="0027132C-F779-11E2-FAC9-6F113DD495D0"
+		/>
+		<uri
+			id="0027132C-F779-11E2-FAF3-B6EFEE37F237"
+		/>
+		<uri
+			id="0027132C-F779-11E3-F5BE-B406C0AFDF70"
+		/>
+	</Webservices>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-1AFB63DC15D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-1AFB63DC35D0</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:23:36.619</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E2-FAC9-A8C4CDC995D0">
+			<DocumentID>0027132C-F779-11E2-FAC9-A8C4CDC975D0</DocumentID>
+			<Name>UIImportUserModel</Name>
+			<Description>UIImportUserModel</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-16T06:27:16.427</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/coe/useradmin/ui/1.0</namespace>
+			<operationName>GetUIImportUserObjects</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E2-FAF2-B0D7D87E1237">
+			<DocumentID>0027132C-F779-11E2-FAF2-B0D7D87DF237</DocumentID>
+			<Name>ImportCordysUserModel</Name>
+			<Description>ImportCordysUserModel</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-06-18T18:43:17.137</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/coe/useradmin/1.0</namespace>
+			<operationName>ImportCordysUser</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E3-F5BE-B527500FFF70">
+			<DocumentID>0027132C-F779-11E3-F5BE-B527500FDF70</DocumentID>
+			<Name>RemoveExportUploadModel</Name>
+			<Description>RemoveExportUploadModel</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-17T17:15:49.256</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/coe/useradmin/1.0</namespace>
+			<operationName>RemoveExportUpload</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

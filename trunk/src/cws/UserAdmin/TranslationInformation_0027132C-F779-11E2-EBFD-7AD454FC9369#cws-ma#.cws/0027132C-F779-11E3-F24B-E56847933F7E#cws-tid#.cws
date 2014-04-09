@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="0027132C-F779-11E3-F24B-E56847935F7E">
+	<DocumentID>0027132C-F779-11E3-F24B-E56847933F7E</DocumentID>
+	<Name>0027132C-F779-11E3-F24B-E56847933F7E</Name>
+	<Description>Team Assignments</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2014-02-10T14:48:28.51</CreationDate>
+	<Notes/>
+	<DefaultText>Team Assignments</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FCD369"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="0027132C-F779-11E3-F24B-E56847937F7E"
+		/>
+	</Translations>
+</TextIdentifier>
