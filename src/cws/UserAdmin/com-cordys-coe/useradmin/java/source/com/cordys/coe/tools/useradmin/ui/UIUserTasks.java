@@ -35,6 +35,7 @@ public class UIUserTasks extends UIUserTasksBase
      */
     public static UIUserTasks getUIUserTasks(String orgUserDN, boolean firstRequest)
     {
+    	//orgUserDN = "cn=cordysadm,cn=organizational users,o=EkemaIT,cn=cordys,cn=defaultInst,o=Cordys";
     	UIUserTasks uiUserTasks = new UIUserTasks();
     	uiUserTasks.makeTransient();
     	uiUserTasks.setOrgUserDN(orgUserDN);

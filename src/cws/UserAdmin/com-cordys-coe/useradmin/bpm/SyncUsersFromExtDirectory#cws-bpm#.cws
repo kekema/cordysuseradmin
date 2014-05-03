@@ -2,7 +2,7 @@
 <BusinessProcess
 	xmlns:cws="http://schemas.cordys.com/cws/1.0"
 	type="com.cordys.bpm.BusinessProcess"
-	typeVersion="7E711776-E397-4FE0-9A97-2BA232DAD56A"
+	typeVersion="00215A64-4F9E-11E2-E7ED-64544796FDAE"
 	RuntimeDocumentID="0027132C-F779-11E2-EBFD-FA3A76C63369">
 	<DocumentID>0027132C-F779-11E2-EBFD-FA3A76C61369</DocumentID>
 	<Name>SyncUsersFromExtDirectory</Name>
@@ -637,7 +637,6 @@
 	<MonitoringEnabled>true</MonitoringEnabled>
 	<Namespaces>
 		<namespaces
-			xmlns:cws="http://schemas.cordys.com/cws/1.0"
 			xmlns="">
 			<namespace
 				prefix="bpm"
@@ -757,7 +756,6 @@
 	<ProcessVariables/>
 	<PublishBIValues>0</PublishBIValues>
 	<UseBusinessCalendar>false</UseBusinessCalendar>
-	<Version>classic</Version>
 	<WsdlTargetNamespace></WsdlTargetNamespace>
 	<WsdlUrl></WsdlUrl>
 	<freeObjectId>69</freeObjectId>
@@ -1999,7 +1997,7 @@
 		</SequenceFlow>
 		<Subprocess
 			type="com.cordys.bpm.activity.Subprocess"
-			typeVersion="ru3229e8-6598-4208-9804-a6e623c0qyte bcb62c16-ffd5-42c2-abb1-33336bc179ca"
+			typeVersion="96357aa8-8deb-426e-9508-856e6ba0122f ru3229e8-6598-4208-9804-a6e623c0qyte"
 			RuntimeDocumentID="0027132C-F779-11E2-EC75-2230A636F369">
 			<DocumentID>0027132C-F779-11E2-EC75-2230A636D369</DocumentID>
 			<Name>DeleteObsoleteUsers</Name>
@@ -2020,7 +2018,6 @@
 			<Dynamic>false</Dynamic>
 			<DynamicExecuteCondition>false</DynamicExecuteCondition>
 			<DynamicInstantiation>false</DynamicInstantiation>
-			<DynamicSubprocessPriority>false</DynamicSubprocessPriority>
 			<ExecuteCondition>ns2:GetXMLObjectResponse/ns2:GetXMLObjectResponse/ns2:tuple/ns2:old/ns2:UserSync/ns2:DeleteObsoleteUsers=&quot;true&quot;</ExecuteCondition>
 			<ExecutionUserType>currentOwner</ExecutionUserType>
 			<FontSize>12</FontSize>
@@ -2035,13 +2032,9 @@
 			<ProcessCallbackUserType>false</ProcessCallbackUserType>
 			<ProcessName></ProcessName>
 			<ShareMessageMap>false</ShareMessageMap>
-			<SubProcessInstanceID></SubProcessInstanceID>
 			<SubprocessCrashRecovery>asInSubProcess</SubprocessCrashRecovery>
 			<SubprocessMonitorLevel>asInSubProcess</SubprocessMonitorLevel>
 			<SubprocessMonitoringEnabled>asInSubProcess</SubprocessMonitoringEnabled>
-			<SubprocessPriorityDynamicValue></SubprocessPriorityDynamicValue>
-			<SubprocessPrioritySource>asInSubProcess</SubprocessPrioritySource>
-			<SubprocessPriorityStaticValue>3</SubprocessPriorityStaticValue>
 			<SyncDBBeforeActivity>false</SyncDBBeforeActivity>
 			<Synchronize>true</Synchronize>
 			<links/>

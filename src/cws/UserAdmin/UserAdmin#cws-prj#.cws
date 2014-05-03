@@ -14,7 +14,7 @@
 	<ISVPackageInfo>
 		<ISVPackageInfo
 			type="com.cordys.cws.packaging.isvp.ISVPackageInfo"
-			typeVersion="00215A62-2E6A-11E2-EEB7-903C43CFF084"
+			typeVersion="00215A62-2E6A-11E1-FCAC-F71EBE253749"
 			RuntimeDocumentID="0027132C-F779-11E2-EBFD-7AD454FD3369">
 			<DocumentID>0027132C-F779-11E2-EBFD-7AD454FD1369</DocumentID>
 			<Name>EkemaIT UserAdmin</Name>
@@ -22,19 +22,18 @@
 			<CreatedBy>cordysadm</CreatedBy>
 			<CreationDate>2013-01-16T15:17:20.737</CreationDate>
 			<Notes/>
-			<BuildNumber>2</BuildNumber>
-			<ISVPackageFileName>EkemaIT UserAdmin 1.2.2</ISVPackageFileName>
+			<BuildNumber>6</BuildNumber>
+			<ISVPackageFileName>EkemaIT UserAdmin 1.0.6</ISVPackageFileName>
 			<ISVPackageOwner>EkemaIT</ISVPackageOwner>
 			<PackageForRuntime>true</PackageForRuntime>
 			<PostISVLoaderInformation/>
 			<Product>UserAdmin</Product>
 			<SupportedDeploymentSpaces
 				xmlns:cws="http://schemas.cordys.com/cws/1.0"
-				cws:type="collection:string">
-				<cws:item>SHARED</cws:item>
-				<cws:item>ORGANIZATION</cws:item>
+				cws:type="collection">
+				<cws:item>SYSTEM</cws:item>
 			</SupportedDeploymentSpaces>
-			<Version>1.2</Version>
+			<Version>1.0</Version>
 			<LicenseAgreement/>
 			<ThirdPartyAgreement/>
 		</ISVPackageInfo>

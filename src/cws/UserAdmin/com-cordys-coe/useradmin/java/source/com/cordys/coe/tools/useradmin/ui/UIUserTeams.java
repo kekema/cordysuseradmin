@@ -66,6 +66,7 @@ public class UIUserTeams extends UIUserTeamsBase
      */
     public static UIUserTeams getUIUserTeams(String orgUserDN)
     {
+    	//orgUserDN = "cn=cordysadm,cn=organizational users,o=EkemaIT,cn=cordys,cn=defaultInst,o=Cordys";
     	UIUserTeams uiUserTeams = new UIUserTeams();
     	uiUserTeams.makeTransient();
     	uiUserTeams.setOrgUserDN(orgUserDN);

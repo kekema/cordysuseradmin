@@ -6,7 +6,6 @@ package com.cordys.coe.tools.useradmin;
 
 import java.util.ArrayList;
 import com.cordys.coe.tools.useradmin.cordys.CordysUser;
-import com.cordys.coe.tools.useradmin.cordys.LDAP;
 import com.cordys.coe.tools.useradmin.cordys.Organization;
 import com.cordys.coe.tools.useradmin.exception.UserAdminException;
 import com.cordys.coe.tools.useradmin.util.Base64Coder;
@@ -85,10 +84,6 @@ public class User extends UserBase
         CordysUser cordysUser = new CordysUser();
         cordysUser.setCN(extUserCN);
         cordysUser.setOSIdentity(extUserCN);
-        if (fullName != null)
-        {
-        	fullName = fullName.replaceAll("[\\n\\t]", "");
-        }
         if (Util.isSet(fullName))
         {
         	cordysUser.setDescription(fullName);
@@ -214,10 +209,6 @@ public class User extends UserBase
      */
     public static String testIt(String inp1, String inp2, String inp3)
     {
-    	boolean aa = LDAP.entryExists("tesst41,cn=authenticated users,cn=cordys,cn=chicago,o=cordys.com");
-    	boolean ee = aa;
-    	int bb = 1;
-    	int cc = bb;
     	return "";
     }
 

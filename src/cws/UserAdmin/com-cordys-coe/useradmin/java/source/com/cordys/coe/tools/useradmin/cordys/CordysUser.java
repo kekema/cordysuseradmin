@@ -43,7 +43,7 @@ public class CordysUser
 	private String company;
 	private String registeredAddress;
 	private String telephoneNumber;
-	private String telephoneNumber2;
+	private String telephoneNumber2;	
 	private String facsimileTelephoneNumber;
 	private String email;
 	private String labeleduri;
@@ -141,7 +141,7 @@ public class CordysUser
 	public void setTelephoneNumber2(String telephoneNumber2)
 	{
 		this.telephoneNumber2 = telephoneNumber2;
-	}
+	}	
 	
 	/**
 	 * Set the facsimile telephone number
@@ -339,7 +339,7 @@ public class CordysUser
 	public String getTelephoneNumber2()
 	{
 		return this.telephoneNumber2;
-	}
+	}	
 	
 	/**
 	 * Facsimile TelephoneNumber
@@ -437,6 +437,11 @@ public class CordysUser
             {
             	attrs.remove(authenticationtype);
             }           
+            LDAPAttribute userPassword = attrs.getAttribute("userPassword");
+            if (userPassword != null)
+            {
+            	attrs.remove(userPassword);
+            }
             LDAPAttribute defaultcontext = attrs.getAttribute("defaultcontext");
             if (defaultcontext != null)
             {
@@ -503,7 +508,6 @@ public class CordysUser
         }
         if (ldapAction != LDAP.LA_NOACTION)
         {
-        	boolean setPW = false;
         	// below attributes to be set both for insert/update scenario
             attrs.add(new LDAPAttribute("osidentity", this.osidentity));
            	attrs.add(new LDAPAttribute("authenticationtype", this.authenticationtype));
@@ -514,10 +518,17 @@ public class CordysUser
             	{
             		pw = this.cn;
             	}
-            	if (!PasswordHashAndDigest.pwIsHashed(pw))
+            	String passwordHash = null;
+            	if (PasswordHashAndDigest.pwIsHashed(pw))
             	{
-            		setPW = true;
+            		passwordHash = pw;
             	}
+            	else
+            	{
+					passwordHash = PasswordHashAndDigest.getSha1PasswordHash(pw);
+            	}
+            	this.setUserPassword(passwordHash);
+                attrs.add(new LDAPAttribute("userPassword", passwordHash));
             }          
            	attrs.add(new LDAPAttribute("defaultcontext", this.defaultcontext));           
             if (Util.isSet(this.description))
@@ -566,12 +577,6 @@ public class CordysUser
             else if (ldapAction == LDAP.LA_INSERT)
             {
                 LDAP.insertEntry(newEntry);
-            }
-            if (setPW)
-            {
-            	String authUserName = Util.getNameFromDN(this.authUserDN);
-            	String hashedPW = maintainPasswordForUser(authUserName, this.userpassword);
-            	this.setUserPassword(hashedPW);
             }
         }
     }
@@ -1105,7 +1110,7 @@ public class CordysUser
     	if (nNode > 0)
     	{
     		telephoneNumber2 = Node.getData(nNode);	
-    	}
+    	}		
     	String facsimileTelephoneNumber = null;
     	nNode = XPath.getFirstMatch("./facsimileTelephoneNumber/string", null, authUserNode);
     	if (nNode > 0)
@@ -1138,7 +1143,7 @@ public class CordysUser
     	cordysUser.setCompany(company);
     	cordysUser.setRegisteredAddress(registeredAddress);
     	cordysUser.setTelephoneNumber(telephoneNumber);
-    	cordysUser.setTelephoneNumber2(telephoneNumber2);
+    	cordysUser.setTelephoneNumber2(telephoneNumber2);		
     	cordysUser.setFacsimileTelephoneNumber(facsimileTelephoneNumber);
     	cordysUser.setEmail(mail);
     	cordysUser.setLabeleduri(labeleduri);   
@@ -1485,7 +1490,109 @@ public class CordysUser
     	removedRoleDNs.add(roleDN);
     	Role.maintainUserRoles(orgUserDN, null, removedRoleDNs);  	
     }
-       
+    
+    /**
+     * Change user password. 
+     * This method supports the functionality in which the user him/herself wants to change his/her password. 
+     * In the UI layer, it can be opted to have the usual feature to ask the user to confirm the new password.
+     * From UI layer, only the new password to be passed to this method (checking the old password 
+     * should be done in UI layer - sending to server would be unsecure in this situation as
+     * it can be cached and send by somebody else).
+     * For the new password, it is advisable to have the them already hashed in the UI client as to 
+     * achieve end-to-end security. However, the method can also deal with plain passwords. 
+     * New password storage in LDAP will always be the SHA1 hashed password.  
+     * 
+     * @param orgUserDN
+     * @param newPassword
+     */
+    public static void changePassword(String orgUserDN, String newPassword)
+    {
+    	if (Util.isSet(newPassword))
+    	{
+	    	CordysUser cordysUser = getCordysUser(orgUserDN);
+	    	if (cordysUser.getAuthenticationType().equals(AT_CUSTOM))
+	    	{
+		    	String existingOldPassword = cordysUser.getUserPassword();
+		    	int oldPwHA = PasswordHashAndDigest.getPasswordHashingAlgorithm(existingOldPassword);
+		    	if ((oldPwHA == PasswordHashAndDigest.PW_HA_SHA1) && passwordsAreMatching(existingOldPassword, newPassword))
+		    	{
+		    		throw new CordysException("Password not changed - entered password is already the current user password.");
+		    	}
+		    	else
+		    	{
+		    		// just set the new password as given by input; the maintainUser will take care of making it a SHA1 hashed pw, if needed
+		    		cordysUser.setUserPassword(newPassword);
+		    		cordysUser.maintainCordysUser(false, true, false);
+		    	}
+	    	}
+	    	else
+	    	{
+	    		throw new CordysException("Change password not applicable - no Cordys Authentication used.");
+	    	}
+    	}
+    	else
+    	{
+    		throw new CordysException("Password can not be empty");
+    	}
+    }
+    
+    /**
+     * Check if the 2 given passwords do match.
+     * Precondition: both passwords should have a value. In addition, either both passwords are 
+     * hashed as per the same algorithm, or both are plain, or one of them is plain.
+     * 
+     * @param pw1
+     * @param pw2
+     * @return
+     */
+    public static boolean passwordsAreMatching(String pw1, String pw2)
+    {
+    	boolean match = false;
+    	if (Util.isSet(pw1) && Util.isSet(pw2))
+    	{
+	    	if (pw1.equals(pw2))
+	    	{
+	    		match = true;
+	    	}
+	    	else
+	    	{
+	    		int pw1Algorithm = PasswordHashAndDigest.getPasswordHashingAlgorithm(pw1);
+	    		int pw2Algorithm = PasswordHashAndDigest.getPasswordHashingAlgorithm(pw2);
+	    		if ((pw1Algorithm != PasswordHashAndDigest.PW_HA_NO_HASH) || (pw2Algorithm != PasswordHashAndDigest.PW_HA_NO_HASH))
+	    		{
+		    		// cover situation where one of them is hashed and the other plain
+		        	if ((pw1Algorithm != PasswordHashAndDigest.PW_HA_NO_HASH) && (pw2Algorithm == PasswordHashAndDigest.PW_HA_NO_HASH))
+		        	{
+		        		match = hashedPwMatchesNonHashedPw(pw1, pw2);
+		        	}
+		        	else if ((pw2Algorithm != PasswordHashAndDigest.PW_HA_NO_HASH) && (pw1Algorithm == PasswordHashAndDigest.PW_HA_NO_HASH))
+		        	{
+		        		match = hashedPwMatchesNonHashedPw(pw2, pw1);
+		        	}
+		        	else
+		        	{
+		        		if (pw1Algorithm != pw2Algorithm)
+		        		{
+		        			throw new CordysException("Internal error: cannot check " + PasswordHashAndDigest.getAlgorithmCode(pw1Algorithm) + " password against " + PasswordHashAndDigest.getAlgorithmCode(pw2Algorithm) + " password.");
+		        		}
+		        	}
+	    		}
+	    	}
+    	}
+    	else
+    	{
+    		throw new CordysException("Password can not be empty");
+    	}
+    	return match;
+    }
+    
+    private static boolean hashedPwMatchesNonHashedPw(String hashedPw, String nonHashedPw)
+    {
+		int hashingAlgorithm = PasswordHashAndDigest.getPasswordHashingAlgorithm(hashedPw);
+		String pw2Hash = PasswordHashAndDigest.getPasswordHash(nonHashedPw, hashingAlgorithm);
+		return (hashedPw.equals(pw2Hash));
+    }  
+    
     /**
      * Check if given user is an organizational admin.
      * 
@@ -1575,61 +1682,5 @@ public class CordysUser
 	    	}
     	}
     	return result;
-    }   
-    
-    /**
-     * Set the user password (as per webservice operation setPasswordForUser, from Cordys 4.3 onwards)
-     * 
-     * @param authUserName		(can be different from org user name!)
-     * @param newPassword
-     * @return
-     */
-    public static String maintainPasswordForUser(String authUserName, String newPassword)
-    {
-    	String hashedPW = null;
-    	String ldapRoot = LDAP.getRoot();
-    	
-        String namespace = "http://schemas.cordys.com/user/password/1.0";
-        String methodName = "SetPasswordForUser";
-        
-        String[] paramNames = new String[] { "Username", "NewPassword" };
-        Object[] paramValues = new Object[] { authUserName, newPassword };
-        
-        SOAPRequestObject sro = new SOAPRequestObject(namespace, methodName, paramNames, paramValues);
-        
-        int response = 0;
-        int authUserNode = 0;
-        try 
-        {
-            response = sro.execute();   
-            String authUserDN = "cn=" + authUserName + ",cn=authenticated users," + ldapRoot;
-	    	authUserNode = getLDAPUserEntry(authUserDN);
-	    	if (authUserNode > 0)
-	    	{
-	        	int nNode = XPath.getFirstMatch("./userPassword/string", null, authUserNode);
-	        	if (nNode > 0)
-	        	{
-	        		hashedPW = Node.getData(nNode);  
-	        	}	
-	    	}	
-        }
-        catch (Exception e)
-        {
-        	throw new CordysException("Not able to set or readback the password for user " + authUserName, e);
-        }
-		finally
-		{
-			if (response > 0)
-			{
-				Node.delete(response);
-				response = 0;
-			}
-			if (authUserNode > 0)
-			{
-				Node.delete(authUserNode);
-				authUserNode = 0;
-			}			
-		} 
-        return hashedPW;
-    }
+    }    
 }

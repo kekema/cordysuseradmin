@@ -2,7 +2,7 @@
 <BusinessProcess
 	xmlns:cws="http://schemas.cordys.com/cws/1.0"
 	type="com.cordys.bpm.BusinessProcess"
-	typeVersion="7E711776-E397-4FE0-9A97-2BA232DAD56A"
+	typeVersion="00215A64-4F9E-11E2-E7ED-64544796FDAE"
 	RuntimeDocumentID="0027132C-F779-11E2-EC6D-DC315631D369">
 	<DocumentID>0027132C-F779-11E2-EC6D-DC315631B369</DocumentID>
 	<Name>DeleteObsoleteUsers</Name>
@@ -711,7 +711,6 @@
 	<ProcessVariables/>
 	<PublishBIValues>0</PublishBIValues>
 	<UseBusinessCalendar>false</UseBusinessCalendar>
-	<Version>classic</Version>
 	<WsdlTargetNamespace></WsdlTargetNamespace>
 	<WsdlUrl></WsdlUrl>
 	<freeObjectId>35</freeObjectId>
@@ -1559,7 +1558,7 @@
 		</SequenceFlow>
 		<Gateway
 			type="com.cordys.bpm.gateway.Gateway"
-			typeVersion="ru3229e8-6598-4208-9804-a6e623c0qyte QWER56C0-0124-112S-FA2B-XQE9S9FD9C01"
+			typeVersion="ru3229e8-6598-4208-9804-a6e623c0qyte"
 			RuntimeDocumentID="0027132C-F779-11E2-EC76-44590F241369">
 			<DocumentID>0027132C-F779-11E2-EC76-44590F23F369</DocumentID>
 			<Name>Decision</Name>
@@ -1575,7 +1574,6 @@
 			<DynamicExecuteCondition>_none</DynamicExecuteCondition>
 			<ExecuteCondition></ExecuteCondition>
 			<FontSize>12</FontSize>
-			<GatewayType>INCLUSIVE</GatewayType>
 			<IsXor>false</IsXor>
 			<MonitorLevel>11</MonitorLevel>
 			<MonitoringEnabled>true</MonitoringEnabled>

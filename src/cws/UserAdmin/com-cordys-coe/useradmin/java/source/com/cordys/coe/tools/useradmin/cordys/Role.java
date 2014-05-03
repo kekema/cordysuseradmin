@@ -1,6 +1,5 @@
 package com.cordys.coe.tools.useradmin.cordys;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +13,6 @@ import com.cordys.cpc.bsf.soap.SOAPRequestObject;
 import com.eibus.directory.soap.LDAPUtil;
 import com.eibus.xml.nom.Document;
 import com.eibus.xml.nom.Node;
-import com.eibus.xml.nom.XMLException;
 import com.eibus.xml.xpath.XPath;
 import com.eibus.xml.xpath.XPathMetaInfo;
 import com.novell.ldap.LDAPAttribute;
@@ -102,25 +100,12 @@ public class Role
 				}
 				if (include)
 				{
-					int pIndex = dn.indexOf("cn=packages,o=");
-					if (pIndex > 0)
-					{
-						// role deployed in an organizational space
-						include = (dn.indexOf(BSF.getOrganization()) > 0);
-						dn = dn.substring(0, pIndex) + ldapRoot;
-					}
+					// only include if not assigned yet to user
+					include = ((userRoles != null) && !(userRoles.contains(dn)));
 				}
 				if (include)
 				{
-					// only include if not assigned yet to user
-					include = ((userRoles != null) && !(userRoles.contains(dn)));
-				}				
-				if (include)
-				{
-					if (!unassignedRoles.contains(dn))
-					{
-						unassignedRoles.add(dn);
-					}
+					unassignedRoles.add(dn);
 				}
 			}
 			Collections.sort(unassignedRoles);			
@@ -197,14 +182,11 @@ public class Role
 				try
 				{
 					response = getRoleTree(roleDN, null);
-					if (response > 0)
+					int roleNode = XPath.getFirstMatch(".//role", new XPathMetaInfo(), response);
+					if (roleNode > 0)
 					{
-						int roleNode = XPath.getFirstMatch(".//role", new XPathMetaInfo(), response);
-						if (roleNode > 0)
-						{
-							roleNode = Node.unlink(roleNode);
-							Node.appendToChildren(roleNode, result);
-						}
+						roleNode = Node.unlink(roleNode);
+						Node.appendToChildren(roleNode, result);
 					}
 				}
 				finally
@@ -495,23 +477,9 @@ public class Role
 				{
 					include = (!onlyOrganizational);
 				}
-				if (!onlyOrganizational)
-				{
-					int pIndex = dn.indexOf("cn=packages,o=");
-					if (pIndex > 0)
-					{
-						// role deployed in an organizational space
-						include = (dn.indexOf(BSF.getOrganization()) > 0);
-						dn = dn.substring(0, pIndex) + ldapRoot;
-					}
-				}
 				if (include)
 				{
-					// in case the role was also deployed in shared space, the result array might already contain the roleDN
-					if (!result.contains(dn))
-					{	
-						result.add(dn);
-					}
+					result.add(dn);
 				}
 			}
 			Collections.sort(result, String.CASE_INSENSITIVE_ORDER);			
@@ -550,7 +518,7 @@ public class Role
     	ArrayList<String> result = new ArrayList<String>();
     	try
     	{
-    		LDAPEntry le = getLDAPRoleEntry(roleDN);
+	    	LDAPEntry le = LDAP.getEntry(roleDN);
 	    	LDAPAttributeSet attrs = le.getAttributeSet();
 	    	LDAPAttribute role = attrs.getAttribute("role");
 	    	if (role != null)
@@ -567,29 +535,6 @@ public class Role
     	return result;
     }
     
-    /**
-     * Get role entry from LDAP
-     * @param roleDN
-     * @return
-     */
-    public static LDAPEntry getLDAPRoleEntry(String roleDN)
-    {
-    	LDAPEntry result = null;
-		if (roleDN.indexOf("cn=organizational roles") == -1)
-		{
-    		// try role in org space first
-			String ldapRoot = LDAP.getRoot();
-			int lrIndex = roleDN.indexOf(ldapRoot);
-    		String orgSpaceRoleDN = roleDN.substring(0, lrIndex) + "cn=packages," + BSF.getOrganization();
-	    	result = LDAP.getEntry(orgSpaceRoleDN);
-		}
-    	if (result == null)
-    	{
-    		result = LDAP.getEntry(roleDN);
-    	}		
-		return result;
-    }
-    	
     /**
      * Assign additional subroles and/or unassign subroles.
      * Checks for circular assignments to be done in calling method.

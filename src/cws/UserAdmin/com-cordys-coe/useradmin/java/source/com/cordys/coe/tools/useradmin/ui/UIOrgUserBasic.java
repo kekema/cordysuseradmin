@@ -41,10 +41,6 @@ public class UIOrgUserBasic extends UIOrgUserBasicBase
      */
     public static BusObjectIterator<UIOrgUserBasic> getUIOrgUserBasicObjects(String searchString, String roleDN)
     {
-    	if (searchString != null)
-    	{
-    		searchString = searchString.replaceAll("[\\n\\t]", "");				// in OT Cordys 10.5, XForms sends empty searchString as \n\t\t\t  (tag issue: <ns:SearchString />)
-    	}
     	Vector<UIOrgUserBasic> result = new Vector<UIOrgUserBasic>();
     	
     	boolean filterByRole = (Util.isSet(roleDN));

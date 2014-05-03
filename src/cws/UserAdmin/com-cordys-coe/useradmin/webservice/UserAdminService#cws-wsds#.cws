@@ -2,7 +2,7 @@
 <WebserviceDefinitionSet
 	xmlns:cws="http://schemas.cordys.com/cws/1.0"
 	type="com.cordys.wsdl.WebserviceDefinitionSet"
-	typeVersion="0898f904-6d91-4f74-93ed-d5b3c9ab7827"
+	typeVersion="17C748AF-FC0A-4c9e-A173-EDD0EDA4FBC2"
 	RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B1E3369">
 	<DocumentID>0027132C-F779-11E2-EC15-311A7B1E1369</DocumentID>
 	<Name>UserAdminService</Name>
@@ -98,7 +98,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B1EF369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B1ED369</DocumentID>
 					<Name>sync_id</Name>
@@ -118,7 +117,9 @@
 					</DefinitionXML>
 					<FragmentName>sync_id</FragmentName>
 					<Type>attribute</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B1E5369"
@@ -127,7 +128,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B1F3369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B1F1369</DocumentID>
 					<Name>current_model</Name>
@@ -147,7 +147,9 @@
 					</DefinitionXML>
 					<FragmentName>current_model</FragmentName>
 					<Type>attribute</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B1E5369"
@@ -156,7 +158,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B1F7369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B1F5369</DocumentID>
 					<Name>reorder</Name>
@@ -176,7 +177,9 @@
 					</DefinitionXML>
 					<FragmentName>reorder</FragmentName>
 					<Type>attribute</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B1E5369"
@@ -185,7 +188,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B1FB369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B1F9369</DocumentID>
 					<Name>related</Name>
@@ -205,7 +207,9 @@
 					</DefinitionXML>
 					<FragmentName>related</FragmentName>
 					<Type>attribute</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B1E5369"
@@ -214,7 +218,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B1FF369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B1FD369</DocumentID>
 					<Name>selected</Name>
@@ -234,7 +237,9 @@
 					</DefinitionXML>
 					<FragmentName>selected</FragmentName>
 					<Type>attribute</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B1E5369"
@@ -243,7 +248,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B203369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B201369</DocumentID>
 					<Name>activebusinessobject</Name>
@@ -263,7 +267,9 @@
 					</DefinitionXML>
 					<FragmentName>activebusinessobject</FragmentName>
 					<Type>attribute</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B1E5369"
@@ -320,7 +326,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B213369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B211369</DocumentID>
 					<Name>UpdateMethodAttributes</Name>
@@ -415,7 +420,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateMethodAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -424,7 +431,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B217369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B215369</DocumentID>
 					<Name>tupleAttributes</Name>
@@ -447,7 +453,9 @@
 					</DefinitionXML>
 					<FragmentName>tupleAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -456,7 +464,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B21B369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B219369</DocumentID>
 					<Name>seqId</Name>
@@ -476,7 +483,9 @@
 					</DefinitionXML>
 					<FragmentName>seqId</FragmentName>
 					<Type>attribute</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -485,7 +494,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B21F369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B21D369</DocumentID>
 					<Name>oldObjectAttributes</Name>
@@ -519,7 +527,9 @@
 					</DefinitionXML>
 					<FragmentName>oldObjectAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -528,7 +538,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B223369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B221369</DocumentID>
 					<Name>nestedObjectAttributes</Name>
@@ -551,7 +560,9 @@
 					</DefinitionXML>
 					<FragmentName>nestedObjectAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -560,7 +571,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B227369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B225369</DocumentID>
 					<Name>newObjectAttributes</Name>
@@ -630,7 +640,9 @@
 					</DefinitionXML>
 					<FragmentName>newObjectAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -639,7 +651,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B22B369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B229369</DocumentID>
 					<Name>GetMethodAttributes</Name>
@@ -704,7 +715,9 @@
 					</DefinitionXML>
 					<FragmentName>GetMethodAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -713,7 +726,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B22F369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B22D369</DocumentID>
 					<Name>elementAttributes</Name>
@@ -736,7 +748,9 @@
 					</DefinitionXML>
 					<FragmentName>elementAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -745,7 +759,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B233369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B231369</DocumentID>
 					<Name>values</Name>
@@ -793,7 +806,9 @@
 					</DefinitionXML>
 					<FragmentName>values</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -802,7 +817,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B237369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B235369</DocumentID>
 					<Name>cursor</Name>
@@ -848,7 +862,9 @@
 					</DefinitionXML>
 					<FragmentName>cursor</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B205369"
@@ -924,7 +940,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B243369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B241369</DocumentID>
 					<Name>CommonAttributes</Name>
@@ -1000,7 +1015,9 @@
 					</DefinitionXML>
 					<FragmentName>CommonAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B239369"
@@ -1009,7 +1026,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B247369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B245369</DocumentID>
 					<Name>CursorAttributes</Name>
@@ -1043,7 +1059,9 @@
 					</DefinitionXML>
 					<FragmentName>CursorAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B239369"
@@ -1052,7 +1070,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B24B369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B249369</DocumentID>
 					<Name>QueryAttributes</Name>
@@ -1105,7 +1122,9 @@
 					</DefinitionXML>
 					<FragmentName>QueryAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B239369"
@@ -1114,7 +1133,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B24F369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B24D369</DocumentID>
 					<Name>UpdateAttributes</Name>
@@ -1149,7 +1167,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B239369"
@@ -1158,7 +1178,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B253369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B251369</DocumentID>
 					<Name>elemAttributes</Name>
@@ -1181,7 +1200,9 @@
 					</DefinitionXML>
 					<FragmentName>elemAttributes</FragmentName>
 					<Type>attributeGroup</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B239369"
@@ -1239,7 +1260,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B25F369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B25D369</DocumentID>
 					<Name>LocalizableMessage</Name>
@@ -1275,7 +1295,9 @@
 					</DefinitionXML>
 					<FragmentName>LocalizableMessage</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B255369"
@@ -1284,7 +1306,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B263369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B261369</DocumentID>
 					<Name>NestedMessage</Name>
@@ -1327,7 +1348,9 @@
 					</DefinitionXML>
 					<FragmentName>NestedMessage</FragmentName>
 					<Type>complexType</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B255369"
@@ -1385,7 +1408,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B273369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B271369</DocumentID>
 					<Name>FaultDetails</Name>
@@ -1412,7 +1434,9 @@
 					</DefinitionXML>
 					<FragmentName>FaultDetails</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B265369"
@@ -1421,7 +1445,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B277369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B275369</DocumentID>
 					<Name>FaultRelatedException</Name>
@@ -1442,7 +1465,9 @@
 					</DefinitionXML>
 					<FragmentName>FaultRelatedException</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B265369"
@@ -1510,7 +1535,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B295369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B293369</DocumentID>
 					<Name>AddUserIfNotExists</Name>
@@ -1572,7 +1596,9 @@
 					</DefinitionXML>
 					<FragmentName>AddUserIfNotExists</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B283369"
@@ -1581,7 +1607,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B299369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B297369</DocumentID>
 					<Name>AddUserIfNotExistsResponse</Name>
@@ -1629,7 +1654,9 @@
 					</DefinitionXML>
 					<FragmentName>AddUserIfNotExistsResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B283369"
@@ -1731,7 +1758,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B32D369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B32B369</DocumentID>
 					<Name>UpdateUser</Name>
@@ -1743,7 +1769,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -1799,7 +1824,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateUser</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B31B369"
@@ -1808,7 +1835,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B331369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B32F369</DocumentID>
 					<Name>UpdateUserResponse</Name>
@@ -1820,7 +1846,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -1881,7 +1906,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateUserResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B31B369"
@@ -1983,7 +2010,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B3A9369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B3A7369</DocumentID>
 					<Name>Update</Name>
@@ -1995,7 +2021,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2007,7 +2032,9 @@
 					</DefinitionXML>
 					<FragmentName>Update</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B39B369"
@@ -2016,7 +2043,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B3AD369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B3AB369</DocumentID>
 					<Name>UpdateResponse</Name>
@@ -2028,7 +2054,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2039,7 +2064,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B39B369"
@@ -2123,7 +2150,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B425369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B423369</DocumentID>
 					<Name>Validate</Name>
@@ -2135,7 +2161,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2147,7 +2172,9 @@
 					</DefinitionXML>
 					<FragmentName>Validate</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B417369"
@@ -2156,7 +2183,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B429369">
 					<DocumentID>0027132C-F779-11E2-EC15-311A7B427369</DocumentID>
 					<Name>ValidateResponse</Name>
@@ -2168,7 +2194,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2179,7 +2204,9 @@
 					</DefinitionXML>
 					<FragmentName>ValidateResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B417369"
@@ -2263,7 +2290,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC2C-F8A15F275369">
 					<DocumentID>0027132C-F779-11E2-EC2C-F8A15F273369</DocumentID>
 					<Name>TestIt</Name>
@@ -2275,7 +2301,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2305,7 +2330,9 @@
 					</DefinitionXML>
 					<FragmentName>TestIt</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC2C-F8A15F267369"
@@ -2314,7 +2341,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC2C-F8A15F279369">
 					<DocumentID>0027132C-F779-11E2-EC2C-F8A15F277369</DocumentID>
 					<Name>TestItResponse</Name>
@@ -2326,7 +2352,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2348,7 +2373,9 @@
 					</DefinitionXML>
 					<FragmentName>TestItResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC2C-F8A15F267369"
@@ -2432,7 +2459,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC7B-2E510EF7F369">
 					<DocumentID>0027132C-F779-11E2-EC7B-2E510EF7D369</DocumentID>
 					<Name>DeleteObsoleteUser</Name>
@@ -2444,7 +2470,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2470,7 +2495,9 @@
 					</DefinitionXML>
 					<FragmentName>DeleteObsoleteUser</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC7B-2E510EF71369"
@@ -2479,7 +2506,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-EC7B-2E510EF83369">
 					<DocumentID>0027132C-F779-11E2-EC7B-2E510EF81369</DocumentID>
 					<Name>DeleteObsoleteUserResponse</Name>
@@ -2491,7 +2517,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2502,7 +2527,9 @@
 					</DefinitionXML>
 					<FragmentName>DeleteObsoleteUserResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-EC7B-2E510EF71369"
@@ -2586,7 +2613,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-ECE0-FBE61D34731F">
 					<DocumentID>0027132C-F779-11E2-ECE0-FBE61D34531F</DocumentID>
 					<Name>MaintainUser</Name>
@@ -2598,7 +2624,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2652,7 +2677,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainUser</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-ECE0-FBE61D33531F"
@@ -2661,7 +2688,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-ECE0-FBE61D34B31F">
 					<DocumentID>0027132C-F779-11E2-ECE0-FBE61D34931F</DocumentID>
 					<Name>MaintainUserResponse</Name>
@@ -2673,7 +2699,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -2709,7 +2734,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainUserResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-ECE0-FBE61D33531F"
@@ -2811,7 +2838,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FABC-92F4D958F5D0">
 					<DocumentID>0027132C-F779-11E2-FABC-92F4D958D5D0</DocumentID>
 					<Name>GetImportExportObjects</Name>
@@ -2840,7 +2866,9 @@
 					</DefinitionXML>
 					<FragmentName>GetImportExportObjects</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FABC-92F4D95815D0"
@@ -2849,7 +2877,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FABC-92F4D95935D0">
 					<DocumentID>0027132C-F779-11E2-FABC-92F4D95915D0</DocumentID>
 					<Name>GetImportExportObjectsResponse</Name>
@@ -2883,7 +2910,9 @@
 					</DefinitionXML>
 					<FragmentName>GetImportExportObjectsResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FABC-92F4D95815D0"
@@ -2967,7 +2996,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FABC-92F4D960F5D0">
 					<DocumentID>0027132C-F779-11E2-FABC-92F4D960D5D0</DocumentID>
 					<Name>UpdateImportExport</Name>
@@ -2979,7 +3007,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3035,7 +3062,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateImportExport</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FABC-92F4D95FD5D0"
@@ -3044,7 +3073,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FABC-92F4D96135D0">
 					<DocumentID>0027132C-F779-11E2-FABC-92F4D96115D0</DocumentID>
 					<Name>UpdateImportExportResponse</Name>
@@ -3056,7 +3084,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3117,7 +3144,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateImportExportResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FABC-92F4D95FD5D0"
@@ -3219,7 +3248,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FABC-A13302FDB5D0">
 					<DocumentID>0027132C-F779-11E2-FABC-A13302FD95D0</DocumentID>
 					<Name>ExportCordysUsers</Name>
@@ -3248,7 +3276,9 @@
 					</DefinitionXML>
 					<FragmentName>ExportCordysUsers</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FABC-A13302FCD5D0"
@@ -3257,7 +3287,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FABC-A13302FDF5D0">
 					<DocumentID>0027132C-F779-11E2-FABC-A13302FDD5D0</DocumentID>
 					<Name>ExportCordysUsersResponse</Name>
@@ -3291,7 +3320,9 @@
 					</DefinitionXML>
 					<FragmentName>ExportCordysUsersResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FABC-A13302FCD5D0"
@@ -3375,7 +3406,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FAC1-1E8A2A6EF5D0">
 					<DocumentID>0027132C-F779-11E2-FAC1-1E8A2A6ED5D0</DocumentID>
 					<Name>ExportCordysUsersBase64</Name>
@@ -3387,7 +3417,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3404,7 +3433,9 @@
 					</DefinitionXML>
 					<FragmentName>ExportCordysUsersBase64</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FAC1-1E8A2A6E15D0"
@@ -3413,7 +3444,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FAC1-1E8A2A6F35D0">
 					<DocumentID>0027132C-F779-11E2-FAC1-1E8A2A6F15D0</DocumentID>
 					<Name>ExportCordysUsersBase64Response</Name>
@@ -3425,7 +3455,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3447,7 +3476,9 @@
 					</DefinitionXML>
 					<FragmentName>ExportCordysUsersBase64Response</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FAC1-1E8A2A6E15D0"
@@ -3531,7 +3562,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FAF3-B6EFEE33D237">
 					<DocumentID>0027132C-F779-11E2-FAF3-B6EFEE33B237</DocumentID>
 					<Name>ImportCordysUser</Name>
@@ -3543,7 +3573,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3569,7 +3598,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportCordysUser</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FAF3-B6EFEE32F237"
@@ -3578,7 +3609,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FAF3-B6EFEE341237">
 					<DocumentID>0027132C-F779-11E2-FAF3-B6EFEE33F237</DocumentID>
 					<Name>ImportCordysUserResponse</Name>
@@ -3590,7 +3620,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3601,7 +3630,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportCordysUserResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FAF3-B6EFEE32F237"
@@ -3685,7 +3716,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FAF3-B6EFEE3B9237">
 					<DocumentID>0027132C-F779-11E2-FAF3-B6EFEE3B7237</DocumentID>
 					<Name>ImportCordysUsers</Name>
@@ -3697,7 +3727,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3719,7 +3748,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportCordysUsers</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FAF3-B6EFEE3AB237"
@@ -3728,7 +3759,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E2-FAF3-B6EFEE3BD237">
 					<DocumentID>0027132C-F779-11E2-FAF3-B6EFEE3BB237</DocumentID>
 					<Name>ImportCordysUsersResponse</Name>
@@ -3740,7 +3770,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3751,7 +3780,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportCordysUsersResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E2-FAF3-B6EFEE3AB237"
@@ -3834,7 +3865,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E95F-95916CBF96E6">
 					<DocumentID>0027132C-F779-11E3-E95F-95916CBF76E6</DocumentID>
 					<Name>GetUserSyncConfigurationObject</Name>
@@ -3846,7 +3876,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3863,7 +3892,9 @@
 					</DefinitionXML>
 					<FragmentName>GetUserSyncConfigurationObject</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E95F-95916CBDB6E6"
@@ -3872,7 +3903,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E95F-95916CBFD6E6">
 					<DocumentID>0027132C-F779-11E3-E95F-95916CBFB6E6</DocumentID>
 					<Name>GetUserSyncConfigurationObjectResponse</Name>
@@ -3884,7 +3914,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -3920,7 +3949,9 @@
 					</DefinitionXML>
 					<FragmentName>GetUserSyncConfigurationObjectResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E95F-95916CBDB6E6"
@@ -4021,7 +4052,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E95F-95916CC796E6">
 					<DocumentID>0027132C-F779-11E3-E95F-95916CC776E6</DocumentID>
 					<Name>UpdateUserSyncConfiguration</Name>
@@ -4033,7 +4063,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4089,7 +4118,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateUserSyncConfiguration</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E95F-95916CC676E6"
@@ -4098,7 +4129,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E95F-95916CC7D6E6">
 					<DocumentID>0027132C-F779-11E3-E95F-95916CC7B6E6</DocumentID>
 					<Name>UpdateUserSyncConfigurationResponse</Name>
@@ -4110,7 +4140,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4171,7 +4200,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateUserSyncConfigurationResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E95F-95916CC676E6"
@@ -4272,7 +4303,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9AB-E1177C345335">
 					<DocumentID>0027132C-F779-11E3-E9AB-E1177C343335</DocumentID>
 					<Name>MaintainUser2</Name>
@@ -4284,7 +4314,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4316,7 +4345,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainUser2</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9AB-E1177C333335"
@@ -4325,7 +4356,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9AB-E1177C349335">
 					<DocumentID>0027132C-F779-11E3-E9AB-E1177C347335</DocumentID>
 					<Name>MaintainUser2Response</Name>
@@ -4337,7 +4367,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4348,7 +4377,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainUser2Response</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9AB-E1177C333335"
@@ -4449,7 +4480,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9AB-E1177C3F5335">
 					<DocumentID>0027132C-F779-11E3-E9AB-E1177C3F3335</DocumentID>
 					<Name>UpdateUserUpdateData</Name>
@@ -4461,7 +4491,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4517,7 +4546,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateUserUpdateData</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9AB-E1177C3E3335"
@@ -4526,7 +4557,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9AB-E1177C3F9335">
 					<DocumentID>0027132C-F779-11E3-E9AB-E1177C3F7335</DocumentID>
 					<Name>UpdateUserUpdateDataResponse</Name>
@@ -4538,7 +4568,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4599,7 +4628,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateUserUpdateDataResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9AB-E1177C3E3335"
@@ -4700,7 +4731,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC26FEE5335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC26FEE3335</DocumentID>
 					<Name>UpdateRole</Name>
@@ -4712,7 +4742,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4768,7 +4797,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateRole</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC26FED3335"
@@ -4777,7 +4808,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC26FEE9335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC26FEE7335</DocumentID>
 					<Name>UpdateRoleResponse</Name>
@@ -4789,7 +4819,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -4850,7 +4879,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateRoleResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC26FED3335"
@@ -4951,7 +4982,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC26FF6D335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC26FF6B335</DocumentID>
 					<Name>UpdateRoles</Name>
@@ -4963,7 +4993,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5019,7 +5048,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateRoles</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC26FF5B335"
@@ -5028,7 +5059,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC26FF71335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC26FF6F335</DocumentID>
 					<Name>UpdateRolesResponse</Name>
@@ -5040,7 +5070,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5101,7 +5130,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateRolesResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC26FF5B335"
@@ -5202,7 +5233,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC26FFED335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC26FFEB335</DocumentID>
 					<Name>UpdateTask</Name>
@@ -5214,7 +5244,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5270,7 +5299,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTask</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC26FFDB335"
@@ -5279,7 +5310,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC26FFF1335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC26FFEF335</DocumentID>
 					<Name>UpdateTaskResponse</Name>
@@ -5291,7 +5321,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5352,7 +5381,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTaskResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC26FFDB335"
@@ -5453,7 +5484,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC270077335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC270075335</DocumentID>
 					<Name>UpdateTasks</Name>
@@ -5465,7 +5495,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5521,7 +5550,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTasks</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC270065335"
@@ -5530,7 +5561,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC27007B335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC270079335</DocumentID>
 					<Name>UpdateTasksResponse</Name>
@@ -5542,7 +5572,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5603,7 +5632,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTasksResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC270065335"
@@ -5704,7 +5735,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC2700F9335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC2700F7335</DocumentID>
 					<Name>UpdateTeam</Name>
@@ -5716,7 +5746,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5772,7 +5801,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTeam</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC2700E7335"
@@ -5781,7 +5812,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC2700FD335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC2700FB335</DocumentID>
 					<Name>UpdateTeamResponse</Name>
@@ -5793,7 +5823,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -5854,7 +5883,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTeamResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC2700E7335"
@@ -5955,7 +5986,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC27017D335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC27017B335</DocumentID>
 					<Name>UpdateTeams</Name>
@@ -5967,7 +5997,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6023,7 +6052,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTeams</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC27016B335"
@@ -6032,7 +6063,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B0-FFC270181335">
 					<DocumentID>0027132C-F779-11E3-E9B0-FFC27017F335</DocumentID>
 					<Name>UpdateTeamsResponse</Name>
@@ -6044,7 +6074,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6105,7 +6134,9 @@
 					</DefinitionXML>
 					<FragmentName>UpdateTeamsResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9B0-FFC27016B335"
@@ -6206,7 +6237,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BD-673E322DB335">
 					<DocumentID>0027132C-F779-11E3-E9BD-673E322D9335</DocumentID>
 					<Name>MaintainTasks</Name>
@@ -6218,7 +6248,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6260,7 +6289,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainTasks</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BD-673E322BD335"
@@ -6269,7 +6300,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BD-673E322DF335">
 					<DocumentID>0027132C-F779-11E3-E9BD-673E322DD335</DocumentID>
 					<Name>MaintainTasksResponse</Name>
@@ -6281,7 +6311,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6292,7 +6321,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainTasksResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BD-673E322BD335"
@@ -6393,7 +6424,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BE-E29888CA5335">
 					<DocumentID>0027132C-F779-11E3-E9BE-E29888CA3335</DocumentID>
 					<Name>MaintainRoles</Name>
@@ -6405,7 +6435,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6447,7 +6476,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainRoles</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BE-E29888C93335"
@@ -6456,7 +6487,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BE-E29888CA9335">
 					<DocumentID>0027132C-F779-11E3-E9BE-E29888CA7335</DocumentID>
 					<Name>MaintainRolesResponse</Name>
@@ -6468,7 +6498,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6479,7 +6508,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainRolesResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BE-E29888C93335"
@@ -6580,7 +6611,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BF-4F6ADBF45335">
 					<DocumentID>0027132C-F779-11E3-E9BF-4F6ADBF43335</DocumentID>
 					<Name>ImportUser</Name>
@@ -6592,7 +6622,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6624,7 +6653,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportUser</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BF-4F6ADBF33335"
@@ -6633,7 +6664,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BF-4F6ADBF49335">
 					<DocumentID>0027132C-F779-11E3-E9BF-4F6ADBF47335</DocumentID>
 					<Name>ImportUserResponse</Name>
@@ -6645,7 +6675,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6681,7 +6710,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportUserResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BF-4F6ADBF33335"
@@ -6800,7 +6831,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BF-8B985D825335">
 					<DocumentID>0027132C-F779-11E3-E9BF-8B985D823335</DocumentID>
 					<Name>ImportExtDirUser</Name>
@@ -6812,7 +6842,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6866,7 +6895,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportExtDirUser</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BF-8B985D813335"
@@ -6875,7 +6906,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BF-8B985D829335">
 					<DocumentID>0027132C-F779-11E3-E9BF-8B985D827335</DocumentID>
 					<Name>ImportExtDirUserResponse</Name>
@@ -6887,7 +6917,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -6923,7 +6952,9 @@
 					</DefinitionXML>
 					<FragmentName>ImportExtDirUserResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9BF-8B985D813335"
@@ -7024,7 +7055,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9DA-B592419B7335">
 					<DocumentID>0027132C-F779-11E3-E9DA-B592419B5335</DocumentID>
 					<Name>MaintainTeams</Name>
@@ -7036,7 +7066,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -7078,7 +7107,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainTeams</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9DA-B592419A5335"
@@ -7087,7 +7118,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-E9DA-B592419BB335">
 					<DocumentID>0027132C-F779-11E3-E9DA-B592419B9335</DocumentID>
 					<Name>MaintainTeamsResponse</Name>
@@ -7099,7 +7129,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -7110,7 +7139,9 @@
 					</DefinitionXML>
 					<FragmentName>MaintainTeamsResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-E9DA-B592419A5335"
@@ -7211,7 +7242,6 @@
 			<SchemaFragments>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0ABBF70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0AB9F70</DocumentID>
 					<Name>RemoveExportUpload</Name>
@@ -7223,7 +7253,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -7253,7 +7282,9 @@
 					</DefinitionXML>
 					<FragmentName>RemoveExportUpload</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-F5BE-B406C0AADF70"
@@ -7262,7 +7293,6 @@
 				</BusinessObjectDocument>
 				<BusinessObjectDocument
 					type="com.cordys.businessobjectdocument.BusinessObjectDocument"
-					typeVersion="6180B612-C311-46F9-BBCA-F7240137C95A"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0ABFF70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0ABDF70</DocumentID>
 					<Name>RemoveExportUploadResponse</Name>
@@ -7274,7 +7304,6 @@
 					<DefinitionXML>
 						<xsd:element
 							xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-							xmlns:cws="http://schemas.cordys.com/cws/1.0"
 							xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 							xmlns:wcp="http://schemas.cordys.com/"
 							xmlns:tns="http://schemas.cordys.com/coe/useradmin/1.0"
@@ -7285,7 +7314,9 @@
 					</DefinitionXML>
 					<FragmentName>RemoveExportUploadResponse</FragmentName>
 					<Type>element</Type>
+					<DecisionCases/>
 					<Realizations/>
+					<Rules/>
 					<SchemaDefinition>
 						<uri
 							id="0027132C-F779-11E3-F5BE-B406C0AADF70"
@@ -7390,8 +7421,8 @@
 	<WebserviceBindings>
 		<WebserviceBinding
 			type="com.cordys.wsdl.WebserviceBinding"
-			typeVersion="59F595CB-70A2-4E99-A062-84706C227D3F"
-			RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B2DB369">
+			typeVersion="FE379025-F509-4cb1-9383-05C305AD061E"
+			RuntimeDocumentID="0027132C-F779-11E2-EC15-311A7B2DD369">
 			<DocumentID>0027132C-F779-11E2-EC15-311A7B2DB369</DocumentID>
 			<Name>UserAdminInterface</Name>
 			<Description>UserAdminInterface</Description>
@@ -7399,7 +7430,6 @@
 			<CreationDate>2013-01-17T13:26:47.864</CreationDate>
 			<Notes/>
 			<ImplementationClass></ImplementationClass>
-			<OldRuntimeWebserviceInterfaceName></OldRuntimeWebserviceInterfaceName>
 			<RuntimeWebserviceInterfaceName>UserAdminService.UserAdminInterface</RuntimeWebserviceInterfaceName>
 			<Type></Type>
 			<ApplicationConnector>
@@ -7574,7 +7604,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>User</object>
@@ -7589,25 +7618,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BAB217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BA9217</DocumentID>
-							<Name>UpdateUser</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:39.689</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-EC15-311A7B36F369"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -7765,7 +7776,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate"
 								/>
@@ -7778,25 +7788,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BAF217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BAD217</DocumentID>
-							<Name>Update</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:47.999</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-EC15-311A7B3EB369"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -7954,7 +7946,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfValidate"
 								/>
@@ -7967,25 +7958,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BB3217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BB1217</DocumentID>
-							<Name>Validate</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:47.897</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-EC15-311A7B467369"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -8143,7 +8116,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.User</class>
@@ -8176,25 +8148,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BB7217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BB5217</DocumentID>
-							<Name>TestIt</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:50.663</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-EC2C-F8A15F2B7369"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -8352,7 +8306,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.User</class>
@@ -8380,25 +8333,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BBB217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BB9217</DocumentID>
-							<Name>DeleteObsoleteUser</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:50.626</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-EC7B-2E510EFC1369"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -8556,7 +8491,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>ImportExport</object>
@@ -8571,25 +8505,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BBF217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BBD217</DocumentID>
-							<Name>UpdateImportExport</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:47.913</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-FABC-92F4D96515D0"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -8747,7 +8663,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.ImportExport</class>
@@ -8771,25 +8686,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BC3217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BC1217</DocumentID>
-							<Name>ExportCordysUsersBase64</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:47.841</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-FAC1-1E8A2A7315D0"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -8947,7 +8844,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.ImportExport</class>
@@ -8975,25 +8871,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BC7217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BC5217</DocumentID>
-							<Name>ImportCordysUser</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:39.641</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-FAF3-B6EFEE37F237"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -9151,7 +9029,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.ImportExport</class>
@@ -9176,25 +9053,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BCB217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BC9217</DocumentID>
-							<Name>ImportCordysUsers</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:39.482</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E2-FAF3-B6EFEE3FB237"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -9352,7 +9211,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.UserSyncConfiguration</class>
@@ -9376,25 +9234,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BCF217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BCD217</DocumentID>
-							<Name>GetUserSyncConfigurationObject</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:45.542</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E95F-95916CC3B6E6"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -9552,7 +9392,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>UserSyncConfiguration</object>
@@ -9567,25 +9406,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BD3217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BD1217</DocumentID>
-							<Name>UpdateUserSyncConfiguration</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:55.919</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E95F-95916CCBB6E6"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -9743,7 +9564,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>UserUpdateData</object>
@@ -9758,25 +9578,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BD7217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BD5217</DocumentID>
-							<Name>UpdateUserUpdateData</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:55.891</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9AB-E1177C437335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -9934,7 +9736,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>Role</object>
@@ -9949,25 +9750,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BDB217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BD9217</DocumentID>
-							<Name>UpdateRole</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:52.57</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9B0-FFC26FF27335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -10125,7 +9908,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>Roles</object>
@@ -10140,25 +9922,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BDF217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BDD217</DocumentID>
-							<Name>UpdateRoles</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:55.931</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9B0-FFC26FFAF335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -10316,7 +10080,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>Task</object>
@@ -10331,25 +10094,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BE3217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BE1217</DocumentID>
-							<Name>UpdateTask</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:45.552</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9B0-FFC270039335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -10507,7 +10252,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>Tasks</object>
@@ -10522,25 +10266,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BE7217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BE5217</DocumentID>
-							<Name>UpdateTasks</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:47.91</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9B0-FFC2700B9335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -10698,7 +10424,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>Team</object>
@@ -10713,25 +10438,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BEB217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BE9217</DocumentID>
-							<Name>UpdateTeam</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:39.645</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9B0-FFC27013F335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -10889,7 +10596,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfUpdate">
 									<object>Teams</object>
@@ -10904,25 +10610,7 @@
 							<WSAppServerMethod/>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BEF217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BED217</DocumentID>
-							<Name>UpdateTeams</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:52.511</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9B0-FFC2701BF335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -11080,7 +10768,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.Tasks</class>
@@ -11114,25 +10801,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BF3217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BF1217</DocumentID>
-							<Name>MaintainTasks</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:45.686</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9BD-673E3231D335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -11290,7 +10959,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.Roles</class>
@@ -11324,25 +10992,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BF7217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BF5217</DocumentID>
-							<Name>MaintainRoles</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:55.942</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9BE-E29888CE7335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -11500,7 +11150,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.User</class>
@@ -11531,25 +11180,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BFB217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BF9217</DocumentID>
-							<Name>ImportUser</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:45.667</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9BF-4F6ADBF87335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -11707,7 +11338,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.User</class>
@@ -11759,25 +11389,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354BFF217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354BFD217</DocumentID>
-							<Name>ImportExtDirUser</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:45.654</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9BF-8B985D871335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -11935,7 +11547,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.Teams</class>
@@ -11966,25 +11577,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354C03217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354C01217</DocumentID>
-							<Name>MaintainTeams</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:50.632</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-E9DA-B59241A03335"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -12142,7 +11735,6 @@
 							<Notes/>
 							<Implementation>
 								<implementation
-									xmlns:cws="http://schemas.cordys.com/cws/1.0"
 									xmlns=""
 									type="BsfJavaCall">
 									<class>com.cordys.coe.tools.useradmin.ImportExport</class>
@@ -12172,25 +11764,7 @@
 							</WSAppServerMethod>
 						</WSAppServerOperationRealization>
 					</Realizations>
-					<SecurityDescriptor>
-						<SecurityDescriptor
-							type="com.cordys.acl.SecurityDescriptor"
-							RuntimeDocumentID="0027132C-F779-11E3-F7CA-AD7354C07217">
-							<DocumentID>0027132C-F779-11E3-F7CA-AD7354C05217</DocumentID>
-							<Name>RemoveExportUpload</Name>
-							<Description/>
-							<CreatedBy>cordysadm</CreatedBy>
-							<CreationDate>2014-04-07T13:06:58.338</CreationDate>
-							<Notes/>
-							<inherit>true</inherit>
-							<accesscontrolentries/>
-							<securedObject>
-								<uri
-									id="0027132C-F779-11E3-F5BE-B406C0AFDF70"
-								/>
-							</securedObject>
-						</SecurityDescriptor>
-					</SecurityDescriptor>
+					<SecurityDescriptor/>
 					<WebserviceBinding>
 						<uri
 							id="0027132C-F779-11E2-EC15-311A7B2DB369"
@@ -12313,7 +11887,6 @@
 			<WebserviceOperations>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E95F-95916CC2D6E6">
 					<DocumentID>0027132C-F779-11E3-E95F-95916CC2B6E6</DocumentID>
 					<Name>GetUserSyncConfigurationObject</Name>
@@ -12383,7 +11956,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E95F-95916CCAD6E6">
 					<DocumentID>0027132C-F779-11E3-E95F-95916CCAB6E6</DocumentID>
 					<Name>UpdateUserSyncConfiguration</Name>
@@ -12453,7 +12025,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B1-746A175E9335">
 					<DocumentID>0027132C-F779-11E3-E9B1-746A175E7335</DocumentID>
 					<Name>UpdateUserUpdateData</Name>
@@ -12523,7 +12094,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B1-A37F38A65335">
 					<DocumentID>0027132C-F779-11E3-E9B1-A37F38A63335</DocumentID>
 					<Name>UpdateRole</Name>
@@ -12593,7 +12163,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B1-A37F38A95335">
 					<DocumentID>0027132C-F779-11E3-E9B1-A37F38A93335</DocumentID>
 					<Name>UpdateTask</Name>
@@ -12663,7 +12232,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9B1-A37F38ACF335">
 					<DocumentID>0027132C-F779-11E3-E9B1-A37F38ACD335</DocumentID>
 					<Name>UpdateTeam</Name>
@@ -12733,7 +12301,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BD-97A313A69335">
 					<DocumentID>0027132C-F779-11E3-E9BD-97A313A67335</DocumentID>
 					<Name>MaintainTasks</Name>
@@ -12803,7 +12370,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BD-97A313A8B335">
 					<DocumentID>0027132C-F779-11E3-E9BD-97A313A89335</DocumentID>
 					<Name>UpdateTasks</Name>
@@ -12873,7 +12439,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BE-E29888CD9335">
 					<DocumentID>0027132C-F779-11E3-E9BE-E29888CD7335</DocumentID>
 					<Name>MaintainRoles</Name>
@@ -12943,7 +12508,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9BE-E29888D17335">
 					<DocumentID>0027132C-F779-11E3-E9BE-E29888D15335</DocumentID>
 					<Name>UpdateRoles</Name>
@@ -13013,7 +12577,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9D9-F2861FF57335">
 					<DocumentID>0027132C-F779-11E3-E9D9-F2861FF55335</DocumentID>
 					<Name>DeleteObsoleteUser</Name>
@@ -13083,7 +12646,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9D9-F2861FF79335">
 					<DocumentID>0027132C-F779-11E3-E9D9-F2861FF77335</DocumentID>
 					<Name>ImportExtDirUser</Name>
@@ -13153,7 +12715,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9D9-F2861FF93335">
 					<DocumentID>0027132C-F779-11E3-E9D9-F2861FF91335</DocumentID>
 					<Name>ImportUser</Name>
@@ -13223,7 +12784,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9D9-F2861FFAB335">
 					<DocumentID>0027132C-F779-11E3-E9D9-F2861FFA9335</DocumentID>
 					<Name>TestIt</Name>
@@ -13293,7 +12853,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9D9-F2861FFC3335">
 					<DocumentID>0027132C-F779-11E3-E9D9-F2861FFC1335</DocumentID>
 					<Name>UpdateUser</Name>
@@ -13363,7 +12922,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9DA-B592419EB335">
 					<DocumentID>0027132C-F779-11E3-E9DA-B592419E9335</DocumentID>
 					<Name>MaintainTeams</Name>
@@ -13433,7 +12991,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-E9DA-B59241A31335">
 					<DocumentID>0027132C-F779-11E3-E9DA-B59241A2F335</DocumentID>
 					<Name>UpdateTeams</Name>
@@ -13503,7 +13060,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0A67F70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0A65F70</DocumentID>
 					<Name>ExportCordysUsersBase64</Name>
@@ -13573,7 +13129,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0A7FF70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0A7DF70</DocumentID>
 					<Name>ImportCordysUser</Name>
@@ -13643,7 +13198,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0A97F70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0A95F70</DocumentID>
 					<Name>ImportCordysUsers</Name>
@@ -13713,7 +13267,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0AEFF70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0AEDF70</DocumentID>
 					<Name>RemoveExportUpload</Name>
@@ -13783,7 +13336,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0B2BF70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0B29F70</DocumentID>
 					<Name>UpdateImportExport</Name>
@@ -13853,7 +13405,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0B43F70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0B41F70</DocumentID>
 					<Name>Update</Name>
@@ -13923,7 +13474,6 @@
 				</WebserviceOperationDesigntime>
 				<WebserviceOperationDesigntime
 					type="com.cordys.wsdl.WebserviceOperationDesigntime"
-					typeVersion="9283B20E-CD69-4c52-A954-1DA1482DB329"
 					RuntimeDocumentID="0027132C-F779-11E3-F5BE-B406C0B5BF70">
 					<DocumentID>0027132C-F779-11E3-F5BE-B406C0B59F70</DocumentID>
 					<Name>Validate</Name>

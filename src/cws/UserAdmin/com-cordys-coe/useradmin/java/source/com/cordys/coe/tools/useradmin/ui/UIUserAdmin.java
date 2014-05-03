@@ -41,9 +41,9 @@ public class UIUserAdmin extends UIUserAdminBase
         	CordysVersion cordysVersion = CordysInstallation.getVersion();
         	int major = cordysVersion.getIntMajor();
         	int minor = cordysVersion.getIntMinor();
-        	if ((major != 4) || (minor != 4))
+        	if ((major != 4) || (minor != 2))
         	{
-        		throw new UserAdminException("Platform version is " + cordysVersion.getFormattedExternal() + " - this version of User Admin supports OpenTexct Cordys 10.5");
+        		throw new UserAdminException("Platform version is " + cordysVersion.getFormattedExternal() + " - this version of User Admin supports Cordys 4.2");
         	}
         }
     }

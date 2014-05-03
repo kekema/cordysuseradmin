@@ -47,15 +47,12 @@ public class UIOrganization extends UIOrganizationBase
      */
     public static BusObjectIterator<UIOrganization> getUIOrganizationObjects(String authUserDN)
     {
-    	if (authUserDN != null)
-    	{
-    		authUserDN = authUserDN.replaceAll("[\\n\\t]", "");
-    	}
 		int response = 0;
 		Vector<UIOrganization> result = new Vector<UIOrganization>();
 
 		// determine the LDAP root
 		String ldapRoot = LDAP.getRoot();
+		String origOrg = LDAP.getOrganization();
 		
 		// fire soap request for getting organizations from LDAP
         String namespace = "http://schemas.cordys.com/1.0/ldap";

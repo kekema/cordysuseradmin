@@ -445,10 +445,6 @@ public class UIUser extends UIUserBase
     
     public static void deleteUIUser(String orgUserDN)
     {
-    	if (orgUserDN != null)
-    	{
-    		orgUserDN = orgUserDN.replaceAll("[\\n\\t]", "");
-    	}
     	try
     	{
 	    	if (Util.isSet(orgUserDN))
@@ -491,10 +487,6 @@ public class UIUser extends UIUserBase
      */
     public static void updateUIUserAttribute(String orgUserDN, int action, String newValue)
     {
-    	if (orgUserDN != null)
-    	{
-    		orgUserDN = orgUserDN.replaceAll("[\\n\\t]", "");
-    	}
     	try
     	{
 	    	if (Util.isSet(orgUserDN))
