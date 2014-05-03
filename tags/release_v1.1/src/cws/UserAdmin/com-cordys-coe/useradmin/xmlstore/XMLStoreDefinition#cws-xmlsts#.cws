@@ -1,0 +1,44 @@
+
+<XMLStoreSource
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xmlstore.sourceroot.XMLStoreSource"
+	RuntimeDocumentID="0027132C-F779-11E2-EBFD-FA3A76C97369">
+	<DocumentID>0027132C-F779-11E2-EBFD-FA3A76C95369</DocumentID>
+	<Name>XMLStoreDefinition</Name>
+	<Description>XMLStoreDefinition</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2013-01-16T15:54:35.11</CreationDate>
+	<Notes/>
+	<NamespacePrefix></NamespacePrefix>
+	<SecurityDescriptor>
+		<XMLStoreSecurityDescriptor
+			type="com.cordys.xmlstore.sourceroot.XMLStoreSecurityDescriptor"
+			RuntimeDocumentID="0027132C-F779-11E2-EBFD-FA3A76C93369">
+			<DocumentID>0027132C-F779-11E2-EBFD-FA3A76C91369</DocumentID>
+			<Name>Untitled XML Store Definition</Name>
+			<Description>Untitled XML Store Definition</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2013-01-16T15:54:35.111</CreationDate>
+			<Notes/>
+			<inherit>true</inherit>
+			<XMLStoreDefinition>
+				<uri
+					id="0027132C-F779-11E2-EBFD-FA3A76C95369"
+				/>
+			</XMLStoreDefinition>
+			<accesscontrolentries/>
+			<securedObject>
+				<uri
+					id="0027132C-F779-11E2-EBFD-FA3A76C95369"
+				/>
+			</securedObject>
+		</XMLStoreSecurityDescriptor>
+	</SecurityDescriptor>
+	<SourceFolder>
+		<uri
+			id="0027132C-F779-11E3-E8DF-E1AD14D89262"
+			path="UserAdmin/com-cordys-coe/useradmin/xmlstore"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+</XMLStoreSource>

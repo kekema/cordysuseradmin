@@ -1,0 +1,2972 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="0027132C-F779-11E3-F2CA-2EEE4B86D7C6">
+	<DocumentID>0027132C-F779-11E3-F2CA-2EEE4B86B7C6</DocumentID>
+	<Name>Users</Name>
+	<Description>Users</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2014-02-15T17:30:48.055</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<script
+					src="wcp/library/util/sha1.js"
+				/>
+				<script
+					src="wcp/library/util/md5.js"
+				/>
+				<script
+					src="com/ekemait/useradmin/js/useradmin.js"
+					documentID="0027132C-F779-11E3-F2AE-B66E4CE737C6"
+				/>
+				<xforms:model
+					xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+					xmlns:ev="http://www.w3.org/2001/xml-events"
+					xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+					id="UIUserModel"
+					wcpforms:automatic="false"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					promptToSave="false"
+					isEBIModelValue="true"
+					isConstraintValidation="true"
+					isInitializationRequired="true"
+					isApplyAccessControl="true"
+					singleTransaction="false"
+					wcpforms:businessElement="tns:UIUser">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							src="http://schemas.cordys.com/coe/useradmin/ui/1.0/GetUIUserObjects"
+							operationName="GetUIUserObjects"
+							type="get"
+							wcpforms:wsguid="0027132C-F779-11E3-F2CC-3E70B6BF77C6"
+						/>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<xforms:action
+						ev:event="xforms-onbeforesynchronize">
+						<xforms:UIUserModel_BeforeSynchronize/>
+					</xforms:action>
+					<xforms:action
+						ev:event="xforms-onbeforeebivalidate">
+						<xforms:UIUserModel_BeforeEBIValidate/>
+					</xforms:action>
+					<xforms:action
+						ev:event="xforms-onsoapfault">
+						<xforms:UIUserModel_OnSOAPFault/>
+					</xforms:action>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/coe/useradmin/ui/1.0</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/coe/useradmin/ui/1.0</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xml
+					xmlns="">
+					<xml
+						id="appDeleteUsers">
+						<Application>
+							<url>/com-cordys-coe/useradmin/ui/DeleteUsers.caf</url>
+							<id>deleteUsersApp</id>
+							<caption>Delete Users</caption>
+							<description>Delete Users</description>
+							<frame
+								height="415"
+								width="838">main</frame>
+							<data/>
+						</Application>
+					</xml>
+					<xml
+						id="appUpdateUsers">
+						<Application>
+							<url>/com-cordys-coe/useradmin/ui/UpdateUsers.caf</url>
+							<id>updateUsersApp</id>
+							<caption>Update Users</caption>
+							<description>Update Users</description>
+							<frame
+								height="515"
+								width="838">main</frame>
+							<data/>
+						</Application>
+					</xml>
+				</xml>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="horizontal"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group1"
+						wcpforms:layout="horizontal"
+						wcpforms:class="h_layout"
+						wcpforms:size="1127px 627px"
+						wcpforms:labelalign="ontop">
+						<xforms:repeat
+							wcpforms:displayContextMenu="true"
+							wcpforms:toggleColumns="true"
+							wcpforms:movableColumns="false"
+							wcpforms:saveState="false"
+							wcpforms:autoInsert="false"
+							wcpforms:minRows="5"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsTable"
+							id="UIUserTable"
+							model="UIUserModel"
+							synchronizedDialogFrame="main"
+							isNavigationEnabled="true"
+							wcpforms:gridtype="datagrid"
+							wcpforms:checkboxes="true"
+							wcpforms:layout="vertical"
+							wcpforms:class="h_layout"
+							wcpforms:size="234px 621px">
+							<xforms:group
+								appearance="elementbar"
+								id="_elementBar"
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsElementbar">
+								<xforms:group
+									appearance="controlbar"
+									id="_controlBar"
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbar"
+									wcpforms:class="controlbar">
+									<xforms:trigger
+										wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsElementbarItem"
+										id="navDelete1"
+										standardid="navDelete">
+										<xforms:label>
+											<img
+												src="wcp/theme/default/icon/action/delete.png"
+											/>
+										</xforms:label>
+										<xforms:hint
+											textIdentifier="0027132C-F779-11E3-F684-A9EB93F6121E">Delete Selected Users</xforms:hint>
+										<xforms:action
+											ev:event="onbeforedelete">
+											<xforms:navDelete1_BeforeDelete/>
+										</xforms:action>
+									</xforms:trigger>
+									<xforms:trigger
+										wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsElementbarItem"
+										id="tbtnEdit">
+										<xforms:label>
+											<img
+												src="wcp/theme/default/icon/action/edit.png"
+											/>
+										</xforms:label>
+										<xforms:hint
+											textIdentifier="0027132C-F779-11E3-F684-A9EB93F7121E">Update Selected Users</xforms:hint>
+										<xforms:action
+											ev:event="xforms-activate">
+											<xforms:tbtnEdit_Click/>
+										</xforms:action>
+									</xforms:trigger>
+								</xforms:group>
+							</xforms:group>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="description"
+								ref="tns:Description"
+								wcpforms:textalign="left_align"
+								doEBIValidate="false"
+								wcpforms:size="auto 100%">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-F2CC-D9413DB877C6">Description</xforms:label>
+							</xforms:output>
+							<xforms:action
+								ev:event="xforms-onrowclick">
+								<xforms:UIUserTable_xformsonrowclick/>
+							</xforms:action>
+							<xforms:action
+								ev:event="xforms-onrowselect">
+								<xforms:UIUserTable_OnSelectRow/>
+							</xforms:action>
+						</xforms:repeat>
+						<xforms:group
+							appearance="tabgroup"
+							wcpforms:orientation="top"
+							wcpforms:textDirection="horizontal"
+							wcpforms:scrollBy="roller"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsTabGroup"
+							id="UIUserTab"
+							model="UIUserModel"
+							isNavigationEnabled="true"
+							showSingleTab="true"
+							wcpforms:class="h_layout"
+							wcpforms:size="710px 599px">
+							<xforms:group
+								appearance="tabpage"
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsTabPage"
+								id="tabpageUser"
+								wcpforms:orientation="top"
+								wcpforms:textDirection="horizontal"
+								wcpforms:scrollBy="roller"
+								wcpforms:layout="vertical"
+								wcpforms:class="simplecontainer"
+								wcpforms:labelalign="ontop">
+								<xforms:label>User</xforms:label>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="username1"
+									ref="tns:UserName"
+									doEBIValidate="false"
+									wcpforms:textalign="left_align"
+									wcpforms:required="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F303-8FA1AA2BF7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">User Name</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:username1_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="fullusername1"
+									ref="tns:FullUserName"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2FB-910DAFE337C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Full User Name</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:fullusername1_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="userid1"
+									ref="tns:UserID"
+									wcpforms:textalign="left_align"
+									doEBIValidate="true"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2CC-D9413DB977C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">UserID</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:userid1_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:group
+									appearance="choicebox"
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsChoicebox"
+									id="choicebox1"
+									controltype="radio"
+									wcpforms:layout="horizontal"
+									wcpforms:class="v_layout autoextent"
+									wcpforms:size="null auto">
+									<xforms:select1
+										appearance="full"
+										unique-id="1"
+										id="radioAT"
+										ref="tns:AuthenticationType">
+										<xforms:label
+											wcpforms:size="114px null"
+											wcpforms:class="h_label left_align">Authentication Type</xforms:label>
+										<xforms:item
+											wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsRadio"
+											id="radio1_1"
+											wcpforms:class="h_choicebox"
+											wcpforms:size="90px auto">
+											<xforms:label
+												textIdentifier="0027132C-F779-11E3-F303-425E657197C6">Cordys</xforms:label>
+											<xforms:value>custom</xforms:value>
+										</xforms:item>
+										<xforms:item
+											wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsRadio"
+											id="radio1_2"
+											wcpforms:class="h_choicebox"
+											wcpforms:size="90px auto">
+											<xforms:label
+												textIdentifier="0027132C-F779-11E3-F303-425E656FD7C6">External</xforms:label>
+											<xforms:value>domain</xforms:value>
+										</xforms:item>
+										<xforms:item
+											wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsRadio"
+											id="radio1_3"
+											wcpforms:class="h_choicebox"
+											wcpforms:size="90px auto">
+											<xforms:label
+												textIdentifier="0027132C-F779-11E3-F31C-6E44BA00F7C6">Certificate</xforms:label>
+											<xforms:value>certified</xforms:value>
+											<xforms:hint>Use Cordys User Manager for this option.</xforms:hint>
+										</xforms:item>
+										<xforms:action
+											ev:event="xforms-value-changed">
+											<xforms:radioAT_Change/>
+										</xforms:action>
+									</xforms:select1>
+								</xforms:group>
+								<xforms:secret
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsPassword"
+									id="dpw1"
+									ref="tns:UserPassword"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2FB-910DAFE1B7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Password</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:dpw1_Change/>
+									</xforms:action>
+									<xforms:action
+										ev:event="xforms-onvalidate">
+										<xforms:dpw1_Validate/>
+									</xforms:action>
+								</xforms:secret>
+								<xforms:secret
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsPassword"
+									id="dpw2"
+									doEBIValidate="false"
+									ref="tns:ConfirmPassword"
+									wcpforms:class="v_layout"
+									wcpforms:size="666px auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F303-8FA1AA2E77C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Confirm Password</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:dpw2_Change/>
+									</xforms:action>
+									<xforms:action
+										ev:event="xforms-onvalidate">
+										<xforms:dpw2_Validate/>
+									</xforms:action>
+								</xforms:secret>
+								<xforms:select1
+									appearance="check"
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsCheck"
+									id="check1"
+									ref="tns:Disabled"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F666-952A2466F21E"
+										wcpforms:class="autosuggest">Login disabled</xforms:label>
+									<xforms:item>
+										<xforms:label>true</xforms:label>
+										<xforms:value>true</xforms:value>
+									</xforms:item>
+									<xforms:item>
+										<xforms:label>false</xforms:label>
+										<xforms:value>false</xforms:value>
+									</xforms:item>
+								</xforms:select1>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="company1"
+									ref="tns:Company"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2CC-D9413DB5F7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Company</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:company1_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:textarea
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsTextarea"
+									id="address1"
+									ref="tns:Address"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:layout="vertical"
+									wcpforms:class="v_layout"
+									wcpforms:size="null 81px">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2CC-D9413DB4F7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Address</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:address1_Change/>
+									</xforms:action>
+								</xforms:textarea>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="telephone1"
+									ref="tns:Telephone"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2CC-D9413DB3F7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Telephone</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:telephone1_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="telephone21"
+									ref="tns:Telephone2"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2CC-D9413DB2F7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Telephone2</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:telephone21_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="email1"
+									ref="tns:Email"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2CC-D9413DB1F7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Email</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:email1_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:input
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+									id="userhomepage1"
+									ref="tns:UserHomePage"
+									wcpforms:textalign="left_align"
+									doEBIValidate="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2FB-910DAFE037C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">User Homepage</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:userhomepage1_Change/>
+									</xforms:action>
+								</xforms:input>
+								<xforms:select1
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsSelect"
+									id="defaultorg1"
+									doEBIValidate="false"
+									ref="tns:DefaultOrg"
+									initializeValueSets="1"
+									wcpforms:enumerated="false"
+									multiple="false"
+									wcpforms:class="v_layout"
+									wcpforms:size="null auto">
+									<xforms:label
+										textIdentifier="0027132C-F779-11E3-F2FB-910DAFDEB7C6"
+										wcpforms:size="114px null"
+										wcpforms:class="h_label left_align">Default Organization</xforms:label>
+									<xforms:action
+										ev:event="xforms-value-changed">
+										<xforms:defaultorg1_Change/>
+									</xforms:action>
+								</xforms:select1>
+								<xforms:group
+									appearance="group"
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+									id="group5"
+									wcpforms:layout="vertical"
+									wcpforms:class="v_layout"
+									wcpforms:size="null 30px"
+									wcpforms:labelalign="ontop"
+								/>
+								<xforms:group
+									appearance="group"
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+									id="group2"
+									isNavigationEnabled="true"
+									wcpforms:layout="horizontal"
+									wcpforms:class="v_layout"
+									wcpforms:size="null 18px"
+									wcpforms:labelalign="ontop">
+									<xforms:select1
+										appearance="check"
+										wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsCheck"
+										id="chkCloneRoles"
+										doEBIValidate="false"
+										ref="tns:CloneRoles"
+										wcpforms:class="h_layout"
+										wcpforms:size="13.86% auto">
+										<xforms:label
+											textIdentifier="0027132C-F779-11E3-F68C-FB8AA48F321E"
+											wcpforms:class="autosuggest">Clone Roles</xforms:label>
+										<xforms:item>
+											<xforms:label>true</xforms:label>
+											<xforms:value>true</xforms:value>
+										</xforms:item>
+										<xforms:item>
+											<xforms:label>false</xforms:label>
+											<xforms:value>false</xforms:value>
+										</xforms:item>
+										<xforms:action
+											ev:event="xforms-value-changed">
+											<xforms:chkCloneRoles_Change/>
+										</xforms:action>
+									</xforms:select1>
+									<xforms:select1
+										appearance="check"
+										wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsCheck"
+										id="chkCloneTasks"
+										doEBIValidate="false"
+										ref="tns:CloneTasks"
+										wcpforms:class="h_layout"
+										wcpforms:size="13.86% auto">
+										<xforms:label
+											textIdentifier="0027132C-F779-11E3-F68C-FB8AA48E721E"
+											wcpforms:class="autosuggest">Clone Tasks</xforms:label>
+										<xforms:item>
+											<xforms:label>true</xforms:label>
+											<xforms:value>true</xforms:value>
+										</xforms:item>
+										<xforms:item>
+											<xforms:label>false</xforms:label>
+											<xforms:value>false</xforms:value>
+										</xforms:item>
+									</xforms:select1>
+									<xforms:select1
+										appearance="check"
+										wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsCheck"
+										id="chkCloneTeams"
+										doEBIValidate="false"
+										ref="tns:CloneTeams"
+										wcpforms:class="h_layout"
+										wcpforms:size="14.76% auto">
+										<xforms:label
+											textIdentifier="0027132C-F779-11E3-F68C-FB8AA48CB21E"
+											wcpforms:class="autosuggest">Clone Teams</xforms:label>
+										<xforms:item>
+											<xforms:label>true</xforms:label>
+											<xforms:value>true</xforms:value>
+										</xforms:item>
+										<xforms:item>
+											<xforms:label>false</xforms:label>
+											<xforms:value>false</xforms:value>
+										</xforms:item>
+										<xforms:action
+											ev:event="xforms-onvalidate">
+											<xforms:chkCloneTeams_Validate/>
+										</xforms:action>
+									</xforms:select1>
+								</xforms:group>
+							</xforms:group>
+						</xforms:group>
+						<xforms:group
+							appearance="controlbox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+							id="controlbox1"
+							controltype="button"
+							wcpforms:layout="vertical"
+							wcpforms:class="f_layout"
+							wcpforms:align="left_align"
+							wcpforms:size="11.54% 185px"
+							wcpforms:position="970px 40px">
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnRefresh"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E2-F8DC-B08FB4BF9D2A">Refresh</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnRefresh_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnEdit"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-F34F-043956F417C6">Edit</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnEdit_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnNew"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-F2FE-BC5A843F77C6">New</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnNew_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnClone"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-F689-AFDB6920D21E">Clone</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnClone_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnSave"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E2-F8DC-0E314D7B7D2A">Save</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnSave_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnUndo"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-EBE9-AA2F0FA3B68F">Undo</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnUndo_Click/>
+								</xforms:action>
+							</xforms:trigger>
+						</xforms:group>
+					</xforms:group>
+				</xforms:group>
+				<div
+					xmlns="http://www.w3.org/2002/xforms/cr"
+					id="appInfoBar"
+					xformextendedname="StatusBar"
+					namespace="wcp.library.ui.StatusBar"
+					wcpforms:designLibrary="cas.xforms.designerlibrary.controls.extensions.StatusBar"
+					contentElementId="xbody_group"
+					position="footer">
+					<table
+						xmlns=""
+						width="100%"
+						border="1">
+						<tr
+							valign="top">
+							<td
+								width="100%"
+								id="NewPanel1">New Panel1</td>
+						</tr>
+					</table>
+				</div>
+			</xbody>
+			<xformsscript>
+				<![CDATA[/**
+ * XForm for multiple cordys user maintenance.
+ */
+
+var AT_CUSTOM = "custom";
+var AT_DOMAIN = "domain";
+var AT_CERTIFIED = "certified";
+
+var MODE_VIEW = 0;
+var MODE_EDIT = 1;
+var MODE_INSERT = 2;
+var MODE_CLONE = 3;
+
+// password hashing algorithm
+var PW_HA_NO_HASH = 0;
+var PW_HA_MD5 = 1;
+var PW_HA_SHA1 = 2;
+var PW_HA_MD5_SHA = 3;
+
+var MD5_PREFIX = "{MD5}";
+var SHA1_PREFIX = "{SHA1}";
+var MD5_SHA_PREFIX = "{MD5 + SHA}";
+
+var cloneOrgUserDN = null;
+var defaultAT = AT_CUSTOM;
+var doFieldValidate = true;
+var doEBIValidateConstraints = true;
+var skipValidate = false;
+var currentMode = MODE_VIEW;
+var pwAlgorithm = PW_HA_SHA1;
+
+var artifactInfo = "";
+var statusInfo = "";
+
+function btnSave_Click(eventObject)
+{
+    if (WebForm.validateForm(application.container.applicationId))
+    {
+        UIUserModel.synchronize();
+        if (!UIUserModel.soapFaultOccurred)
+        {
+            setCurrentMode(MODE_VIEW);
+            var rIndex = UIUserTable.getIndex();
+            showOrgUserDN(rIndex);
+        }
+    }
+}
+
+function btnNew_Click(eventObject)
+{
+    skipValidate = true;    // no initialize required for new
+    var newUser = UIUserTab.create();
+    skipValidate = false;
+    // radio button has no contraint validation on change, so we do it ourselves here
+    // required to set access/display levels
+    doEBIValidateConstraints = false;
+    radioAT.setValue(defaultAT);
+    UIUserModel.validateEBIConstraints(newUser); 
+    doEBIValidateConstraints = true;
+    setCurrentMode(MODE_INSERT);    
+    username1.setFocus();
+}
+
+function btnUndo_Click(eventObject)
+{
+    var tblIndex = UIUserTable.getIndex();
+    UIUserModel.undo();
+    setCurrentMode(MODE_VIEW);  
+    if ((description[tblIndex].getValue() != null) && (description[tblIndex].getValue() != "") && (description[tblIndex].getValue().slice(-1) != "*"))
+    {
+        UIUserTable.setIndex(tblIndex);
+    }
+}
+
+function btnRefresh_Click(eventObject)
+{
+    refreshUsers();
+}
+
+function refreshUsers()
+{
+    btnEdit.disable();
+    btnNew.disable();
+    btnClone.disable();
+    btnRefresh.disable();
+    statusInfo = "Reading users...";
+    setAppInfoBar();
+    setTimeout("doRefreshUsers()", 20);
+}
+
+function doRefreshUsers()
+{
+    var tblIndex = UIUserTable.getIndex();
+    UIUserModel.reset();
+    statusInfo = "";
+    setAppInfoBar(); 
+    btnEdit.enable();
+    btnNew.enable();
+    btnClone.enable();
+    btnRefresh.enable();       
+    if ((description[tblIndex].getValue() != null) && (description[tblIndex].getValue() != "") && (description[tblIndex].getValue().slice(-1) != "*"))
+    {
+        UIUserTable.setIndex(tblIndex);
+    }
+}
+
+function UIUserModel_BeforeSynchronize(eventObject)
+{
+    // apply any needed password hashing
+    checkPasswords(eventObject.updateDocument, "UserPassword");
+    checkPasswords(eventObject.updateDocument, "ConfirmPassword");
+}
+
+/**
+ * check the passwords in the tuple/new/UIUser instances, and hash any plain password if needed
+ */
+function checkPasswords(updDocument, pwElementName)
+{
+    if (pwAlgorithm != PW_HA_NO_HASH)
+    {
+        var pwNodes = cordys.selectXMLNodes(updDocument, ".//*[local-name()='tuple']/*[local-name()='new']/*[local-name()='UIUser']/*[local-name()='"+pwElementName+"']");
+        for (var i=0, n=pwNodes.length; i<n; i++)
+        {
+            var pwNode = pwNodes[i];
+            var pw = cordys.getTextContent(pwNode);
+            if ((pw != null) && (pw != "") && (!pwIsHashed(pw)))
+            {
+                if (pwAlgorithm == PW_HA_SHA1)
+                {        
+                    b64pad  = "="; //base-64 pad character. "=" for strict RFC compliance 
+                    chrsz   = 16;
+                    var pwHash = SHA1_PREFIX + b64_sha1(pw);
+                    cordys.setTextContent(pwNode, pwHash);
+                }
+                else if (pwAlgorithm == PW_HA_MD5)
+                {
+                    b64pad  = "=";  
+                    chrsz   = 8;     // imported from sha1.js / md5.js; does not use multi bytes because of backward compatibility 
+                    var pwHash = MD5_PREFIX + b64_md5(pw);
+                    cordys.setTextContent(pwNode, pwHash);                
+                }
+                else if (pwAlgorithm == PW_HA_MD5_SHA)
+                {
+                    b64pad  = "="; //base-64 pad character. "=" for strict RFC compliance            
+                    chrsz   = 8; 
+                    var pwMD5 = "{MD5}" + b64_md5(pw);
+                    b64pad  = "=";  
+                    chrsz   = 16;
+                    var pwHash = MD5_SHA_PREFIX + b64_sha1(pwMD5);                
+                    cordys.setTextContent(pwNode, pwHash);
+                }
+            }
+        }
+    }
+}
+
+function pwIsHashed(pw)
+{
+    return((pw.indexOf(MD5_PREFIX) >= 0) || (pw.indexOf(SHA1_PREFIX) >= 0) || (pw.indexOf(MD5_SHA_PREFIX) >= 0));
+}
+
+function fullusername1_Change(eventObject)
+{
+    setDescription();
+    setChangeIndicator();
+}
+
+function userid1_Change(eventObject)
+{
+    setDescription();
+    setChangeIndicator();    
+}
+
+function setDescription()
+{
+    var desc = fullusername1.getValue();
+    var usrid = userid1.getValue();
+    if ((usrid != null) && (usrid != ""))
+    {
+        desc = desc + " ("+usrid+")";
+    }
+    var tblIndex = UIUserTable.getIndex();
+    description[tblIndex].setValue(desc);
+}
+
+function setChangeIndicator()
+{
+    var tblIndex = UIUserTable.getIndex();
+    var desc = description[tblIndex].getValue();
+    if ((desc != null) && (desc != "") && (desc.slice(-1) != "*"))
+    {
+        description[tblIndex].setValue(desc+"*");
+    }
+}
+
+function username1_Change(eventObject)
+{
+    setChangeIndicator();
+    if ((fullusername1.getValue() == null) || (fullusername1.getValue() == ""))
+    {
+        fullusername1.setValue(username1.getValue());
+    }
+}
+
+function radioAT_Change(eventObject)
+{
+    setChangeIndicator(); 
+    if (doEBIValidateConstraints)
+    {
+        // radio button has no contraint validation on change, so we do it ourselves here
+        // required to set access/display levels
+        var currentUser = UIUserModel.activeTuple;
+        UIUserModel.validateEBIConstraints(currentUser); 
+    }
+    defaultAT = radioAT.getValue();
+}
+
+function dpw1_Change(eventObject)
+{
+    setChangeIndicator();  
+    doFieldValidate = false;
+    dpw2.setValue("");  
+    doFieldValidate = true;
+}
+
+function dpw2_Change(eventObject)
+{
+    setChangeIndicator();
+}
+
+function company1_Change(eventObject)
+{
+    setChangeIndicator();    
+}
+
+function address1_Change(eventObject)
+{
+    setChangeIndicator();    
+}
+
+function telephone1_Change(eventObject)
+{
+    setChangeIndicator();    
+}
+
+function telephone21_Change(eventObject)
+{
+    setChangeIndicator();    
+}
+
+function email1_Change(eventObject)
+{
+    setChangeIndicator();    
+}
+
+function userhomepage1_Change(eventObject)
+{
+    setChangeIndicator();    
+}
+
+function defaultorg1_Change(eventObject)
+{
+    setChangeIndicator();   
+}
+
+function Form_InitDone(eventObject)
+{
+    chkCloneRoles.hide();
+    chkCloneTasks.hide();
+    chkCloneTeams.hide();
+    setAppInfoBar();
+    application.showBusy(true);
+    setTimeout("showAll()", 20);
+    radioAT[2].disable();
+    tabpageUser.disable();
+    checkEnableDisable();
+    // below can be used to disable the checkbox for a row
+    // UIUserTable.rows[2].firstChild.disabled = true;
+}
+
+function showAll()
+{
+    UIUserTable.showAll();
+    application.showBusy(false);
+}
+
+function dpw2_Validate(eventObject)
+{
+    if (doFieldValidate)
+    {
+        if (radioAT.getValue() == AT_CUSTOM)
+        {
+            if ((dpw2.getValue() == null) || (dpw2.getValue() == ""))
+            {
+               eventObject.errorMessage = "Pls confirm the user password.";
+               eventObject.valid = false;
+            } 
+            else if (dpw2.getValue() != dpw1.getValue())
+            {
+               eventObject.errorMessage = "Entered passwords do not match.";
+               eventObject.valid = false;
+           }
+        }
+    }
+}
+
+function btnEdit_Click(eventObject)
+{
+    if (UIUserModel.activeTuple != null)
+    {
+        setCurrentMode(MODE_EDIT);
+        username1.setFocus();
+    }
+    else
+    {
+        application.notify("No user selected");
+    }
+}
+
+function UIUserTable_xformsonrowclick(eventObject)
+{
+    if (currentMode > MODE_VIEW)
+    {
+        var currentUser = fullusername1.getValue();
+        if ((currentUser != null) && (currentUser != ""))
+        {
+            currentUser = "(" + currentUser + ") ";
+        }
+        application.notify("Save/undo current user "+currentUser +"first.");
+        eventObject.returnValue = false;
+    }
+}
+
+function setCurrentMode(newMode)
+{
+    currentMode = newMode;
+    checkEnableDisable();
+    if (currentMode > MODE_VIEW)
+    {
+        tabpageUser.enable();
+        radioAT[2].disable();
+    }
+    else
+    {
+        tabpageUser.disable();
+    }
+}
+
+function checkEnableDisable()
+{
+    btnEdit.disable();
+    btnNew.disable();
+    btnClone.disable();
+    btnRefresh.disable();
+    btnSave.disable();
+    btnUndo.disable();
+    navDelete1.hide();
+    tbtnEdit.hide();
+    if (currentMode > MODE_VIEW)
+    {
+        btnSave.enable();
+        btnUndo.enable();
+    }
+    else
+    {
+        btnEdit.enable();
+        btnNew.enable();
+        btnClone.enable();
+        btnRefresh.enable();
+        navDelete1.show();
+        tbtnEdit.show();
+    }
+}
+
+function UIUserModel_BeforeEBIValidate(eventObject)
+{
+    if (!skipValidate)
+    {
+        var request = eventObject.request;
+        if (!doEBIValidateConstraints)
+        {
+            var nNode = cordys.selectXMLNode(request, ".//*[local-name()='tuple']/*[local-name()='new']/*[local-name()='UIUser']");
+            if (nNode != null)
+            {
+                cordys.setXMLAttribute(nNode, "", "qConstraint", "0");
+            }
+        }
+        if ((currentMode == MODE_CLONE) && (cloneOrgUserDN != null))
+        {
+            setBOpropertyValue(request, "http://schemas.cordys.com/coe/useradmin/ui/1.0", "UIUser", "CloneOrgUserDN", cloneOrgUserDN);
+        }     
+    }
+    else
+    {
+        eventObject.returnValue = false;
+    }
+}
+
+function UIUserModel_OnSOAPFault(eventObject)
+{
+    // Dont show the soap fault if it's an 'Constraint(s) violated during Update' 
+    var faultString = eventObject.faultString; 
+    if (faultString.indexOf("Constraint(s) violated") >= 0) 
+    {
+        eventObject.showError = false;
+    }    
+}
+
+function dpw1_Validate(eventObject)
+{
+    if (radioAT.getValue() == AT_CUSTOM)
+    {
+        if ((dpw1.getValue() == null) || (dpw1.getValue() == ""))
+        {
+           eventObject.errorMessage = "Pls enter the user password.";
+           eventObject.valid = false;
+        } 
+    }
+}
+function navDelete1_BeforeDelete(eventObject)
+{
+    processUsers("delete");
+    eventObject.returnValue = false;
+}
+
+function UIUserTable_OnSelectRow(eventObject)
+{
+    var rIndex = eventObject.rowIndex;
+    showOrgUserDN(rIndex);
+}
+
+function showOrgUserDN(rIndex)
+{
+    var orgUserDN = "";
+    if (rIndex > 0)
+    {
+        // show org user DN in status bar
+        var orgUserDN = "";
+        var tRows = UIUserTable.getRows();
+        if ((tRows != null) && (tRows.length > 0))
+        {
+            var bo = tRows[rIndex-1].getBusinessObject();
+            if (bo != null)
+            {
+                var curBO = bo.businessObject;
+                if (curBO != null)
+                {
+                    var nNode = cordys.selectXMLNode(curBO, ".//*[local-name()='OrgUserDN']");
+                    if (nNode != null)
+                    {
+                        orgUserDN = cordys.getTextContent(nNode);
+                    }
+                }
+            }
+        }
+    }
+    artifactInfo = orgUserDN;
+    setAppInfoBar();
+}
+
+function setAppInfoBar()
+{
+    var info = statusInfo;
+    if (info == "")
+    {
+        info = artifactInfo;
+    }
+    appInfoBar.setStatus(info);
+}
+
+function tbtnEdit_Click(eventObject)
+{
+    processUsers("update");
+}
+
+function processUsers(action)
+{
+    var orgUserDNs = new Array();
+    var checkedRows = UIUserTable.getCheckedRows();
+    var usersFound = false;
+    for(i=0; i<checkedRows.length; i++)
+    {
+        var bo = checkedRows[i].getBusinessObject().getCurrent();
+        var nNode = cordys.selectXMLNode(bo, ".//*[local-name()='OrgUserDN']");
+        if (nNode != null)
+        {
+            var orgUserDN = cordys.getTextContent(nNode);
+            if ((orgUserDN != null) && (orgUserDN != ""))
+            {
+                orgUserDNs[orgUserDN] = true;
+                usersFound = true;
+            }
+        }
+    }
+    if (usersFound)
+    {
+        var usersData = UIUserModel.getData().cloneNode(true);
+        var userNodes = cordys.selectXMLNodes(usersData, ".//*[local-name()='tuple']/*/*[local-name()='UIUser']");
+        for (var i=0, n=userNodes.length; i<n; i++)
+        {
+            var skipUser = true;
+            var userNode = userNodes[i]; 
+            var nNode = cordys.selectXMLNode(userNode, ".//*[local-name()='OrgUserDN']");
+            if (nNode != null)
+            {
+                var orgUserDN = cordys.getTextContent(nNode);  
+                if ((orgUserDN != null) && (orgUserDN != "")) 
+                {
+                    skipUser = (typeof(orgUserDNs[orgUserDN]) == 'undefined');   
+                }
+            }
+            if (skipUser)
+            {
+                var tupleNode = userNode.parentNode.parentNode;
+                tupleNode.parentNode.removeChild(tupleNode);
+            }
+        }
+        if (action == "delete")
+        {
+            application.showDialog(appDeleteUsers.XMLDocument.documentElement, usersData, null, closeDialogHandler);
+        }
+        else if (action == "update")
+        {
+            application.showDialog(appUpdateUsers.XMLDocument.documentElement, usersData, null, closeDialogHandler);
+        }
+    }
+    else
+    {
+        application.notify("Check one or more users.");
+    }
+}
+
+function closeDialogHandler(dialogReturnValue)
+{
+    if (dialogReturnValue.refreshUsers)
+    {
+        refreshUsers();
+    }
+}
+
+function btnClone_Click(eventObject)
+{
+    // determine cloneOrgUserDN
+    cloneOrgUserDN = null;
+    var curBO = UIUserModel.activeTuple;
+    if (curBO != null)
+    { 
+        var nNode = cordys.selectXMLNode(curBO, ".//*[local-name()='OrgUserDN']");
+        if (nNode != null)
+        {
+            cloneOrgUserDN = cordys.getTextContent(nNode);
+        } 
+    }
+    if (cloneOrgUserDN != null)
+    {
+        setCurrentMode(MODE_CLONE);  
+        var newUser = UIUserTab.create(); 
+        // upon create, XForms will fire the validate as to initialize the new BO - in the onInitialize in wsapps, we will copy 
+        // the relevant attributes from the cloned user
+        username1.setFocus(); 
+    }
+    else
+    {
+        application.notify("Select a user first.");
+    }
+}
+
+function chkCloneRoles_Change(eventObject)
+{
+    var cloneRoles = chkCloneRoles.getValue();
+    if (cloneRoles == "false")
+    {
+        chkCloneTeams.setValue("false");
+    }
+}
+
+function chkCloneTeams_Validate(eventObject)
+{
+    var cloneTeams = chkCloneTeams.getValue();
+    if (cloneTeams == "true")
+    {
+        chkCloneRoles.setValue("true");
+    }
+}]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>Users</taskDescription>
+	<taskName>Users</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts>
+		<uri
+			id="0027132C-F779-11E3-F2AE-B66E4CE737C6"
+			path="UserAdmin/com-cordys-coe/useradmin/web/com/ekemait/useradmin/js/useradmin.js"
+			type="com.cordys.cws.documenttypes.javascript.Javascript"
+		/>
+	</Javascripts>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DAFD7C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DAFB7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DAFB7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DAFB7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.065</CreationDate>
+			<Notes/>
+			<Identifier>
+				<uri
+					id="0027132C-F779-11E2-F8DA-2482DB2B1D2A"
+				/>
+			</Identifier>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CA-2EEE4B85D7C6">
+			<DocumentID>0027132C-F779-11E3-F2CA-2EEE4B85B7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CA-2EEE4B85B7C6</Name>
+			<Description>0027132C-F779-11E3-F2CA-2EEE4B85B7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.067</CreationDate>
+			<Notes/>
+			<UIRef>orguserdn</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CA-2EEE4B8617C6">
+					<DocumentID>0027132C-F779-11E3-F2CA-2EEE4B85F7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CA-2EEE4B85F7C6</Name>
+					<Description>0027132C-F779-11E3-F2CA-2EEE4B85F7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.053</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC9-A8C4CDD035D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CA-2EEE4B8497C6">
+			<DocumentID>0027132C-F779-11E3-F2CA-2EEE4B8477C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CA-2EEE4B8477C6</Name>
+			<Description>0027132C-F779-11E3-F2CA-2EEE4B8477C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.068</CreationDate>
+			<Notes/>
+			<UIRef>username</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CA-2EEE4B84D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CA-2EEE4B84B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CA-2EEE4B84B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CA-2EEE4B84B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.054</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CA-2EEE4B84F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CA-2EEE4B8397C6">
+			<DocumentID>0027132C-F779-11E3-F2CA-2EEE4B8377C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CA-2EEE4B8377C6</Name>
+			<Description>0027132C-F779-11E3-F2CA-2EEE4B8377C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.052</CreationDate>
+			<Notes/>
+			<UIRef>fullusername</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CA-2EEE4B83D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CA-2EEE4B83B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CA-2EEE4B83B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CA-2EEE4B83B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.063</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CA-2EEE4B83F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB917C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB8F7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB8F7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB8F7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.068</CreationDate>
+			<Notes/>
+			<UIRef>userid</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB957C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB937C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB937C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB937C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.069</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB977C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB817C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB7F7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB7F7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB7F7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.051</CreationDate>
+			<Notes/>
+			<UIRef>description</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB857C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB837C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB837C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB837C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.059</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB877C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB797C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB777C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB777C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB777C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.057</CreationDate>
+			<Notes/>
+			<UIRef>authenticationtype</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB7D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB7B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB7B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB7B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.064</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-E970-7AAFC5F4D6E6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB697C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB677C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB677C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB677C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.052</CreationDate>
+			<Notes/>
+			<UIRef>userpassword</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB6D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB6B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB6B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB6B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.051</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB6F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB597C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB577C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB577C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB577C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.059</CreationDate>
+			<Notes/>
+			<UIRef>company</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB5D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB5B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB5B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB5B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.066</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB5F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB497C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB477C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB477C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB477C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.058</CreationDate>
+			<Notes/>
+			<UIRef>address</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB4D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB4B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB4B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB4B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.051</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB4F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB397C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB377C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB377C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB377C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.067</CreationDate>
+			<Notes/>
+			<UIRef>telephone</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB3D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB3B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB3B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB3B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.06</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB3F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB297C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB277C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB277C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB277C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.066</CreationDate>
+			<Notes/>
+			<UIRef>telephone2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB2D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB2B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB2B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB2B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.068</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB2F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB197C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB177C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB177C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB177C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.051</CreationDate>
+			<Notes/>
+			<UIRef>email</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB1D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB1B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB1B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB1B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.069</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB1F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB097C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB077C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DB077C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DB077C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.052</CreationDate>
+			<Notes/>
+			<UIRef>userhomepage</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB0D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DB0B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DB0B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DB0B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:30:48.05</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB0F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DAE97C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DAE77C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DAE77C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DAE77C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.08</CreationDate>
+			<Notes/>
+			<UIRef>orguserdn1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DAED7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DAEB7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DAEB7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DAEB7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.08</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-FAC9-A8C4CDD035D0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DAE17C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DADF7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DADF7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DADF7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.079</CreationDate>
+			<Notes/>
+			<UIRef>username1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F303-8FA1AA2BD7C6">
+					<DocumentID>0027132C-F779-11E3-F304-15550C5F57C6</DocumentID>
+					<Name>0027132C-F779-11E3-F304-15550C5F57C6</Name>
+					<Description>0027132C-F779-11E3-F304-15550C5F57C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T22:13:07.963</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F303-8FA1AA2BF7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DAD97C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DAD77C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-D9413DAD77C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-D9413DAD77C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.08</CreationDate>
+			<Notes/>
+			<UIRef>fullusername1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FB-910DAFE317C6">
+					<DocumentID>0027132C-F779-11E3-F2FB-910DAFE2F7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FB-910DAFE2F7C6</Name>
+					<Description>0027132C-F779-11E3-F2FB-910DAFE2F7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T16:00:33.277</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2FB-910DAFE337C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DAD17C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263B2F7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263B2F7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263B2F7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.078</CreationDate>
+			<Notes/>
+			<UIRef>userid1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DAD57C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-D9413DAD37C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-D9413DAD37C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-D9413DAD37C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.082</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB977C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B297C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263B277C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263B277C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263B277C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.079</CreationDate>
+			<Notes/>
+			<UIRef>description1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B2D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-EEB263B2B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-EEB263B2B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-EEB263B2B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.082</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB877C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B217C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263B1F7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263B1F7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263B1F7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.078</CreationDate>
+			<Notes/>
+			<UIRef>authenticationtype1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FB-910DAFE257C6">
+					<DocumentID>0027132C-F779-11E3-F2FB-910DAFE237C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FB-910DAFE237C6</Name>
+					<Description>0027132C-F779-11E3-F2FB-910DAFE237C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T16:00:33.278</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2FB-910DAFE277C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B197C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263B177C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263B177C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263B177C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.082</CreationDate>
+			<Notes/>
+			<UIRef>dpw1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FB-910DAFE197C6">
+					<DocumentID>0027132C-F779-11E3-F2FB-910DAFE177C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FB-910DAFE177C6</Name>
+					<Description>0027132C-F779-11E3-F2FB-910DAFE177C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T16:00:33.274</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2FB-910DAFE1B7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B117C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263B0F7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263B0F7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263B0F7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.079</CreationDate>
+			<Notes/>
+			<UIRef>company1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B157C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-EEB263B137C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-EEB263B137C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-EEB263B137C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.083</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB5F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B097C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263B077C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263B077C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263B077C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.078</CreationDate>
+			<Notes/>
+			<UIRef>address1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B0D7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-EEB263B0B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-EEB263B0B7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-EEB263B0B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.08</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB4F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B017C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263AFF7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263AFF7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263AFF7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.081</CreationDate>
+			<Notes/>
+			<UIRef>telephone1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263B057C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-EEB263B037C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-EEB263B037C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-EEB263B037C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.079</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB3F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263AF97C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263AF77C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263AF77C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263AF77C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.082</CreationDate>
+			<Notes/>
+			<UIRef>telephone21</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263AFD7C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-EEB263AFB7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-EEB263AFB7C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-EEB263AFB7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.079</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB2F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263AF17C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263AEF7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263AEF7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263AEF7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.081</CreationDate>
+			<Notes/>
+			<UIRef>email1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263AF57C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-EEB263AF37C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-EEB263AF37C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-EEB263AF37C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:39:42.08</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2CC-D9413DB1F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263AE97C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263AE77C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263AE77C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263AE77C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:39:42.078</CreationDate>
+			<Notes/>
+			<UIRef>userhomepage1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FB-910DAFE017C6">
+					<DocumentID>0027132C-F779-11E3-F2FB-910DAFDFF7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FB-910DAFDFF7C6</Name>
+					<Description>0027132C-F779-11E3-F2FB-910DAFDFF7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T16:00:33.273</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2FB-910DAFE037C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263A8F7C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263A8D7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CC-EEB263A8D7C6</Name>
+			<Description>0027132C-F779-11E3-F2CC-EEB263A8D7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:52:32.049</CreationDate>
+			<Notes/>
+			<UIRef>UIUserTab</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263A937C6">
+					<DocumentID>0027132C-F779-11E3-F2CC-EEB263A917C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2CC-EEB263A917C6</Name>
+					<Description>0027132C-F779-11E3-F2CC-EEB263A917C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-15T17:52:32.05</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-F947-425E9CE57279"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CD-567F07C8F7C6">
+			<DocumentID>0027132C-F779-11E3-F2CD-567F07C8D7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2CD-567F07C8D7C6</Name>
+			<Description>0027132C-F779-11E3-F2CD-567F07C8D7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T14:01:38.546</CreationDate>
+			<Notes/>
+			<UIRef>defaultorg1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FB-910DAFDE97C6">
+					<DocumentID>0027132C-F779-11E3-F2FB-910DAFDE77C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FB-910DAFDE77C6</Name>
+					<Description>0027132C-F779-11E3-F2FB-910DAFDE77C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T16:00:33.275</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2FB-910DAFDEB7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2FB-910DAFDD17C6">
+			<DocumentID>0027132C-F779-11E3-F2FB-910DAFDCF7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2FB-910DAFDCF7C6</Name>
+			<Description>0027132C-F779-11E3-F2FB-910DAFDCF7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T16:07:37.517</CreationDate>
+			<Notes/>
+			<UIRef>btnSave</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FB-910DAFDCD7C6">
+					<DocumentID>0027132C-F779-11E3-F2FB-910DAFDCB7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FB-910DAFDCB7C6</Name>
+					<Description>0027132C-F779-11E3-F2FB-910DAFDCB7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T16:07:37.517</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-F8DC-0E314D7B7D2A"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2FE-BC5A844017C6">
+			<DocumentID>0027132C-F779-11E3-F2FE-BC5A843FF7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2FE-BC5A843FF7C6</Name>
+			<Description>0027132C-F779-11E3-F2FE-BC5A843FF7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T17:25:06.027</CreationDate>
+			<Notes/>
+			<UIRef>btnNew</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FE-BC5A843F57C6">
+					<DocumentID>0027132C-F779-11E3-F2FE-BC5A843F37C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FE-BC5A843F37C6</Name>
+					<Description>0027132C-F779-11E3-F2FE-BC5A843F37C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T17:25:06.029</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F2FE-BC5A843F77C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F2FE-BC5A843D17C6">
+			<DocumentID>0027132C-F779-11E3-F2FE-BC5A843CF7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F2FE-BC5A843CF7C6</Name>
+			<Description>0027132C-F779-11E3-F2FE-BC5A843CF7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T17:29:00.866</CreationDate>
+			<Notes/>
+			<UIRef>btnUndo</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F2FE-BC5A843CD7C6">
+					<DocumentID>0027132C-F779-11E3-F2FE-BC5A843CB7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F2FE-BC5A843CB7C6</Name>
+					<Description>0027132C-F779-11E3-F2FE-BC5A843CB7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T17:29:00.866</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-EBE9-AA2F0FA3B68F"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F303-425E6576D7C6">
+			<DocumentID>0027132C-F779-11E3-F303-425E6576B7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F303-425E6576B7C6</Name>
+			<Description>0027132C-F779-11E3-F303-425E6576B7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T21:32:39.545</CreationDate>
+			<Notes/>
+			<UIRef>btnRefresh</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F303-425E657697C6">
+					<DocumentID>0027132C-F779-11E3-F303-425E657677C6</DocumentID>
+					<Name>0027132C-F779-11E3-F303-425E657677C6</Name>
+					<Description>0027132C-F779-11E3-F303-425E657677C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T21:32:39.545</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E2-F8DC-B08FB4BF9D2A"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F303-425E657437C6">
+			<DocumentID>0027132C-F779-11E3-F303-425E657417C6</DocumentID>
+			<Name>0027132C-F779-11E3-F303-425E657417C6</Name>
+			<Description>0027132C-F779-11E3-F303-425E657417C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T21:41:44.054</CreationDate>
+			<Notes/>
+			<UIRef>choicebox1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F303-425E657277C6">
+					<DocumentID>0027132C-F779-11E3-F303-425E657257C6</DocumentID>
+					<Name>0027132C-F779-11E3-F303-425E657257C6</Name>
+					<Description>0027132C-F779-11E3-F303-425E657257C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T21:41:44.05</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F303-425E657297C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F303-425E657337C6">
+			<DocumentID>0027132C-F779-11E3-F303-425E657317C6</DocumentID>
+			<Name>0027132C-F779-11E3-F303-425E657317C6</Name>
+			<Description>0027132C-F779-11E3-F303-425E657317C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T21:41:44.053</CreationDate>
+			<Notes/>
+			<UIRef>radio1_1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F303-425E657177C6">
+					<DocumentID>0027132C-F779-11E3-F303-425E657157C6</DocumentID>
+					<Name>0027132C-F779-11E3-F303-425E657157C6</Name>
+					<Description>0027132C-F779-11E3-F303-425E657157C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T21:41:44.053</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F303-425E657197C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F303-425E657077C6">
+			<DocumentID>0027132C-F779-11E3-F303-425E657057C6</DocumentID>
+			<Name>0027132C-F779-11E3-F303-425E657057C6</Name>
+			<Description>0027132C-F779-11E3-F303-425E657057C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T21:41:44.05</CreationDate>
+			<Notes/>
+			<UIRef>radio1_2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F303-425E656FB7C6">
+					<DocumentID>0027132C-F779-11E3-F303-425E656F97C6</DocumentID>
+					<Name>0027132C-F779-11E3-F303-425E656F97C6</Name>
+					<Description>0027132C-F779-11E3-F303-425E656F97C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T21:41:44.05</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F303-425E656FD7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F303-8FA1AA2F17C6">
+			<DocumentID>0027132C-F779-11E3-F303-8FA1AA2EF7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F303-8FA1AA2EF7C6</Name>
+			<Description>0027132C-F779-11E3-F303-8FA1AA2EF7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-17T21:53:41.689</CreationDate>
+			<Notes/>
+			<UIRef>dpw2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F303-8FA1AA2E57C6">
+					<DocumentID>0027132C-F779-11E3-F303-8FA1AA2E37C6</DocumentID>
+					<Name>0027132C-F779-11E3-F303-8FA1AA2E37C6</Name>
+					<Description>0027132C-F779-11E3-F303-8FA1AA2E37C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-17T21:53:41.688</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F303-8FA1AA2E77C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F31C-6E44BA0197C6">
+			<DocumentID>0027132C-F779-11E3-F31C-6E44BA0177C6</DocumentID>
+			<Name>0027132C-F779-11E3-F31C-6E44BA0177C6</Name>
+			<Description>0027132C-F779-11E3-F31C-6E44BA0177C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-20T20:01:19.621</CreationDate>
+			<Notes/>
+			<UIRef>radio1_3</UIRef>
+			<TooltipText>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F34D-385B258C37C6">
+					<DocumentID>0027132C-F779-11E3-F34D-385B258C17C6</DocumentID>
+					<Name>0027132C-F779-11E3-F34D-385B258C17C6</Name>
+					<Description>0027132C-F779-11E3-F34D-385B258C17C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-20T20:13:27.946</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F34D-385B258C57C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TooltipText>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F31C-6E44BA00D7C6">
+					<DocumentID>0027132C-F779-11E3-F31C-6E44BA00B7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F31C-6E44BA00B7C6</Name>
+					<Description>0027132C-F779-11E3-F31C-6E44BA00B7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-20T20:01:19.621</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F31C-6E44BA00F7C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F34F-043956F4F7C6">
+			<DocumentID>0027132C-F779-11E3-F34F-043956F4D7C6</DocumentID>
+			<Name>0027132C-F779-11E3-F34F-043956F4D7C6</Name>
+			<Description>0027132C-F779-11E3-F34F-043956F4D7C6</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-20T23:07:55.548</CreationDate>
+			<Notes/>
+			<UIRef>btnEdit</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F34F-043956F3F7C6">
+					<DocumentID>0027132C-F779-11E3-F34F-043956F3D7C6</DocumentID>
+					<Name>0027132C-F779-11E3-F34F-043956F3D7C6</Name>
+					<Description>0027132C-F779-11E3-F34F-043956F3D7C6</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-02-20T23:07:55.55</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F34F-043956F417C6"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F666-952A2467921E">
+			<DocumentID>0027132C-F779-11E3-F666-952A2467721E</DocumentID>
+			<Name>0027132C-F779-11E3-F666-952A2467721E</Name>
+			<Description>0027132C-F779-11E3-F666-952A2467721E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-24T09:35:01.798</CreationDate>
+			<Notes/>
+			<UIRef>check1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F666-952A2466D21E">
+					<DocumentID>0027132C-F779-11E3-F666-952A2466B21E</DocumentID>
+					<Name>0027132C-F779-11E3-F666-952A2466B21E</Name>
+					<Description>0027132C-F779-11E3-F666-952A2466B21E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-24T09:35:01.799</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F666-952A2466F21E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F684-A9EB93F8B21E">
+			<DocumentID>0027132C-F779-11E3-F684-A9EB93F8921E</DocumentID>
+			<Name>0027132C-F779-11E3-F684-A9EB93F8921E</Name>
+			<Description>0027132C-F779-11E3-F684-A9EB93F8921E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-25T14:12:00.125</CreationDate>
+			<Notes/>
+			<UIRef>tbtnEdit</UIRef>
+			<TooltipText>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F684-A9EB93F6F21E">
+					<DocumentID>0027132C-F779-11E3-F684-A9EB93F6D21E</DocumentID>
+					<Name>0027132C-F779-11E3-F684-A9EB93F6D21E</Name>
+					<Description>0027132C-F779-11E3-F684-A9EB93F6D21E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-25T14:12:00.128</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F684-A9EB93F7121E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TooltipText>
+			<TranslatableName/>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F684-A9EB93F6B21E">
+			<DocumentID>0027132C-F779-11E3-F684-A9EB93F6921E</DocumentID>
+			<Name>0027132C-F779-11E3-F684-A9EB93F6921E</Name>
+			<Description>0027132C-F779-11E3-F684-A9EB93F6921E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-25T14:12:00.127</CreationDate>
+			<Notes/>
+			<UIRef>navDelete1</UIRef>
+			<TooltipText>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F684-A9EB93F5F21E">
+					<DocumentID>0027132C-F779-11E3-F684-A9EB93F5D21E</DocumentID>
+					<Name>0027132C-F779-11E3-F684-A9EB93F5D21E</Name>
+					<Description>0027132C-F779-11E3-F684-A9EB93F5D21E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-25T14:12:00.127</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F684-A9EB93F6121E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TooltipText>
+			<TranslatableName/>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F689-AFDB6921B21E">
+			<DocumentID>0027132C-F779-11E3-F689-AFDB6921921E</DocumentID>
+			<Name>0027132C-F779-11E3-F689-AFDB6921921E</Name>
+			<Description>0027132C-F779-11E3-F689-AFDB6921921E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-25T20:36:04.14</CreationDate>
+			<Notes/>
+			<UIRef>btnClone</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F689-AFDB6920B21E">
+					<DocumentID>0027132C-F779-11E3-F689-AFDB6920921E</DocumentID>
+					<Name>0027132C-F779-11E3-F689-AFDB6920921E</Name>
+					<Description>0027132C-F779-11E3-F689-AFDB6920921E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-25T20:36:04.141</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F689-AFDB6920D21E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA490D21E">
+			<DocumentID>0027132C-F779-11E3-F68C-FB8AA490B21E</DocumentID>
+			<Name>0027132C-F779-11E3-F68C-FB8AA490B21E</Name>
+			<Description>0027132C-F779-11E3-F68C-FB8AA490B21E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-25T22:31:55.279</CreationDate>
+			<Notes/>
+			<UIRef>chkCloneRoles</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA48F121E">
+					<DocumentID>0027132C-F779-11E3-F68C-FB8AA48EF21E</DocumentID>
+					<Name>0027132C-F779-11E3-F68C-FB8AA48EF21E</Name>
+					<Description>0027132C-F779-11E3-F68C-FB8AA48EF21E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-25T22:31:55.278</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F68C-FB8AA48F321E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA48FD21E">
+			<DocumentID>0027132C-F779-11E3-F68C-FB8AA48FB21E</DocumentID>
+			<Name>0027132C-F779-11E3-F68C-FB8AA48FB21E</Name>
+			<Description>0027132C-F779-11E3-F68C-FB8AA48FB21E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-25T22:31:55.282</CreationDate>
+			<Notes/>
+			<UIRef>chkCloneTasks</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA48E521E">
+					<DocumentID>0027132C-F779-11E3-F68C-FB8AA48E321E</DocumentID>
+					<Name>0027132C-F779-11E3-F68C-FB8AA48E321E</Name>
+					<Description>0027132C-F779-11E3-F68C-FB8AA48E321E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-25T22:31:55.279</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F68C-FB8AA48E721E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA48D521E">
+			<DocumentID>0027132C-F779-11E3-F68C-FB8AA48D321E</DocumentID>
+			<Name>0027132C-F779-11E3-F68C-FB8AA48D321E</Name>
+			<Description>0027132C-F779-11E3-F68C-FB8AA48D321E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-25T22:31:55.278</CreationDate>
+			<Notes/>
+			<UIRef>chkCloneTeams</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA48C921E">
+					<DocumentID>0027132C-F779-11E3-F68C-FB8AA48C721E</DocumentID>
+					<Name>0027132C-F779-11E3-F68C-FB8AA48C721E</Name>
+					<Description>0027132C-F779-11E3-F68C-FB8AA48C721E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-25T22:31:55.281</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F68C-FB8AA48CB21E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA48C121E">
+			<DocumentID>0027132C-F779-11E3-F68C-FB8AA48BF21E</DocumentID>
+			<Name>0027132C-F779-11E3-F68C-FB8AA48BF21E</Name>
+			<Description>0027132C-F779-11E3-F68C-FB8AA48BF21E</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-03-25T22:31:55.278</CreationDate>
+			<Notes/>
+			<UIRef>group2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F68C-FB8AA48C521E">
+					<DocumentID>0027132C-F779-11E3-F68C-FB8AA48C321E</DocumentID>
+					<Name>0027132C-F779-11E3-F68C-FB8AA48C321E</Name>
+					<Description>0027132C-F779-11E3-F68C-FB8AA48C321E</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-03-25T22:31:55.28</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0027132C-F779-11E3-F689-AFDB6920D21E"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices>
+		<uri
+			id="0027132C-F779-11E3-F2CC-3E70B6BF77C6"
+		/>
+	</Webservices>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-D9413DB057C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-D9413DB037C6</DocumentID>
+			<Name>UIUserModel</Name>
+			<Description>UIUserModel</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:30:48.05</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/coe/useradmin/ui/1.0</namespace>
+			<operationName>GetUIUserObjects</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0027132C-F779-11E3-F2CC-EEB263A6F7C6">
+			<DocumentID>0027132C-F779-11E3-F2CC-EEB263A6D7C6</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-02-15T17:57:59.184</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

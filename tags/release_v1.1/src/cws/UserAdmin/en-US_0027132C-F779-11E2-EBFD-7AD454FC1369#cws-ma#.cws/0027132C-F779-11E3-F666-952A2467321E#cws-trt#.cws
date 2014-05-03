@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0027132C-F779-11E3-F666-952A2467521E">
+	<DocumentID>0027132C-F779-11E3-F666-952A2467321E</DocumentID>
+	<Name>0027132C-F779-11E3-F666-952A2467321E</Name>
+	<Description>Login disabled</Description>
+	<CreatedBy>cordysadm</CreatedBy>
+	<CreationDate>2014-03-24T09:35:01.799</CreationDate>
+	<Notes/>
+	<Text>Login disabled</Text>
+	<Language>
+		<uri
+			id="0027132C-F779-11E2-EBFD-7AD454FC5369"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0027132C-F779-11E3-F666-952A2466F21E"
+		/>
+	</TextIdentifier>
+</TranslatedText>

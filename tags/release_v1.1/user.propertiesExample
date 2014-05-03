@@ -1,0 +1,6 @@
+# Property file version. Do now modify!
+cep.propertyfile.version = 2.0.4
+# Cordys Server Configuration
+server.configuration.name = EkemaITLocal
+# Location of CWS workspace folder under the project
+src.cws.dir = C:\\PROGRA~1\\Cordys\\defaultInst\\cws
