@@ -22,12 +22,6 @@
 			showError="true">
 			<xhead>
 				<script
-					src="wcp/library/util/sha1.js"
-				/>
-				<script
-					src="wcp/library/util/md5.js"
-				/>
-				<script
 					src="com/ekemait/useradmin/js/useradmin.js"
 					documentID="0027132C-F779-11E3-F2AE-B66E4CE737C6"
 				/>
@@ -57,10 +51,6 @@
 						/>
 					</xforms:instance>
 					<wcpforms:instanceschema/>
-					<xforms:action
-						ev:event="xforms-onbeforesynchronize">
-						<xforms:UIUserModel_BeforeSynchronize/>
-					</xforms:action>
 					<xforms:action
 						ev:event="xforms-onbeforeebivalidate">
 						<xforms:UIUserModel_BeforeEBIValidate/>
@@ -320,6 +310,10 @@
 										<xforms:action
 											ev:event="xforms-value-changed">
 											<xforms:radioAT_Change/>
+										</xforms:action>
+										<xforms:action
+											ev:event="xforms-before-data-bind">
+											<xforms:radioAT_BeforeBind/>
 										</xforms:action>
 									</xforms:select1>
 								</xforms:group>
@@ -603,7 +597,7 @@
 							wcpforms:layout="vertical"
 							wcpforms:class="f_layout"
 							wcpforms:align="left_align"
-							wcpforms:size="11.54% 185px"
+							wcpforms:size="11.54% 203px"
 							wcpforms:position="970px 40px">
 							<xforms:trigger
 								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
@@ -615,18 +609,6 @@
 								<xforms:action
 									ev:event="xforms-activate">
 									<xforms:btnRefresh_Click/>
-								</xforms:action>
-							</xforms:trigger>
-							<xforms:trigger
-								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
-								id="btnEdit"
-								wcpforms:class="v_button"
-								wcpforms:size="null 2em">
-								<xforms:label
-									textIdentifier="0027132C-F779-11E3-F34F-043956F417C6">Edit</xforms:label>
-								<xforms:action
-									ev:event="xforms-activate">
-									<xforms:btnEdit_Click/>
 								</xforms:action>
 							</xforms:trigger>
 							<xforms:trigger
@@ -643,6 +625,18 @@
 							</xforms:trigger>
 							<xforms:trigger
 								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnEdit"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-F34F-043956F417C6">Edit</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnEdit_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
 								id="btnClone"
 								wcpforms:class="v_button"
 								wcpforms:size="null 2em">
@@ -651,6 +645,18 @@
 								<xforms:action
 									ev:event="xforms-activate">
 									<xforms:btnClone_Click/>
+								</xforms:action>
+							</xforms:trigger>
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="btnChangePassword"
+								wcpforms:class="v_button"
+								wcpforms:size="null 2em">
+								<xforms:label
+									textIdentifier="0027132C-F779-11E3-F7E8-B6B9C8DBD217">Set Passwd</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:btnChangePassword_Click/>
 								</xforms:action>
 							</xforms:trigger>
 							<xforms:trigger
@@ -714,16 +720,7 @@ var MODE_VIEW = 0;
 var MODE_EDIT = 1;
 var MODE_INSERT = 2;
 var MODE_CLONE = 3;
-
-// password hashing algorithm
-var PW_HA_NO_HASH = 0;
-var PW_HA_MD5 = 1;
-var PW_HA_SHA1 = 2;
-var PW_HA_MD5_SHA = 3;
-
-var MD5_PREFIX = "{MD5}";
-var SHA1_PREFIX = "{SHA1}";
-var MD5_SHA_PREFIX = "{MD5 + SHA}";
+var MODE_CHANGE_PW = 4;
 
 var cloneOrgUserDN = null;
 var defaultAT = AT_CUSTOM;
@@ -731,7 +728,6 @@ var doFieldValidate = true;
 var doEBIValidateConstraints = true;
 var skipValidate = false;
 var currentMode = MODE_VIEW;
-var pwAlgorithm = PW_HA_SHA1;
 
 var artifactInfo = "";
 var statusInfo = "";
@@ -784,6 +780,7 @@ function btnRefresh_Click(eventObject)
 function refreshUsers()
 {
     btnEdit.disable();
+    btnChangePassword.disable();
     btnNew.disable();
     btnClone.disable();
     btnRefresh.disable();
@@ -799,6 +796,7 @@ function doRefreshUsers()
     statusInfo = "";
     setAppInfoBar(); 
     btnEdit.enable();
+    btnChangePassword.enable();
     btnNew.enable();
     btnClone.enable();
     btnRefresh.enable();       
@@ -806,61 +804,6 @@ function doRefreshUsers()
     {
         UIUserTable.setIndex(tblIndex);
     }
-}
-
-function UIUserModel_BeforeSynchronize(eventObject)
-{
-    // apply any needed password hashing
-    checkPasswords(eventObject.updateDocument, "UserPassword");
-    checkPasswords(eventObject.updateDocument, "ConfirmPassword");
-}
-
-/**
- * check the passwords in the tuple/new/UIUser instances, and hash any plain password if needed
- */
-function checkPasswords(updDocument, pwElementName)
-{
-    if (pwAlgorithm != PW_HA_NO_HASH)
-    {
-        var pwNodes = cordys.selectXMLNodes(updDocument, ".//*[local-name()='tuple']/*[local-name()='new']/*[local-name()='UIUser']/*[local-name()='"+pwElementName+"']");
-        for (var i=0, n=pwNodes.length; i<n; i++)
-        {
-            var pwNode = pwNodes[i];
-            var pw = cordys.getTextContent(pwNode);
-            if ((pw != null) && (pw != "") && (!pwIsHashed(pw)))
-            {
-                if (pwAlgorithm == PW_HA_SHA1)
-                {        
-                    b64pad  = "="; //base-64 pad character. "=" for strict RFC compliance 
-                    chrsz   = 16;
-                    var pwHash = SHA1_PREFIX + b64_sha1(pw);
-                    cordys.setTextContent(pwNode, pwHash);
-                }
-                else if (pwAlgorithm == PW_HA_MD5)
-                {
-                    b64pad  = "=";  
-                    chrsz   = 8;     // imported from sha1.js / md5.js; does not use multi bytes because of backward compatibility 
-                    var pwHash = MD5_PREFIX + b64_md5(pw);
-                    cordys.setTextContent(pwNode, pwHash);                
-                }
-                else if (pwAlgorithm == PW_HA_MD5_SHA)
-                {
-                    b64pad  = "="; //base-64 pad character. "=" for strict RFC compliance            
-                    chrsz   = 8; 
-                    var pwMD5 = "{MD5}" + b64_md5(pw);
-                    b64pad  = "=";  
-                    chrsz   = 16;
-                    var pwHash = MD5_SHA_PREFIX + b64_sha1(pwMD5);                
-                    cordys.setTextContent(pwNode, pwHash);
-                }
-            }
-        }
-    }
-}
-
-function pwIsHashed(pw)
-{
-    return((pw.indexOf(MD5_PREFIX) >= 0) || (pw.indexOf(SHA1_PREFIX) >= 0) || (pw.indexOf(MD5_SHA_PREFIX) >= 0));
 }
 
 function fullusername1_Change(eventObject)
@@ -917,6 +860,14 @@ function radioAT_Change(eventObject)
         UIUserModel.validateEBIConstraints(currentUser); 
     }
     defaultAT = radioAT.getValue();
+    if (radioAT.getValue() == "custom")
+    {
+        if ((dpw1.getValue() == null) || (dpw1.getValue() == ""))
+        {
+            dpw1.enable();
+            dpw2.enable();
+        }
+    }
 }
 
 function dpw1_Change(eventObject)
@@ -978,6 +929,7 @@ function Form_InitDone(eventObject)
     radioAT[2].disable();
     tabpageUser.disable();
     checkEnableDisable();
+    btnChangePassword.disable();
     // below can be used to disable the checkbox for a row
     // UIUserTable.rows[2].firstChild.disabled = true;
 }
@@ -1039,9 +991,50 @@ function setCurrentMode(newMode)
 {
     currentMode = newMode;
     checkEnableDisable();
-    if (currentMode > MODE_VIEW)
+    if (currentMode == MODE_CHANGE_PW)
+    {
+        tabpageUser.enable();    
+        username1.disable();
+        fullusername1.disable();
+        userid1.disable();
+        radioAT.disable(); 
+        check1.disable();
+        company1.disable();
+        address1.disable();
+        telephone1.disable();
+        telephone21.disable();
+        email1.disable();
+        userhomepage1.disable();
+        defaultorg1.disable();
+        dpw1.enable();
+        dpw2.enable();
+        
+    }
+    else if (currentMode > MODE_VIEW)
     {
         tabpageUser.enable();
+        username1.enable();
+        fullusername1.enable();
+        userid1.enable();
+        radioAT.enable(); 
+        check1.enable();
+        company1.enable();
+        address1.enable();
+        telephone1.enable();
+        telephone21.enable();
+        email1.enable();
+        userhomepage1.enable();
+        defaultorg1.enable();
+        if (currentMode == MODE_EDIT)
+        {        
+            dpw1.disable();
+            dpw2.disable();
+        }
+        else
+        {
+            dpw1.enable();
+            dpw2.enable();
+           }     
         radioAT[2].disable();
     }
     else
@@ -1053,6 +1046,7 @@ function setCurrentMode(newMode)
 function checkEnableDisable()
 {
     btnEdit.disable();
+    btnChangePassword.disable();
     btnNew.disable();
     btnClone.disable();
     btnRefresh.disable();
@@ -1068,6 +1062,14 @@ function checkEnableDisable()
     else
     {
         btnEdit.enable();
+        if ((radioAT.getValue() != null) && (radioAT.getValue() == "custom"))
+        {
+            btnChangePassword.enable();
+        }
+        else
+        {
+            btnChangePassword.disable();
+        }        
         btnNew.enable();
         btnClone.enable();
         btnRefresh.enable();
@@ -1112,13 +1114,16 @@ function UIUserModel_OnSOAPFault(eventObject)
 
 function dpw1_Validate(eventObject)
 {
-    if (radioAT.getValue() == AT_CUSTOM)
+    if (doFieldValidate)
     {
-        if ((dpw1.getValue() == null) || (dpw1.getValue() == ""))
+        if (radioAT.getValue() == AT_CUSTOM)
         {
-           eventObject.errorMessage = "Pls enter the user password.";
-           eventObject.valid = false;
-        } 
+            if ((dpw1.getValue() == null) || (dpw1.getValue() == ""))
+            {
+               eventObject.errorMessage = "Pls enter the user password.";
+               eventObject.valid = false;
+            } 
+        }
     }
 }
 function navDelete1_BeforeDelete(eventObject)
@@ -1285,6 +1290,34 @@ function chkCloneTeams_Validate(eventObject)
     {
         chkCloneRoles.setValue("true");
     }
+}
+function btnChangePassword_Click(eventObject)
+{
+    if (UIUserModel.activeTuple != null)
+    {
+        setCurrentMode(MODE_CHANGE_PW);
+        doFieldValidate = false;
+        dpw1.setValue("");
+        dpw2.setValue("");
+        doFieldValidate = true;
+        dpw1.setFocus();
+    }
+    else
+    {
+        application.notify("No user selected");
+    }    
+}
+
+function radioAT_BeforeBind(eventObject)
+{
+    if ((currentMode == MODE_VIEW) && (eventObject.dataNode) && (eventObject.dataNode.text) && (eventObject.dataNode.text != null) && (eventObject.dataNode.text == "custom"))
+    {
+        btnChangePassword.enable();
+    }
+    else
+    {
+        btnChangePassword.disable();
+    }    
 }]]>
 			</xformsscript>
 			<xforms:action
@@ -2919,6 +2952,36 @@ function chkCloneTeams_Validate(eventObject)
 							id="0027132C-F779-11E3-F689-AFDB6920D21E"
 						/>
 					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0027132C-F779-11E3-F2CA-2EEE4B86B7C6"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0027132C-F779-11E3-F7E8-B6B9C8DD3217">
+			<DocumentID>0027132C-F779-11E3-F7E8-B6B9C8DD1217</DocumentID>
+			<Name>0027132C-F779-11E3-F7E8-B6B9C8DD1217</Name>
+			<Description>0027132C-F779-11E3-F7E8-B6B9C8DD1217</Description>
+			<CreatedBy>cordysadm</CreatedBy>
+			<CreationDate>2014-04-08T19:39:03.476</CreationDate>
+			<Notes/>
+			<UIRef>btnChangePassword</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0027132C-F779-11E3-F7E8-B6B9C8DBB217">
+					<DocumentID>0027132C-F779-11E3-F7E8-B6B9C8DB9217</DocumentID>
+					<Name>0027132C-F779-11E3-F7E8-B6B9C8DB9217</Name>
+					<Description>0027132C-F779-11E3-F7E8-B6B9C8DB9217</Description>
+					<CreatedBy>cordysadm</CreatedBy>
+					<CreationDate>2014-04-08T19:39:03.478</CreationDate>
+					<Notes/>
+					<Identifier/>
 				</TranslatableText>
 			</TranslatableName>
 			<XForm>

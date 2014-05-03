@@ -32,6 +32,10 @@ public class UIRole extends UIRoleBase
     
     public static void deleteRole(String roleDN)
     {
+    	if (roleDN != null)
+    	{
+    		roleDN = roleDN.replaceAll("[\\n\\t]", "");
+    	}    	
     	if (Util.isSet(roleDN))
     	{
     		try

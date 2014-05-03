@@ -48,8 +48,6 @@ public class UIUserRoles extends UIUserRolesBase
      */
     public static UIUserRoles getUIUserRoles(String orgUserDN)
     {
-    	//orgUserDN = "cn=cordysadm,cn=organizational users,o=EkemaIT,cn=cordys,cn=defaultInst,o=Cordys";
-    	
     	UIUserRoles uiUserRoles = new UIUserRoles();
     	uiUserRoles.makeTransient();
     	uiUserRoles.setOrgUserDN(orgUserDN);
@@ -76,8 +74,6 @@ public class UIUserRoles extends UIUserRolesBase
      */
     public static int getUIRoleTrees(String orgUserDN)
     {
-    	//orgUserDN = "cn=cordysadm,cn=organizational users,o=EkemaIT,cn=cordys,cn=defaultInst,o=Cordys";
-    	
         return(Role.getUserRoleTrees(orgUserDN));
     }
     
@@ -90,8 +86,10 @@ public class UIUserRoles extends UIUserRolesBase
      */
     public static int updateAssignedRoles(String orgUserDN, int assignedRoles)
     {
-    	//orgUserDN = "cn=cordysadm,cn=organizational users,o=EkemaIT,cn=cordys,cn=defaultInst,o=Cordys";
-    	
+    	if (orgUserDN != null)
+    	{
+    		orgUserDN = orgUserDN.replaceAll("[\\n\\t]", "");
+    	}
     	if (Util.isSet(orgUserDN))
     	{
     		// compose array list from assigned roles in xml

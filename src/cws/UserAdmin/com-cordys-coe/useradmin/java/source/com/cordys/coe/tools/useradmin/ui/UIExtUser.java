@@ -48,6 +48,10 @@ public class UIExtUser extends UIExtUserBase
      */
     public static BusObjectIterator<UIExtUser> getUIExtUserObjects(String groupDN, boolean includeSubgroups)
     {
+    	if (groupDN != null)
+    	{
+    		groupDN = groupDN.replaceAll("[\\n\\t]", "");
+    	}    	
     	Vector<UIExtUser> result = new Vector<UIExtUser>();
     	if (Util.isSet(groupDN))
     	{

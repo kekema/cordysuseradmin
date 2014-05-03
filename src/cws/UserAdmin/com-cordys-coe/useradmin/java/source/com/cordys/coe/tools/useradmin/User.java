@@ -84,6 +84,10 @@ public class User extends UserBase
         CordysUser cordysUser = new CordysUser();
         cordysUser.setCN(extUserCN);
         cordysUser.setOSIdentity(extUserCN);
+        if (fullName != null)
+        {
+        	fullName = fullName.replaceAll("[\\n\\t]", "");
+        }        
         if (Util.isSet(fullName))
         {
         	cordysUser.setDescription(fullName);

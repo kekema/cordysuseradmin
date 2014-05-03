@@ -58,6 +58,10 @@ public class UIListItem extends UIListItemBase
      */
     public static BusObjectIterator<UIListItem> getUIListItems(int listType, String filter, boolean firstTasksRequest, boolean addEmptyOption)
     {
+    	if (filter != null)
+    	{
+    		filter = filter.replaceAll("[\\n\\t]", "");
+    	}    	
         Vector<UIListItem> result = null;
         
         switch (listType)
