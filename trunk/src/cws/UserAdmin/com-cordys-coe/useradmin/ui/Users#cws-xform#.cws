@@ -748,7 +748,6 @@ function btnSave_Click(eventObject)
 
 function btnNew_Click(eventObject)
 {
-debugger;
     skipValidate = true;    // no initialize required for new
     var newUser = UIUserTab.create();
     skipValidate = false;
@@ -1205,7 +1204,7 @@ function processUsers(action)
     if (usersFound)
     {
         var usersData = UIUserModel.getData().cloneNode(true);
-        var userNodes = cordys.selectXMLNodes(usersData, ".//*[local-name()='tuple']/*[local-name()='old']/*[local-name()='UIUser']");
+        var userNodes = cordys.selectXMLNodes(usersData, ".//*[local-name()='tuple']/*/*[local-name()='UIUser']");
         for (var i=0, n=userNodes.length; i<n; i++)
         {
             var skipUser = true;
