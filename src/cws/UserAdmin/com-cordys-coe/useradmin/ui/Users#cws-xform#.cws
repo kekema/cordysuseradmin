@@ -1199,7 +1199,7 @@ function processUsers(action)
     if (usersFound)
     {
         var usersData = UIUserModel.getData().cloneNode(true);
-        var userNodes = cordys.selectXMLNodes(usersData, ".//*[local-name()='tuple']/*[local-name()='old']/*[local-name()='UIUser']");
+        var userNodes = cordys.selectXMLNodes(usersData, ".//*[local-name()='tuple']/*/*[local-name()='UIUser']");
         for (var i=0, n=userNodes.length; i<n; i++)
         {
             var skipUser = true;
