@@ -14,7 +14,7 @@
 	<ISVPackageInfo>
 		<ISVPackageInfo
 			type="com.cordys.cws.packaging.isvp.ISVPackageInfo"
-			typeVersion="00215A62-2E6A-11E1-FCAC-F71EBE253749"
+			typeVersion="00215A62-2E6A-11E2-EEB7-903C43CFF084"
 			RuntimeDocumentID="0027132C-F779-11E2-F66B-EA7A3AD5D211">
 			<DocumentID>0027132C-F779-11E2-F66B-EA7A3AD5B211</DocumentID>
 			<Name>Cordys Default Organization Unit Types 1.0</Name>
@@ -30,8 +30,8 @@
 			<Product>Default Organization Unit Types</Product>
 			<SupportedDeploymentSpaces
 				xmlns:cws="http://schemas.cordys.com/cws/1.0"
-				cws:type="collection">
-				<cws:item>SYSTEM</cws:item>
+				cws:type="collection:string">
+				<cws:item>SHARED</cws:item>
 			</SupportedDeploymentSpaces>
 			<Version>1.0</Version>
 			<LicenseAgreement/>

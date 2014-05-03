@@ -11,6 +11,7 @@ import java.util.Calendar;
 
 /**
  * A passwordhasher class to generates MD5 / SHA-1 password / PasswordDigest hashes.
+ * For PBKDF2WithHmacSHA1, use the dedicated webservice operations in Cordys.
  * 
  * @author jpluimers 
  */
@@ -21,6 +22,7 @@ public class PasswordHashAndDigest
 	public static final int PW_HA_MD5 = 1;
 	public static final int PW_HA_SHA1 = 2;
 	public static final int PW_HA_MD5_SHA = 3;
+	public static final int PW_HA_PBKDF2WithHmacSHA1 = 4;
 	
 	public static final String SHA1 = "SHA1";
 	public static final String SHA1_prefix = "{"+SHA1+"}";
@@ -28,6 +30,8 @@ public class PasswordHashAndDigest
 	public static final String MD5_prefix = "{"+MD5+"}";
 	public static final String MD5_SHA = "MD5 + SHA";
 	public static final String MD5_SHA_prefix = "{"+MD5_SHA+"}";
+	public static final String PBKDF2WithHmacSHA1 = "PBKDF2WithHmacSHA1";
+	public static final String PBKDF2WithHmacSHA1_prefix = "{"+PBKDF2WithHmacSHA1+"}";	
 	
 	private static final String SHA1_PASSWORD_ENCODING = null; // Can be set to a specific encoding
 	
@@ -220,7 +224,7 @@ public class PasswordHashAndDigest
     	boolean result = false;
     	if (Util.isSet(pw))
     	{
-    		result = (pw.startsWith(SHA1_prefix) || pw.startsWith(MD5_prefix) || pw.startsWith(MD5_SHA_prefix));
+    		result = (pw.startsWith(SHA1_prefix) || pw.startsWith(MD5_prefix) || pw.startsWith(MD5_SHA_prefix) || pw.startsWith(PBKDF2WithHmacSHA1_prefix));
     	}
     	return result;
     }
@@ -247,7 +251,11 @@ public class PasswordHashAndDigest
     		else if (pwHash.startsWith(MD5_SHA_prefix))
     		{
     			result = PW_HA_MD5_SHA;
-    		}    		
+    		}   
+    		else if (pwHash.startsWith(PBKDF2WithHmacSHA1_prefix))
+    		{
+    			result = PW_HA_PBKDF2WithHmacSHA1;
+    		}      		
     	}
     	return result;
     }
@@ -276,6 +284,11 @@ public class PasswordHashAndDigest
 	    	case PW_HA_MD5_SHA:
 	    	{
 	    		result = MD5_SHA;
+	    		break;
+	    	}
+	    	case PW_HA_PBKDF2WithHmacSHA1:
+	    	{
+	    		result = PBKDF2WithHmacSHA1;
 	    		break;
 	    	}	    	
     	}   

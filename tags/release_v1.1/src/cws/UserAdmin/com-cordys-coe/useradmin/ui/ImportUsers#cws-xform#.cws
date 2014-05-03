@@ -707,11 +707,7 @@ function Form_InitDone(eventObject)
 					<CreatedBy>cordysadm</CreatedBy>
 					<CreationDate>2013-06-16T06:23:36.619</CreationDate>
 					<Notes/>
-					<Identifier>
-						<uri
-							id="0027132C-F779-11E2-FAC8-E824B5EB95D0"
-						/>
-					</Identifier>
+					<Identifier/>
 				</TranslatableText>
 			</TranslatableName>
 			<XForm>
@@ -741,11 +737,7 @@ function Form_InitDone(eventObject)
 					<CreatedBy>cordysadm</CreatedBy>
 					<CreationDate>2013-06-16T06:23:36.616</CreationDate>
 					<Notes/>
-					<Identifier>
-						<uri
-							id="0027132C-F779-11E2-FAC8-E824B5E895D0"
-						/>
-					</Identifier>
+					<Identifier/>
 				</TranslatableText>
 			</TranslatableName>
 			<XForm>

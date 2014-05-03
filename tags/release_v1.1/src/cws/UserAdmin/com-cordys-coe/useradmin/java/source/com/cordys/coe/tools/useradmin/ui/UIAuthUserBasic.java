@@ -41,8 +41,12 @@ public class UIAuthUserBasic extends UIAuthUserBasicBase
      * @param Filter	for future use
      * @return
      */
-    public static BusObjectIterator<UIAuthUserBasic> getUIAuthUserBasicObjects(String Filter)
+    public static BusObjectIterator<UIAuthUserBasic> getUIAuthUserBasicObjects(String filter)
     {
+    	if (filter != null)
+    	{
+    		filter = filter.replaceAll("[\\n\\t]", "");
+    	}    	
 		int response = 0;
 		Vector<UIAuthUserBasic> result = new Vector<UIAuthUserBasic>();
 
