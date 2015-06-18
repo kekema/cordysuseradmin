@@ -13,7 +13,7 @@ Installation instructions:
   * Deploy the CAP
     * For Cordys 4.2: [CAP](http://cordysuseradmin.googlecode.com/svn/tags/release_v1.0/build/EkemaIT%20UserAdmin%201.0.8.cap)
     * For Cordys 4.3: [CAP](http://cordysuseradmin.googlecode.com/svn/tags/release_v1.1/build/EkemaIT%20UserAdmin%201.1.0.cap)
-    * For OpenText Cordys 10.5: [CAP](http://cordysuseradmin.googlecode.com/svn/trunk/build/EkemaIT%20UserAdmin%201.2.3.cap)
+    * For OpenText Cordys 10.5: [CAP](https://github.com/kekema/cordysuseradmin/blob/master/build/EkemaIT%20UserAdmin%201.2.3.cap)
   * Attach the 2 UserAdmin interfaces to a WS-AppServer (in org or in system)
   * jre classpath configure <Cordys Instance>\com-cordys-coe\useradmin\java\UserAdmin.jar;
   * Assign UserAdmin role (Cordys Administrator role also required)
